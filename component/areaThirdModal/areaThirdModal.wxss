@@ -1,0 +1,7 @@
+.flter-image image {
+  height: 15rpx;
+  width: 25rpx;
+  position: absolute;
+  right: -40rpx;
+  bottom: -5px;
+}

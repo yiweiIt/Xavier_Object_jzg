@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2171accc-71e0-4340-a608-4f5485e4569b" name="Default Changelist" comment="机械获取积分提交">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/hireDetail/hireDetail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hireDetail/hireDetail.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/publish/publish.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/publish/publish.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/publish/publish.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/publish/publish.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tcpq/tcpq.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tcpq/tcpq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tcpq/tcpq.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tcpq/tcpq.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tcpq/tcpq.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tcpq/tcpq.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tcpq/tcpq.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tcpq/tcpq.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wd/wd.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wd/wd.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wdzg/registrationList/registrationList.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wdzg/registrationList/registrationList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wdzg/registrationList/registrationList.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wdzg/registrationList/registrationList.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wdzg/registrationList/registrationList.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wdzg/registrationList/registrationList.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/zgxx/zgxx.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/zgxx/zgxx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/http.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$USER_HOME$/development/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="$USER_HOME$/development/apache-maven-3.6.0/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+    <option name="vmOptions" value="-Dfile.encoding=GBK" />
+  </component>
+  <component name="ProjectId" id="1PwQZKcnkTw3EvbSocuGyBk6ris" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/bzlb" />
+      <recent name="$PROJECT_DIR$/pages/works" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/component" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings">
+          <MavenGeneralSettings>
+            <option name="alwaysUpdateSnapshots" value="false" />
+            <option name="checksumPolicy" value="NOT_SET" />
+            <option name="failureBehavior" value="NOT_SET" />
+            <option name="localRepository" value="" />
+            <option name="mavenHome" value="$USER_HOME$/development/apache-maven-3.6.0" />
+            <option name="nonRecursive" value="false" />
+            <option name="outputLevel" value="INFO" />
+            <option name="pluginUpdatePolicy" value="DEFAULT" />
+            <option name="printErrorStackTraces" value="false" />
+            <option name="threads" />
+            <option name="updateIndicesOnProjectOpen" value="true" />
+            <option name="usePluginRegistry" value="false" />
+            <option name="userSettingsFile" value="$USER_HOME$/development/apache-maven-3.6.0/conf/settings.xml" />
+            <option name="workOffline" value="false" />
+          </MavenGeneralSettings>
+        </option>
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2171accc-71e0-4340-a608-4f5485e4569b" name="Default Changelist" comment="" />
+      <created>1560305673130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560305673130</updated>
+      <workItem from="1560305674452" duration="2289000" />
+      <workItem from="1560406488135" duration="6005000" />
+      <workItem from="1560475053756" duration="17195000" />
+      <workItem from="1560756526051" duration="7436000" />
+      <workItem from="1560835741153" duration="3468000" />
+      <workItem from="1560870040833" duration="2875000" />
+      <workItem from="1560912239296" duration="5864000" />
+      <workItem from="1560991310167" duration="3000000" />
+      <workItem from="1561099550369" duration="3065000" />
+      <workItem from="1561169750866" duration="4990000" />
+      <workItem from="1566782740679" duration="116000" />
+      <workItem from="1566782882473" duration="384000" />
+      <workItem from="1566902056433" duration="1315000" />
+      <workItem from="1567043226154" duration="3982000" />
+      <workItem from="1567137265744" duration="915000" />
+      <workItem from="1567233215346" duration="1918000" />
+      <workItem from="1567408340477" duration="611000" />
+      <workItem from="1567596211562" duration="37000" />
+      <workItem from="1567647222542" duration="685000" />
+      <workItem from="1568097449880" duration="2728000" />
+      <workItem from="1568163395275" duration="1902000" />
+      <workItem from="1568250077191" duration="597000" />
+      <workItem from="1568601149067" duration="777000" />
+      <workItem from="1568790781300" duration="690000" />
+      <workItem from="1568886530748" duration="1482000" />
+      <workItem from="1568890035277" duration="79000" />
+      <workItem from="1568959827100" duration="2190000" />
+      <workItem from="1568975862657" duration="88000" />
+      <workItem from="1569204999466" duration="967000" />
+      <workItem from="1569489026295" duration="240000" />
+      <workItem from="1569550918974" duration="1426000" />
+      <workItem from="1570586878439" duration="1634000" />
+      <workItem from="1570675198030" duration="598000" />
+      <workItem from="1570756981891" duration="596000" />
+      <workItem from="1570865720150" duration="593000" />
+      <workItem from="1571045419659" duration="332000" />
+      <workItem from="1571122414533" duration="800000" />
+      <workItem from="1571301847211" duration="604000" />
+      <workItem from="1572343948670" duration="579000" />
+      <workItem from="1572571918327" duration="1826000" />
+      <workItem from="1572831302783" duration="3532000" />
+      <workItem from="1573454330591" duration="677000" />
+      <workItem from="1573799139282" duration="766000" />
+      <workItem from="1573954386327" duration="1169000" />
+      <workItem from="1574043795175" duration="538000" />
+      <workItem from="1574045759177" duration="1137000" />
+      <workItem from="1574124881312" duration="1851000" />
+      <workItem from="1574148403497" duration="3417000" />
+      <workItem from="1574215975724" duration="6729000" />
+      <workItem from="1574298040912" duration="4013000" />
+      <workItem from="1574386573253" duration="1465000" />
+      <workItem from="1574471219503" duration="136000" />
+      <workItem from="1574649586880" duration="3764000" />
+      <workItem from="1574668478215" duration="1113000" />
+      <workItem from="1574731172404" duration="2549000" />
+      <workItem from="1574818387171" duration="5898000" />
+      <workItem from="1574925278448" duration="2296000" />
+      <workItem from="1575009244345" duration="748000" />
+      <workItem from="1575258543038" duration="1395000" />
+      <workItem from="1575282816188" duration="587000" />
+      <workItem from="1575431717273" duration="603000" />
+      <workItem from="1575505600756" duration="1406000" />
+      <workItem from="1575593056415" duration="1887000" />
+      <workItem from="1575882844493" duration="1158000" />
+      <workItem from="1575937618744" duration="712000" />
+      <workItem from="1585016674526" duration="1998000" />
+      <workItem from="1585119088424" duration="5551000" />
+      <workItem from="1585209310397" duration="77000" />
+      <workItem from="1585539777388" duration="160000" />
+      <workItem from="1585618354903" duration="1210000" />
+      <workItem from="1585707213701" duration="121000" />
+      <workItem from="1585707350358" duration="31000" />
+    </task>
+    <task id="LOCAL-00007" summary="实名认证 班组">
+      <created>1560855255863</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560855255863</updated>
+    </task>
+    <task id="LOCAL-00008" summary="组件优化，">
+      <created>1560875778597</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1560875778597</updated>
+    </task>
+    <task id="LOCAL-00009" summary="组件提交">
+      <created>1560914541172</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560914541173</updated>
+    </task>
+    <task id="LOCAL-00010" summary="组件提交">
+      <created>1560924683725</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560924683725</updated>
+    </task>
+    <task id="LOCAL-00011" summary="组件提交">
+      <created>1560991446526</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560991446527</updated>
+    </task>
+    <task id="LOCAL-00012" summary="各大模块代码优化，删除无用代码">
+      <created>1561109117102</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1561109117102</updated>
+    </task>
+    <task id="LOCAL-00013" summary="找活模块，模块化">
+      <created>1561172495885</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1561172495885</updated>
+    </task>
+    <task id="LOCAL-00014" summary="组件提交">
+      <created>1566902283257</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1566902283257</updated>
+    </task>
+    <task id="LOCAL-00015" summary="组件提交">
+      <created>1567044557715</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1567044557716</updated>
+    </task>
+    <task id="LOCAL-00016" summary="班组入组提交">
+      <created>1567137497075</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1567137497075</updated>
+    </task>
+    <task id="LOCAL-00017" summary="组件提交">
+      <created>1567233483604</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1567233483604</updated>
+    </task>
+    <task id="LOCAL-00018" summary="组件提交">
+      <created>1567245278840</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1567245278840</updated>
+    </task>
+    <task id="LOCAL-00019" summary="2.2.0改版">
+      <created>1568106823850</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1568106823850</updated>
+    </task>
+    <task id="LOCAL-00020" summary="2.2.0">
+      <created>1568106981503</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1568106981503</updated>
+    </task>
+    <task id="LOCAL-00021" summary="2.2.0">
+      <created>1568107130028</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1568107130028</updated>
+    </task>
+    <task id="LOCAL-00022" summary="2.2.0增加">
+      <created>1568107216184</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1568107216184</updated>
+    </task>
+    <task id="LOCAL-00023" summary="2.2.0测试修改">
+      <created>1568111697557</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1568111697557</updated>
+    </task>
+    <task id="LOCAL-00024" summary="组件提交">
+      <created>1568601329183</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1568601329183</updated>
+    </task>
+    <task id="LOCAL-00025" summary="组件提交">
+      <created>1568888194916</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1568888194916</updated>
+    </task>
+    <task id="LOCAL-00026" summary="组件提交">
+      <created>1568888467690</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1568888467690</updated>
+    </task>
+    <task id="LOCAL-00027" summary="组件提交">
+      <created>1568890104693</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1568890104693</updated>
+    </task>
+    <task id="LOCAL-00028" summary="找活详情">
+      <created>1568964314666</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1568964314667</updated>
+    </task>
+    <task id="LOCAL-00029" summary="组件提交">
+      <created>1568975052549</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1568975052549</updated>
+    </task>
+    <task id="LOCAL-00030" summary="积分修改">
+      <created>1568975937462</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1568975937462</updated>
+    </task>
+    <task id="LOCAL-00031" summary="找活拨打电话">
+      <created>1569205252541</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1569205252541</updated>
+    </task>
+    <task id="LOCAL-00032" summary="实名认证详情，找活编辑，同城机械举报">
+      <created>1569489257971</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1569489257971</updated>
+    </task>
+    <task id="LOCAL-00033" summary="2.2.3修改">
+      <created>1569551020853</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1569551020853</updated>
+    </task>
+    <task id="LOCAL-00034" summary="2.2.3">
+      <created>1569554258455</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1569554258455</updated>
+    </task>
+    <task id="LOCAL-00035" summary="我的机械修改">
+      <created>1570587131197</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1570587131197</updated>
+    </task>
+    <task id="LOCAL-00036" summary="删除一个组件">
+      <created>1572313516610</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1572313516610</updated>
+    </task>
+    <task id="LOCAL-00037" summary="机械获取积分提交">
+      <created>1572315720904</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1572315720904</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fromId埋点，发布找活手机号判断">
+      <created>1572835508498</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1572835508499</updated>
+    </task>
+    <task id="LOCAL-00039" summary="长度去除">
+      <created>1573955271733</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1573955271733</updated>
+    </task>
+    <task id="LOCAL-00040" summary="积分充值">
+      <created>1574216063152</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1574216063152</updated>
+    </task>
+    <task id="LOCAL-00041" summary="班组列表速度优化">
+      <created>1574236010927</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1574236010927</updated>
+    </task>
+    <task id="LOCAL-00042" summary="无值时候添加判断">
+      <created>1574238305488</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1574238305488</updated>
+    </task>
+    <task id="LOCAL-00043" summary="班组消费查询">
+      <created>1574664004871</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1574664004871</updated>
+    </task>
+    <task id="LOCAL-00044" summary="机械获取手机号码提交">
+      <created>1575267769618</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1575267769618</updated>
+    </task>
+    <task id="LOCAL-00045" summary="3.24正式版本（同城机械界面修改）">
+      <created>1585017283786</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1585017283786</updated>
+    </task>
+    <task id="LOCAL-00046" summary="增加发布急聘招工">
+      <created>1585119722571</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1585119722571</updated>
+    </task>
+    <task id="LOCAL-00047" summary="更改发布急聘招工金额+webScoket响应函数">
+      <created>1585120589838</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1585120589838</updated>
+    </task>
+    <task id="LOCAL-00048" summary="招工报名列表增加同意入组功能">
+      <created>1585120681516</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1585120681516</updated>
+    </task>
+    <task id="LOCAL-00049" summary="同意入组功能">
+      <created>1585120735358</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1585120735358</updated>
+    </task>
+    <task id="LOCAL-00050" summary="快速注册增加手机号码判断">
+      <created>1585126556712</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1585126556713</updated>
+    </task>
+    <task id="LOCAL-00051" summary="实名认证成功界面设计更改">
+      <created>1585194256667</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1585194256667</updated>
+    </task>
+    <task id="LOCAL-00052" summary="同城机械租赁界面更改">
+      <created>1585194386621</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1585194386621</updated>
+    </task>
+    <task id="LOCAL-00053" summary="增加授权判断">
+      <created>1585209022508</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1585209022508</updated>
+    </task>
+    <task id="LOCAL-00054" summary="快速注册-详细地址选填">
+      <created>1585209201987</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1585209201987</updated>
+    </task>
+    <task id="LOCAL-00055" summary="快速注册手机授权BUG">
+      <created>1585539898600</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1585539898600</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="3">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="4">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="5">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="6">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="7">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="8">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+        <option value="2" />
+        <option value="3" />
+        <option value="4" />
+        <option value="5" />
+        <option value="6" />
+        <option value="7" />
+        <option value="8" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="找活拨打电话" />
+    <MESSAGE value="实名认证详情，找活编辑，同城机械举报" />
+    <MESSAGE value="2.2.3修改" />
+    <MESSAGE value="2.2.3" />
+    <MESSAGE value="我的机械修改" />
+    <MESSAGE value="删除一个组件" />
+    <MESSAGE value="机械获取积分提交" />
+    <MESSAGE value="fromId埋点，发布找活手机号判断" />
+    <MESSAGE value="长度去除" />
+    <MESSAGE value="积分充值" />
+    <MESSAGE value="班组列表速度优化" />
+    <MESSAGE value="无值时候添加判断" />
+    <MESSAGE value="班组消费查询" />
+    <MESSAGE value="机械获取手机号码提交" />
+    <MESSAGE value="3.24正式版本（同城机械界面修改）" />
+    <MESSAGE value="增加发布急聘招工" />
+    <MESSAGE value="更改发布急聘招工金额+webScoket响应函数" />
+    <MESSAGE value="招工报名列表增加同意入组功能" />
+    <MESSAGE value="同意入组功能" />
+    <MESSAGE value="快速注册增加手机号码判断" />
+    <MESSAGE value="实名认证成功界面设计更改" />
+    <MESSAGE value="同城机械租赁界面更改" />
+    <MESSAGE value="增加授权判断" />
+    <MESSAGE value="快速注册-详细地址选填" />
+    <MESSAGE value="快速注册手机授权BUG" />
+    <option name="LAST_COMMIT_MESSAGE" value="快速注册手机授权BUG" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="400" y="21" width="1180" height="817" key="CommitChangelistDialog2" timestamp="1585733226096">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="400" y="21" width="1180" height="817" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585733226096" />
+    <state x="261" y="52" key="DiffContextDialog" timestamp="1585539909651">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="261" y="52" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1585539909651" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1585707379599">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1585707379599" />
+    <state x="509" y="145" key="MultipleFileMergeDialog" timestamp="1585016711649">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="509" y="145" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1585016711649" />
+    <state x="501" y="135" key="Vcs.Push.Dialog.v2" timestamp="1585733229915">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="501" y="135" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585733229915" />
+    <state x="592" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585733165661">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="592" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1585733165661" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

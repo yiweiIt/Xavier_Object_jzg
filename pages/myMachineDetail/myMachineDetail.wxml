@@ -1,0 +1,418 @@
+<!-- 工程找机械 -->
+<view class="mui-bg" wx:if="{{statusId === 'machineIns'}}">
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       机械分类:
+       </text>
+      <text class="pull-right p-value">
+        {{machineType}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       机械数量:
+       </text>
+      <text class="pull-right p-value">
+       {{machineInfo.number}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       价格:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.price}}{{machineInfo.priceType==0 ? '元/天' : machineInfo.priceType == 1 ? '元/月' : '台/班'}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       联系人：
+      </text>
+      <text class="pull-right p-value">
+       {{machineInfo.phone}}
+       </text>
+      <text class="pull-right p-value" decode="{{true}}">
+       {{machineInfo.contract}}&nbsp;&nbsp;
+       </text>
+    </view>
+  </view>
+
+  <!-- <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       目前所在地:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.area.fullTitle}}
+       </text>
+    </view>
+  </view> -->
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       所在地:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.address}}
+       </text>
+    </view>
+  </view>
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       工期:
+       </text>
+      <text class="pull-right p-value">
+        {{firstInTime}} 至 {{lastInTime}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+     状态：
+       </text>
+      <view class="pull-right p-value spc">
+        <picker class='zt' mode="selector" bindchange="changeMachineStatus" value="{{machineIndex}}" range="{{machineStatus}}" range-key="text">
+          <view class="flter-itm">
+            {{machineStatus[machineIndex].text}}
+            <image src='../../image/xl.jpg'></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+        要求/备注：
+        </text>
+      <span class="p-spec">
+        {{machineInfo.remark}}
+      </span>
+    </view>
+  </view>
+
+</view>
+<!-- 机械找工程 -->
+<view class="mui-bg" wx:if="{{statusId === 'machineOuts'}}">
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       机械分类:
+       </text>
+      <text class="pull-right p-value">
+        {{machineType}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       机械型号:
+       </text>
+      <text class="pull-right p-value">
+       {{machineInfo.version}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       价格:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.price}}{{machineInfo.priceType==0 ? '元/天' : machineInfo.priceType == 1 ? '元/月' : '台/班'}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       联系人：
+      </text>
+      <text class="pull-right p-value">
+       {{machineInfo.phone}}
+       </text>
+      <text class="pull-right p-value" decode="{{true}}">
+       {{machineInfo.contract}}&nbsp;&nbsp;
+       </text>
+    </view>
+  </view>
+
+  <!-- <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       目前所在地:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.area.fullTitle}}
+       </text>
+    </view>
+  </view> -->
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       所在地:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.address}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+     状态：
+       </text>
+      <view class="pull-right p-value spc">
+        <picker class='zt' mode="selector" bindchange="changeMachineStatus" value="{{machineIndex}}" range="{{machineStatus}}" range-key="text">
+          <view class="flter-itm">
+            {{machineStatus[machineIndex].text}}
+            <image src='../../image/xl.jpg'></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+        要求/备注：
+        </text>
+      <span class="p-spec">
+        {{machineInfo.remark}}
+      </span>
+    </view>
+  </view>
+
+</view>
+<!-- 机械手招聘 -->
+<view class="mui-bg" wx:if="{{statusId === 'machineRecruit'}}">
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       机械分类:
+       </text>
+      <text class="pull-right p-value">
+        {{machineType}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       驾机工龄:
+       </text>
+      <text class="pull-right p-value">
+       {{machineInfo.workYear}}年
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       机手人数:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.peopleNumber}}人
+       </text>
+    </view>
+  </view>
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       工资:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.salary}}{{machineInfo.payType==0 ? '元/天':'元/月'}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       联系人：
+      </text>
+      <text class="pull-right p-value">
+       {{machineInfo.phone}}
+       </text>
+      <text class="pull-right p-value" decode="{{true}}">
+       {{machineInfo.contract}}&nbsp;&nbsp;
+       </text>
+    </view>
+  </view>
+
+  <!-- <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       目前所在地:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.area.fullTitle}}
+       </text>
+    </view>
+  </view> -->
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       所在地:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.address}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+     状态：
+       </text>
+      <view class="pull-right p-value spc">
+        <picker class='zt' mode="selector" bindchange="changeMachineStatus" value="{{machineIndex}}" range="{{machineStatus}}" range-key="text">
+          <view class="flter-itm">
+            {{machineStatus[machineIndex].text}}
+            <image src='../../image/xl.jpg'></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+        要求/备注：
+        </text>
+      <span class="p-spec">
+        {{machineInfo.remark}}
+      </span>
+    </view>
+  </view>
+
+</view>
+<!-- 机械手求职 -->
+<view class="mui-bg" wx:if="{{statusId === 'machinerWants'}}">
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       机械分类:
+       </text>
+      <text class="pull-right p-value">
+        {{machineType}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       驾机工龄:
+       </text>
+      <text class="pull-right p-value">
+       {{machineInfo.workYear}}年
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       工资:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.pay}}{{machineInfo.payType==0 ? '元/天':'元/月'}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       联系人：
+      </text>
+      <text class="pull-right p-value">
+       {{machineInfo.phone}}
+       </text>
+      <text class="pull-right p-value" decode="{{true}}">
+       {{machineInfo.contract}}&nbsp;&nbsp;
+       </text>
+    </view>
+  </view>
+
+  <!-- <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       目前所在地:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.area.fullTitle}}
+       </text>
+    </view>
+  </view> -->
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+       所在地:
+       </text>
+      <text class="pull-right p-value">
+        {{machineInfo.address}}
+       </text>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+     状态：
+       </text>
+      <view class="pull-right p-value spc">
+        <picker class='zt' mode="selector" bindchange="changeMachineStatus" value="{{machineIndex}}" range="{{machineStatus}}" range-key="text">
+          <view class="flter-itm">
+            {{machineStatus[machineIndex].text}}
+            <image src='../../image/xl.jpg'></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view class="mui-view">
+    <view class="mui-cell p-title">
+      <text class="p-left">
+        要求/备注：
+        </text>
+      <span class="p-spec">
+        {{machineInfo.remark}}
+      </span>
+    </view>
+  </view>
+
+</view>
+
+<view class="mui-view v-mui-box">
+  <view class="mui-box p-black-normal mui-bg-body" style="clear:both;">
+    <button class='btn' bindtap='updateStatus'>保存</button>
+  </view>
+</view>

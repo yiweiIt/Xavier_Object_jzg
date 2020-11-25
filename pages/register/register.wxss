@@ -1,0 +1,148 @@
+/* pages/register/register.wxss */
+/*实名认证  */
+/*姓名  */
+page{background:rgba(242,242,242,1)}
+.smrz{
+  width:92%;
+  height:auto;
+  background:#fff;
+  padding:20rpx 0rpx;
+  margin:16rpx auto;
+  border-radius:6rpx;
+}
+.smrz text.tiper{
+  width:92%;
+  height:70rpx;
+  line-height:70rpx;
+  margin:0rpx auto;
+  display: block;
+  color:rgb(110, 110, 110);
+  border-bottom: 2rpx solid rgba(242,242,242,1);
+  text-align: center;
+}
+.working{
+  width:92%;
+  height:100rpx;
+  margin:0rpx auto;
+  border-bottom: 2rpx solid rgba(242,242,242,1);
+}
+.working text{
+  display: inline-block;
+  float:left;
+  width:40%;
+  height:100rpx;
+  line-height: 100rpx;
+  font-size:32rpx;
+}
+.working input.telName{
+  display: inline-block;
+  width:60%;
+  float: right;
+  height:100rpx;
+  line-height:100rpx;
+}
+.list{
+  width:92%;
+  height:100rpx;
+  margin:0rpx auto;
+  border-bottom: 2rpx solid rgba(242,242,242,1);
+}
+.list:last-child{
+  border:none;
+}
+.list text{
+  display: inline-block;
+  float:left;
+  width:20%;
+  height:100rpx;
+  line-height: 100rpx;
+  font-size:32rpx;
+}
+.list input.telName{
+  display: inline-block;
+  width:78%;
+  float: left;
+  height:100rpx;
+  line-height:100rpx;
+}
+.list input.idNumber{
+  display: inline-block;
+  width:64%;
+  float: left;
+  height:100rpx;
+  line-height:100rpx;
+}
+.list input.telPhone{
+  display: inline-block;
+  width:50%;
+  float: left;
+  height:100rpx;
+  line-height:100rpx;
+}
+.list button.getPhoneNumber{
+   width:22%;
+   float:right;
+   font-size:22rpx;
+   height:50rpx;
+   line-height:50rpx;
+   background:#fff;
+   border:1rpx solid #666;
+   margin:25rpx 0rpx;
+   border-radius:0;
+   padding:0rpx;
+}
+.list button.getPhoneNumber::after{
+   background:none;
+   border-radius:0;
+}
+.list input.verificationCode{
+  display: inline-block;
+  width:48%;
+  float: left;
+  margin-left:2%;
+  height:100rpx;
+  line-height:100rpx;
+}
+.list button.verification{
+  display: inline-block;
+  float:right;
+  width:30%;
+  background:#4da1ff;
+  border-radius: 0rpx;
+  height:60rpx;
+  line-height:60rpx;
+  
+  text-align:center;
+  font-size:28rpx;
+  margin:15rpx 0rpx;
+  color:#fff;
+}
+.list button::after{
+  border:none;
+}
+.bind{
+  width:90%;
+  margin:30rpx auto;
+  background:#4da1ff;
+  color:#fff;
+  border-radius:6rpx;  
+  height:80rpx;
+  line-height:80rpx;
+  font-size:30rpx;
+}
+.scan input{
+  height:100rpx;
+}
+.scanCard{
+  width:16%;
+  height:100rpx;
+  float:right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scanCard image{
+  display:block;
+  width:50rpx;
+  height:50rpx;
+}

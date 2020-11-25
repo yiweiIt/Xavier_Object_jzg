@@ -1,0 +1,144 @@
+page{background:rgb(242,242,242)}
+.noData{
+  position:absolute;
+  width:100%;
+  height:700rpx;
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;  
+  align-content:center; 
+  flex-wrap:wrap;
+}
+.dataImg{
+  width:100%;
+  height:400rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.dataImg image{
+   width:407rpx;
+   height:320rpx;
+}
+.dataText{
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+  color:#333;
+  font-size:32rpx;
+  text-align:center;
+}
+.detailsList{
+  position:absolute;
+  width:100%;
+  height:auto;
+  background:#fff;
+  padding-top:60rpx;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overHide{
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.list,.lister{
+  width:92%;
+  height:160rpx;
+  background:#fff;
+  margin:0rpx auto;
+  display: flex;
+}
+.lister{
+  height:44rpx;
+}
+.time{
+  width:28%;
+  height:100%;
+}
+.timeData{
+  display: block;
+  width:94%;
+  height:100rpx;
+  line-height:50rpx;
+  font-size:28rpx;
+  color:#666;
+  text-align:right;
+}
+.style{
+  width:8%;
+  height:100%;
+  background:url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/lineTimeTarget.png) 50% 38rpx no-repeat;
+  background-size:24rpx 24rpx;
+}
+.endOfTime{
+   width:8%;
+  height:100%;
+}
+.endOfTime image{
+  width:44rpx;
+  height:44rpx;
+}
+.styleLine{
+  width:2rpx;
+  height:100%;
+  background:#fda067;
+}
+.details{
+   width:74%;
+  height:100%;
+}
+.detailsBox{
+  width:100%;
+  height:120rpx;
+  background:url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/revenueDetailsBox.png) 50% 50% no-repeat;
+  background-size:100% 120rpx;
+  margin-top:14rpx;
+  display:-webkit-flex;
+  display:flex;
+  justify-content: flex-end;
+  align-content:center; 
+  flex-wrap:wrap;
+}
+.boxTip{
+  width:88%;
+  height:50rpx;
+  float:right;
+  margin-right:4%;
+}
+.boxTip text{
+  height:50rpx;
+  line-height: 50rpx;
+  float:left;
+  display:inline-block;
+}
+.boxTip text:nth-child(1){
+  width:30%;
+  color:#ff4e52;
+  font-size:32rpx;
+}
+.boxTip text:nth-child(2){
+  width:70%;
+  color:#333;
+  font-size:26rpx;
+  text-align: right;
+}
+.source{
+  display: block;
+  height:50rpx;
+  line-height:50rpx;
+  width:88%;
+  float:right;
+  margin-right:4%;
+  font-size:26rpx;
+  color:#333;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}

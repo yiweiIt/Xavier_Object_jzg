@@ -1,0 +1,98 @@
+page{
+  background:#87C0FF;
+}
+.twitterCode{
+  width:100%;
+  height:100%;
+}
+.twitterCodeTop{
+  width:100%;
+  height:498rpx;
+}
+.twitterCodeTop image{
+  width:100%;
+  height:100%;
+}
+.twitterCodeBox{
+  width:100%;
+  height:auto;
+}
+.content{
+  width:88%;
+  height:auto;
+  margin:40rpx auto;
+  background:#fff;
+  border-radius:20rpx;
+}
+.contentBox{
+  width:100%;
+  height:180rpx;
+}
+.contentBox image{
+  width:531rpx;
+  height:102rpx;
+}
+.flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content_box{
+  width:100%;
+  height:420rpx;
+}
+.content_box image{
+  width:400rpx;
+  height:400rpx;
+}
+.contentTip{
+  width:100%;
+  height:auto;
+}
+.optionalTitle{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.optionalTitle text{
+  padding:0rpx 20rpx;
+  color:#333;
+  font-size:30rpx;
+}
+.jobIcon{
+   width:178rpx;
+   height:10rpx;
+}
+.transform{
+  transform:rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+}
+.contentText{
+  width:92%;
+  margin:0rpx auto;
+  height:auto;
+  padding-bottom:30rpx;
+}
+.contentText text{
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #666;
+  line-height: 36rpx;
+}
+.downLoadTip{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  background: #ECF5FF;
+  border-radius: 0px 0px 20px 20px;
+  font-weight: 400;
+  color: #333333;
+  font-size:28rpx;
+  text-align:center;
+}

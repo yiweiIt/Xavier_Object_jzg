@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "购买保险",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+        "teamType-modal": "/component/teamTypeModal/teamTypeModal",
+        "ocr-navigator": "plugin://ocr-plugin/ocr-navigator",
+        "area-third-input-modal": "/component/areaThirdInputModal/areaThirdInputModal"
+  }
+}

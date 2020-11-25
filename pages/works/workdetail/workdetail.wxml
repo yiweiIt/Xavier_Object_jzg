@@ -1,0 +1,114 @@
+<form bindsubmit="formSubmit" report-submit="true">
+   <view class="upper_apex">
+      <view class="left_apex">
+         <view class="photoBox"><image src="{{workdata.avatarUrl ? workdata.avatarUrl : 'https://static.jianzhugang.com/mini/image/logo.png'}}"  mode="aspectFit"></image></view>
+      </view>
+      <view class="right_apex">
+          <view class="info">
+             <text class="info_title">姓名：</text>
+             <text class="infomation">{{workdata.userName}}</text>
+             <text class="sex_icon">{{workdata.sex ? (workdata.sex == 1 ? '男' : '女') : ''}}</text>
+          </view>
+          <view class="list">
+             <text class="info_title">年龄：</text>
+             <text class="infomation">{{workdata.age}}岁</text>
+          </view>
+          <view class="list">
+             <text class="info_title">电话：</text>
+             <text class="phone">{{workdata.contactNumber}}</text>
+             <block wx:if="{{!isFullPhone}}" class="getphoneview">
+                <view class="phoneBox" bindtap='getContactPhone'>获取完整号码</view>
+             </block>
+             <view class="phoneBox" wx:if="{{isFullPhone}}">
+                <view class="phoneView">
+                  <form bindsubmit="Callphone" report-submit>
+                    <button form-type="submit" class="btn_call">拨打</button>
+                  </form>
+                  <button class="btn_jubao" bindtap='Complain'>举报</button>
+                </view>
+             </view>
+          </view>
+      </view>
+   </view>
+   <view class="topic">
+      <view class="topic_style left"></view>
+      <text class="topicText">找活信息</text>
+      <view class="topic_style right"></view>
+   </view>
+   <view class="boxStyle">
+      <view class="listBox">
+          <text>工种</text>
+          <text>{{workdata.teamTypeName}}</text>
+      </view>
+      <view class="listBox"  wx:if="{{workdata.teamNum>0}}">
+          <text>班组人数</text>
+          <text>{{workdata.teamNum}}</text>
+      </view>
+      <view class="listBox">
+          <text>所在地区</text>
+          <text>{{workdata.address?workdata.address:workdata.county?workdata.province+workdata.city+workdata.county:workdata.city?workdata.province+workdata.city:workdata.province}}</text>
+      </view>
+        <view class="listBox" wx:if="{{source!=0}}">
+          <text>找活状态</text>
+          <text>{{workdata.lookLifeStatus != 1?'找活中':'已找到'}}</text>
+        </view>
+   </view>
+   <view class="topic">
+      <view class="topic_style left"></view>
+      <text class="topicText">自身优势</text>
+      <view class="topic_style right"></view>
+   </view>
+   <view class="boxStyle">
+      <text  class="advantage">{{workdata.content ? workdata.content : '未登记自身优势'}}</text>
+   </view>
+   <view class="boxStyle basis">
+      <text class="advantage {{workdata.accountStatus==1?'accountStatus':'no_project'}}">{{workdata.msg}}</text>
+   </view>
+   <view class="topic"  wx:if="{{experience.length>0}}">
+      <view class="topic_style left"></view>
+      <text class="topicText">项目经验</text>
+      <view class="topic_style right"></view>
+   </view>
+   <block wx:for="{{experience}}" wx:key="{{unique}}" wx:for-item="ite"  wx:if="{{experience.length>0}}">
+      <view class="boxStyle _project">
+          <view class="projectBox">
+            <view class="name">
+                <view class="nameIcon">
+                  <image src="http://static.jianzhugang.com/mini/image/experienceIcon.png"></image>
+                </view>
+                <text>{{ite.hireTitle}}</text>
+            </view>
+            <text class="name time">{{ite.startDate}} - {{ite.endDate}} {{ite.areaTitle}} </text>
+            <view class="caption">
+              <view class="iconBox">
+                <image src="http://static.jianzhugang.com/mini/image/particularIcon.png"></image>
+              </view>
+              <text>项目详情</text>
+            </view>
+            <view class="project_content">{{ite.hireRequest}}</view>
+            <view class="imageBox" style="height:{{ite.imgArrLength*130}}rpx" wx:for-item="item" wx:if="{{ite.imgArr.length>0}}">
+              <block wx:for="{{ite.imgArr}}" wx:key="{{unique}}">
+                <view class="photoList" data-img="{{item.img}}" data-imgArr="{{ite.imgArr}}" bindtap="previewImage">
+                    <image mode="aspectFit" src="{{item.img}}"></image>
+                </view>
+              </block>
+            </view>
+          </view>
+      </view>
+   </block>
+</form>
+
+<modal id="modal" data-id="{{lookingLifeId}}" hidden="{{hiddenmodalput}}" title="请选择举报内容" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <view class="check_list">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view wx:for="{{reportCategorys}}" wx:key="unique" data-name="{{item.id}}">
+        <label class="checkbox ck_list">
+        <radio name="{{item.id}}" value="{{item.id}}"/><span class="text">{{item.text}}</span>
+        </label>
+      </view>
+    </radio-group>
+    <view>
+    <textarea wx:if="{{isremark}}" class="textarea-style" value='{{remark}}' bindinput="bindinputValue" bindblur="bindTextAreaBlur" auto-height placeholder="请填写举报内容" placeholder-class='input-d' cursor-spacing='100' fixed="true" adjust-position="false" />
+    </view>
+  </view>
+</modal>

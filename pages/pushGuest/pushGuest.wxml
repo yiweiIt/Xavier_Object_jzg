@@ -1,0 +1,66 @@
+<view class="tweet">
+   <view class="amountBox">
+      <view class="amountTip">
+          <view class="total">
+            <text class="title">我的总收入(元)</text>
+            <text class="amount">￥{{totalCapital}}</text>
+          </view>
+          <view class="balance"  bindtap="goWithdraw">
+            <text class="title">我的余额(元)</text>
+            <text class="amount">￥{{currentCapital}}</text>
+          </view>
+      </view>
+      <view class="amountbottom" bindtap="goRevenue">
+         <text>• 总收入明细</text>
+         <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/tweetNext.png"></image>
+      </view>
+   </view>
+   <view class="operateBox">
+      <view class="box">
+        <view class="inviteFriends">
+          <button  open-type='share'>
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/inviteFriendsBg.jpg"></image>
+          </button>
+        </view>
+        <view class="tweetQR" bindtap="goTweetQR">
+          <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/tweetQRBg.png"></image>
+        </view>
+      </view>
+      <view class="makeMoney" bindtap='goTiro'>
+      </view>
+   </view>
+   <view class="tweetList">
+     <view class="projectTitle">赚钱专区</view>
+     <view class="projectList">
+        <view class="list" bindtap="goInviteFriends">
+           <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/inviteIcon.png"></image>
+           <text class="projectName">邀请情况</text>
+        </view>
+        <view class="list" bindtap="goNotes">
+           <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/withdrawalsRecord.png"></image>
+           <text class="projectName">消耗记录</text>
+        </view>
+     </view>
+   </view>
+</view>
+
+<view class="prop" wx:if="{{isprop}}">
+    <view class="add_model" data-url="{{invitationCodeUrl}}"  bindtap='save'>
+       <view class="tipBoxBg">
+          <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/inviteTipBanner.png"></image>
+       </view>
+       <view class="scanCodeBoxBg">
+           <image src="{{invitationCodeUrl}}"></image>
+       </view>
+       <view class="tipBoxCOntent">
+         <text>邀请好友扫码-立即绑定</text>
+         <text>一起畅游建筑港</text>
+       </view>
+       <view class="bottomBox" catchtap="">
+          点击二维码下载我的推客码
+       </view>
+    </view>
+    <view class="cancelBox"  bindtap="close_model">
+       <image src="../../image/addModalCancel.png"></image>
+    </view>
+</view>

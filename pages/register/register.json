@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "人员登记",
+  "usingComponents": {
+    "ocr-navigator": "plugin://ocr-plugin/ocr-navigator"
+  }
+}

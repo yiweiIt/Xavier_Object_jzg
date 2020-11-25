@@ -1,0 +1,38 @@
+<!--pages/teamManagement/addDispatchMemer/addDispatchMemer.wxml-->
+<view class="dispatchMeber">
+  <view class="boxBg" wx:if="{{judgeDisplay}}">
+    <view class="noDataTip">
+      <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+      <text>暂无可派单组员</text>
+    </view>
+  </view>
+  <scroll-view class="dataListBox" scroll-y="true">
+    <checkbox-group  bindchange="checkboxChange">
+      <block wx:for="{{memberDispatch}}" wx:key="id">
+        <view class="dispatchBox">
+          <view class="boxList">
+            <view class="checkBox">
+              <label class="checkbox">
+                <checkbox value="{{item.id}}-{{item.name}}" size="20" disabled="{{item.status == '正在派单'}}" />
+              </label>
+            </view>
+            <view class="boxInfo" data-name="{{item.id}}" data-firstname="{{item.name}}" bindtap="memberDispatch">
+              <text class="name">{{item.name}}</text>
+              <text class="project">{{item.memo}}</text>
+              <text class="status {{item.status=='正在派单'?'orange':'gray'}}">{{item.status}}</text>
+              <view class="statusImg">
+                  <image src="../../../image/{{item.status=='正在派单'?'blueNext':'grayNext'}}.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </checkbox-group>
+  </scroll-view>
+</view>
+<form bindsubmit="formSubmit" report-submit="true">
+  <view class="footer {{judgeDisplay?'dpn':''}}">
+    <button formType="submit" bindtap="goDispatch">添加派单</button>
+    <button formType="submit" bindtap="historyDispatch">派单记录</button>
+  </view>
+</form>

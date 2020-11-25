@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "同城机械",
+  "usingComponents": {
+    "area-third-modal": "/component/areaThirdModal/areaThirdModal",
+    "area-third-input-modal": "/component/areaThirdInputModal/areaThirdInputModal"
+  }
+}

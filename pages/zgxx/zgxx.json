@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "劳务招工",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "area-modal": "/component/areaModal/areaModal",
+    "LabourTeam-Type": "/component/LabourTeamType/LabourTeamType"
+  }
+}

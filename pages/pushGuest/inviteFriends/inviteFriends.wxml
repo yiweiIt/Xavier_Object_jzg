@@ -1,0 +1,82 @@
+<view class="inviteBox">
+   <view class="banner" >
+      <button open-type='share'>
+          <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/inviteFridensBanner.jpg"></image>
+      </button>
+   </view>
+   <!-- <view class="noData" wx:if="{{!isDisplayPeople&&inviteList.length==0&&noSreach==0}}">
+      <view class="imgBox">
+        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/noDataBg.png"></image>
+      </view>
+      <text class="tip">暂无记录</text>
+   </view> -->
+   <view class="invite">
+      <view class="invitePeople" wx:if="{{isDisplayPeople}}">
+         <view class="peopleAvtar">
+             <image src="{{invitePeople.avatarUrl}}"></image>
+         </view>
+         <view class="peopleDetails">
+            <view class="detailsBox">
+               <view class="detilsList">
+                  <view class="detailIcon">
+                    <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/invitionIcon.png"></image>
+                  </view>
+                  <text class="detailName">邀请人:</text>
+                  <text class="detailsInfo overflow">{{invitePeople.nickName?invitePeople.nickName:invitePeople.name}}</text>
+               </view>
+              <view class="detilsList">
+                  <view class="detailIcon">
+                      <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/invitePeopleIcon.png"></image>
+                  </view>
+                  <text class="detailsName">联系电话:</text>
+                  <text class="detailsInfo overflow">{{invitePeople.mobile}}</text>
+               </view>
+               <view class="detilsList">
+                  <view class="detailIcon">
+                      <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+                  </view>
+                  <text class="detailsName">受邀时间:</text>
+                  <text class="detailsInfo overflow">{{invitePeople.updateTime}}</text>
+               </view>
+            </view>
+         </view>
+      </view>
+      <view class="inviteList">
+         <view class="listTitle">
+            <text>我的邀请</text>
+            <text>(总计：{{totalElements}}人)</text>
+         </view>
+         <view class="listSearch">
+           <input type="number" maxlength="11" class="search {{isToDeltel?'searchBg':''}}" bindinput="bindSearchStr" placeholder='根据联系方式搜索我的邀请人' placeholder-class="searchText" value="{{phone}}" confirm-type="search"/>
+           <view class="imageBoxD flex" bindtap="toDeltel" wx:if="{{isToDeltel}}">
+              <image src="../../../image/deleteGraySmall.png"></image>
+            </view>
+            <view class="imageBox" bindtap="doSearch">
+              <image src="../../../image/Path.png"></image>
+            </view>
+         </view>
+         <view class="sreachNo" wx:if="{{inviteList.length==0}}">
+            <view class="imgBoxSmall flex">
+              <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/noDataBg.png"></image>
+            </view>
+            <text class="tip">暂无内容，请清空再试</text>
+            <button bindtap="toDeltel">清空</button>
+         </view>
+         <block   wx:if="{{inviteList.length>0}}">
+            <view class="listBox"  wx:for="{{inviteList}}" wx:key="unique">
+                <view class="listImg flex">
+                  <image src="{{item.avatarUrl}}"></image>
+                </view>
+                <view class="listContent">
+                  <text class="name overflow">{{item.nickName?item.nickName:item.name}}</text>
+                  <text class="time overflow">电话：{{item.mobile?item.mobile:'用户未绑定手机号码'}}</text>
+                  <text class="time overflow">受邀时间：{{item.createTime}}</text>
+                </view>
+                <view class="operate flex" data-mobile="{{item.mobile}}" bindtap="callphone">
+                    <button>拨打</button>
+                </view>
+            </view>
+         </block>
+      </view>
+   </view>
+</view>

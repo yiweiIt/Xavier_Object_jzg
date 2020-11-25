@@ -1,0 +1,36 @@
+<view class="hardware">
+  <view class="hardwareBox" wx:for="{{teams}}" wx:key="unique" wx:for-item="item" data-name="{{item.id}}" bindtap="goShopDetail">
+      <view class="contentBox">
+        <view class="imageBox">
+            <image class='img' src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/squareLogo.png"></image>
+        </view>
+        <view class="infoBox">
+           <text class="infoText overHide">{{item.title != null?item.title:item.teamType.title != null?item.teamType.title:item.project.name}}</text>
+           <view class="info">
+              <view class="infoIcon">
+                 <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWarePhone.png"></image>
+              </view>
+              <view class="infoTitle overHide">联系人</view>
+              <view class="infomation overHide">
+                   <block wx:if="{{item.title != null}}">
+                      {{item.ownerName ?item.ownerName:''}}
+                   </block>
+                   <block wx:elif="{{item.teamType.title != null}}">
+                      {{item.teamType.title}}
+                   </block>
+                   <block wx:else>
+                      {{item.project.name}}
+                   </block>
+              </view>
+           </view>
+           <view class="info">
+              <view class="infoIcon">
+                 <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+              </view>
+              <view class="infoTitle overHide">入驻时间</view>
+              <view class="infomation overHide">{{item.createTime}}</view>
+           </view>
+        </view>
+      </view>
+  </view>
+</view>

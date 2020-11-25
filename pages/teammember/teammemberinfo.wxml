@@ -1,0 +1,60 @@
+<!--pages/teammember/teammemberinfo.wxml-->
+<view>
+  <form bindsubmit="formSubmit">  
+    <view class="team_form">
+      <view class="row">
+          <label>姓名</label>
+          <!-- <input type="text" value="{{userinfo.title}}" disabled="{{isEdit}}"
+          name="title"  
+          bindinput="titleinput"/> -->
+          <input type="text" value="{{userinfo.title}}" disabled="{{isEdit}}" name="title" bindinput="bindtitle" />
+      </view>
+      <view class="row">
+          <label>身份证</label>
+          <input type="text" value="{{userinfo.idNumber}}" disabled="{{isEdit}}" 
+          name="idNumber" bindinput="bindidNumber" />
+      </view>
+      <view class="row">
+          <label>手机号</label>
+          <input type="text" value="{{userinfo.phone}}" disabled="{{isEdit}}" 
+           name="phone" bindinput="bindphone"  />
+      </view>
+      <view class="row">
+          <label>开户行</label>
+          <!-- <input type="text" value="{{userinfo.bankName}}" disabled="{{isEdit}}"
+          name="bankName"/> -->
+          <picker bindchange="userbindbankName" value="{{userinfo.bankName}}" range="{{array}}"     name="bankName" disabled="{{isEdit}}">
+        <view class="picker">
+          {{userinfo.bankName?userinfo.bankName:'请选择开户行'}}
+        </view>
+      </picker>
+      </view>
+      <view class="row">
+          <label>银行卡号</label>
+          <input type="text" 
+            value="{{userinfo.cardNumber}}" 
+            disabled="{{isEdit}}"
+            name="cardNumber" 
+            bindinput="bindcardNumber"
+            />
+      </view>
+      <!-- <view class="row">
+          <label>银行卡号</label>
+          <input type="text" 
+            value="{{userinfo.cardNumber}}" 
+            disabled="{{isEdit}}"
+            name="cardNumber" 
+            bindinput="bindcardNumber"  
+            bindtap="placeholder" 
+            data-key='银行卡号'
+            data-val='cardNumber' 
+            placeholder="{{cardNumber}}"
+            />
+      </view> -->
+    </view>
+    <view class="btn_div">
+        <button  size="large" type="info" bindtap="Edit" form-type="submit" class="edit">{{isEdit?'编辑':'保存'}}</button>
+        <button  size="large" type="danger" bindtap="delete" class="delete">删除</button>
+    </view>
+  </form>
+</view>

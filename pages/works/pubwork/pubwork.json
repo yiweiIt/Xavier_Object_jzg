@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "area-third-input-modal": "/component/areaThirdInputModal/areaThirdInputModal",
+    "teamType-modal": "/component/teamTypeModal/teamTypeModal"
+  }
+}

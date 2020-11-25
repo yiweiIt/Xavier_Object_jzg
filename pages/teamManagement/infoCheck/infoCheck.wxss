@@ -1,0 +1,280 @@
+page{background:rgb(242,242,242)}
+.announcement{
+  width:100%;
+  background:#fff;
+  margin:0rpx auto;
+  padding:0rpx 0rpx 10rpx 0rpx;
+}
+.announcement .prompt{
+   display:block;
+   width:92%;
+   margin:0rpx auto;
+   line-height:44rpx;
+   font-size:26rpx;
+   color: #222;
+   padding:10rpx 0rpx;
+}
+.announcement .prompt image{
+  display: inline-block;
+  width:36rpx;
+  height:34rpx;
+  padding-right:6rpx;
+  margin-bottom:-6rpx;
+}
+.announcement .prompt text{
+  color:#222;
+  font-size:26rpx;
+}
+.announcement text.text_prompt{
+  width:50rpx;
+  height:44rpx;
+  display:inline-block;
+  background:url(http://static.jianzhugang.com/mini/image/buyInsurance_p.png) no-repeat 50% 100%;
+  background-size:32rpx 30rpx;
+}
+.pointText text.promptText{
+   color:#666;
+   font-size:26rpx;
+}
+.informationList{
+  width:92%;
+  margin:15rpx auto;
+  padding-bottom:60rpx;
+}
+.nameTip{
+  width: 92%;
+  height:90rpx;
+  line-height: 90rpx;
+  margin:10rpx auto 0rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nameTip text{
+  padding:0rpx 10rpx;
+  color: rgb(77,161,255);
+  font-size:34rpx;
+}
+.nameTip image.jobIcon_4{
+   width:36rpx;
+   height:32rpx;
+}
+.nameTip image.jobIcon_2{
+   width:42rpx;
+   height:32rpx;
+}
+
+.transform{
+  transform:rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+}
+.projectInfo,.policyholder{
+  width:100%;
+  margin:10rpx auto;
+  height:220rpx;
+  background:#fff;
+  border-radius:12rpx;
+  padding:30rpx 0rpx 0rpx 0rpx;
+}
+.list{
+  width:94%;
+  height:110rpx;
+  margin:0rpx auto;
+}
+.listLeft{
+  width:6%;
+  height:100%;
+  float:left;
+  background: url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/lineBoxIcon.png) 50% 0% no-repeat;
+  background-size:20rpx 20rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.line{
+  height:94%;
+  width:2rpx;
+  background: rgb(253,160,103);
+}
+
+.listRight{
+   width:94%;
+   float:left;
+   height:100%;
+   margin-top:-10rpx;
+}
+.timeBox,.program,.programContent{
+  width:100%;
+  height:40rpx;
+}
+.timeBox text{
+   color:#222;
+   font-size: 30rpx;
+}
+.programContent{
+  height:50rpx;
+  line-height:50rpx;
+  padding-top:4rpx;
+}
+.program text.programName,.programContent text.programName{
+  display: inline-block;
+  width:33.3%;
+  height:40rpx;
+  color:#222;
+  font-size: 30rpx;
+}
+.programContent text.programName{
+  font-size:28rpx!important;
+}
+.program text.programName:nth-child(2),.programContent text.programName:nth-child(2){
+   text-align: center
+}
+.program text.programName:nth-child(3),.programContent text.programName:nth-child(3){
+   text-align: right
+}
+.timeBox text.timeName,.timeContent text.timeName{
+  display: inline-block;
+  float:left;
+  width:45%;
+  height:100%;
+}
+.timeBox text.timeCenterBox,.timeContent text.timeCenterBox{
+  display: inline-block;
+  width:10%;
+  float:left;
+  height:100%;
+}
+.listRight text{
+  width:100%;  
+  display: inline-block;
+  color:#222;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.listRight text.title{
+  height:40rpx ;
+  font-size:30rpx;
+}
+.timeContent{
+  width:100%;
+  height:50rpx;
+  line-height:50rpx;
+  margin-top:4rpx;
+}
+.timeContent text{
+  font-size:28rpx;
+  color:#222;
+}
+.timeContent .timeCenterBox text{
+  display: block;
+  width:70%;
+  height:2rpx;
+  margin:20rpx auto;
+  background:pink;
+  background:#222;
+}
+
+.listRight text.info{
+  height:50rpx ;
+  line-height:40rpx;
+  font-size:28rpx;
+}
+.policyholder{
+  height:330rpx;
+}
+.insuredList{
+  width:100%;
+  margin:10rpx auto 26rpx auto;
+  padding-bottom:60rpx;
+}
+.insuredBox{
+   width:100%;
+   height:120rpx;
+   background:url(http://static.jianzhugang.com/mini/image/insured.png) no-repeat 50% 50%;
+   background-size:100% 100%;
+   margin:0rpx auto 22rpx auto;
+}
+.l_insured{
+  width:9%;
+  height:100%;
+  float:left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+  font-size:34rpx;
+}
+.r_insured{
+  width:68%;
+  height:100rpx;
+  float:left;
+  margin:11rpx 0% 11rpx 4%;
+  color:#222;
+  font-size:30rpx;
+}
+.insuredName{
+  width:100%;
+  height:50rpx;
+  line-height:60rpx;
+}
+.insuredName text{
+  display: inline-block;
+}
+.insuredName text:nth-child(1){
+  float:Left;
+  max-width:50%;
+  min-width:30%;
+  height:100%;
+}
+.insuredName text:nth-child(2){
+  float:left;
+  max-width:70%;
+  min-width:50%;
+  height:100%;
+}
+.idCard{
+  width:100%;
+  display: block;
+  height:50rpx;
+  line-height:50rpx;
+}
+.bottomBox{
+    position:fixed;
+    bottom:20rpx;
+    width:92%;
+    height:100rpx;
+    left:4%;
+}
+.half{
+   width:50%;
+   height:100%;
+   float:left;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.halfer{
+   width:80%;
+   height:80rpx;
+   line-height:80rpx;
+   text-align: center;
+   border-radius:16rpx;
+   font-size:34rpx;
+   border:1rpx solid #4da1ff; 
+}
+.left{
+   background:#fff;
+   color:#4da1ff;
+}
+.right{
+   background:#4da1ff;
+   color:#fff;
+}
+.right:hover{
+   background:#3588e7;
+   color:#fff;
+}

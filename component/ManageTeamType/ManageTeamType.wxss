@@ -1,0 +1,23 @@
+/* component/ManageTeamType/ManageTeamType.wxss */
+.flter-itm{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+flter-itm1{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.flter-image{
+  margin-top: -5rpx;
+  position: relative;
+}
+.flter-image image{
+  height: 15rpx;
+  width: 25rpx;
+  position: absolute;
+  right: -40rpx;
+  bottom: -5px;
+}

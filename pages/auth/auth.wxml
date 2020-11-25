@@ -1,0 +1,29 @@
+<!-- 
+<view class=" bottom-info">
+  <view class="auth">用户授权,请点击微信图标授权</view>
+
+  <button class="wechat-icon" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style='background-image:url(../../image/wechat.png);'>
+
+    <image src="../../image/wechat.png"></image>
+  </button>
+  <view wx:else>请升级微信版本</view>
+</view> -->
+<view class="authorization"  wx:if="{{canIUse}}">
+    <view class="tip">
+       <view class="zationTitle">
+          <text class="name">建筑港</text>
+          <text class="name_title">专业的招工求职平台</text>
+       </view>
+       <image src="http://static.jianzhugang.com/mini/image/icon_logo.jpeg"></image>
+    </view>
+    <view class="center">
+       <view class="info"></view>
+       <view class="info2"> </view>
+    </view>
+    <view class="tiper">
+        <text>汇聚工匠力量</text>
+        <text>共创美好未来</text>
+    </view>
+    <button class="experience" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >授权体验</button>
+</view>
+<view wx:else>请升级微信版本</view>

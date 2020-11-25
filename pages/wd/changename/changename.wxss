@@ -1,0 +1,50 @@
+/* pages/wd/changename/changename.wxss */
+.box-contain{
+  border-top: 1rpx solid #eee; 
+  padding:20rpx 30rpx 60rpx 30rpx;
+}
+
+
+.btn{
+  width:28%;
+  display: inline-block;
+  height:70rpx;
+  line-height:70rpx;
+  padding:0rpx 8rpx;
+  top:0rpx;
+  color: #fff;
+  border-radius: 2px;
+  background-color:#1989fa;
+  border-color:#1989fa;
+  font-size: 28rpx !important;
+}
+
+.btn-submit{
+  margin-top:40rpx;
+  margin-bottom:20rpx;
+  color: #fff !important;
+  background-color: #1989fa !important;
+}
+.input-title {
+  font-size: 32rpx !important;
+}
+.input-box{
+  font-size: 32rpx !important;
+}
+.input-itm{
+  display: flex;
+  align-items: center;
+}
+.input-box{
+  border:none !important;
+}
+.hs{
+  color:red;
+  display: inline-block;
+  padding:0rpx 10rpx 0rpx 0rpx;
+}
+
+
+.mui-bg{
+  position: relative;
+}

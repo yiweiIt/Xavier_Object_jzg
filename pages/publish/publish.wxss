@@ -1,0 +1,399 @@
+.btnBox_bg{
+  width:25%;
+  height:100%;
+  /* background:green; */
+  float:left;
+  padding:0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  width:100%;
+  display: inline-block;
+  height:70rpx;
+  line-height:70rpx;
+  padding:0rpx;
+  color: #fff;
+  border-radius: 6rpx;
+  background-color:#1989fa;
+  font-size: 28rpx !important;
+}
+.btn::after{
+  border:none;
+}
+.btn-submit{
+  width:94%;
+  font-size:30rpx;
+  margin:5rpx auto 20rpx auto;
+  color: #fff !important;
+  background-color: #1989fa !important;
+}
+.mui-bg{
+  position: relative;
+  width:96%;
+  margin:20rpx auto 5rpx auto;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent
+}
+._texts{
+  text-align: right;
+}
+._text{
+  width:20%;
+  display:inline-block;
+  text-align:center;
+  color:#4e9fe3;
+  font-size: 26rpx;
+}
+@keyframes myfirst
+{
+  0%   {margin-left:750rpx;}
+  100% {margin-left:-1500rpx;}
+}
+.hide{
+  display: none;
+}
+.input-itm {
+  padding: 8rpx 0rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+}
+.input-itm .input-box{
+  flex: 1;
+  height: 60rpx;
+  border:none;
+  font-size: 28rpx !important;
+}
+.input-title{
+  width: 24% !important;
+  font-size: 30rpx !important;
+}
+.input-itm .error{
+  color:red;
+  float:right;
+  margin-top:-60rpx;
+  margin-right:10rpx;
+}
+.input-itm .error_code{
+  color:red;
+  float:right;
+  margin-top:-70rpx;
+  margin-right:195rpx;
+}
+.info{
+  display:inline-block;
+  color:#45a3f1;
+  padding:5rpx 12rpx;
+  text-align:center;
+  border-radius:5px;
+  border:1px solid #45a3f1;
+  margin: 5rpx 10rpx;
+  font-size:28rpx;
+}
+.input-d{
+  color: #666666;
+  font-size: 30rpx !important;
+}
+.input-area{
+  width:90%;
+  height:150rpx;
+  line-height:30rpx;
+  font-size: 29rpx !important;
+  background:rgba(242,242,242,1);
+  margin:0rpx auto;
+  border:none;
+}
+.input-itm-area{
+  border-bottom: none !important;
+}
+._tips{
+  color: #ccc;
+  font-size: 14px;
+  float: right;
+  right: 2%;
+  position: absolute;
+  bottom: 2%;
+}
+/* .releaseBox,.details */
+.details{
+  width:100%;
+  background:#fff;
+  border-radius:4rpx;
+}
+
+
+.list{
+  width:100%;
+  height:90rpx;
+  line-height:90rpx;
+}
+._list{
+  width:70%;
+  float:Left;
+  height:100%;
+}
+._list_{
+  width:28%;
+  float:right;
+  margin-right:2%;
+  height:100%;
+}
+.list i{
+  font-style: normal;
+  float:left;
+  color:red;
+  display:inline-block;
+}
+.list text{
+  display: inline-block;
+  font-size:32rpx;
+  width:26%;
+  height: 100%;
+  float:left;
+  margin-left:1%;
+}
+._list text{
+   width:38%;
+}
+.list input,.arear,.list .areaModal,.list .release,.teamTypeModal{
+  width:66%;
+  float:left;
+  height:70rpx;
+  line-height:70rpx;
+  margin:10rpx 0rpx;
+  padding:0rpx 2%;
+  border-radius:6rpx;
+  background:rgba(242, 242, 242, 1);
+  font-size:28rpx;
+}
+.areaModal picker view.areaTitleView{
+  width:100%;
+}
+
+._list input,._list picker view.flter-itm1 input,.teamTypeModal{
+  width:52%;
+}
+._list_ input{
+  width:100%;
+}
+.list .release{
+  padding:0rpx;
+   background:rgb(255, 255, 255);
+}
+.list picker view input{
+  height:56rpx;
+  line-height:56rpx;
+  width:100%;
+  margin-top:6rpx;
+}
+.list input.vocd,.list picker input.vocd{
+  width:39%!important;
+  margin-right:2%;
+}
+
+.release .left,.release .right{
+  width:35%;
+  float:left;
+  position:relative;
+}
+.imageBox{
+   position:absolute;
+   width:42rpx;
+   height:42rpx;
+   top:-6rpx;
+   right:6rpx;
+   border-radius:50%;
+}
+
+.release text.releaseText{
+  display: inline-block;
+  float:left;
+  width:90%;
+  height:100%;
+  font-size:28rpx;
+  background:rgba(242, 242, 242, 1);
+  text-align:center;
+  color:#888;
+  border-radius:6rpx;
+}
+.release text.active{
+   background:#1989fa;
+   color:#fff;
+}
+.prompt{
+    width:30%;
+    float:left;
+    height:100%;
+}
+.prompt image{
+  display: block;
+  width: 33rpx;
+  height:33rpx;
+  margin:0rpx auto;
+}
+.prompt text{
+  display: block;
+  width: 100%;
+  height:37rpx;
+  line-height:37rpx;
+  font-size:24rpx;
+  text-align:center;
+  color:rgb(250, 146, 10);
+}
+.check_list{
+  width:100%;
+  font-size:28rpx;
+}
+.check_list .check_box{
+  width:100%;
+  line-height:56rpx;
+  color:#888;
+}
+.check_list  text.check_name{
+  color:#fff;
+  height:32rpx;
+  font-size:22rpx;
+  line-height: 32rpx;
+  margin-top:13rpx;
+  padding:0rpx 8rpx;
+  border-radius:4rpx;
+  background:red;
+  display: inline-block;
+}
+.quickInput{
+  width:100%;
+  height:auto;
+  margin:10rpx auto 0rpx auto;
+}
+.quickLeft{
+   width:15%;
+   margin-left:2%;
+   display: inline-block;
+   height:50rpx;
+   line-height: 50rpx;
+   float:left;
+   font-size:25rpx;
+   color:#888;
+}
+.quickRight{
+  width:81%;
+  height:auto;
+  float:right;
+  margin-right:2%;
+  padding-bottom:20rpx;
+}
+.quickRight text{
+  padding:0rpx 10rpx;
+  margin:4rpx 6rpx;
+   display: inline-block;
+   height:40rpx;
+   line-height:40rpx;
+   font-size:24rpx;
+   background:rgba(242, 242, 242, 1);
+   /* border:1rpx solid rgb(150, 148, 148); */
+   border-radius: 4rpx;
+   color:#888;
+}
+.prop{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+  align-content:center; 
+  flex-wrap:wrap;
+}
+
+.add_model{
+  width:501rpx;
+  background: url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/ugertHireTarget.png) 50% 50% no-repeat;
+  background-size:501rpx 620rpx;
+  border-radius: 20rpx;
+  z-index: 999;
+  height:620rpx;
+  position:relative;
+}
+.modelTip{
+  width:420rpx;
+  height:120rpx;
+  margin:32rpx auto;
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  align-content:center; 
+  flex-wrap:wrap;
+  overflow: hidden;
+}
+.modelTip text{
+  display: block;
+  color:#fff;
+  line-height:56rpx;
+  font-size: 32rpx,
+}
+.modalBottom{
+  position:absolute;
+  width:420rpx;
+  height:406rpx;
+  bottom:20rpx;
+  left:41rpx;
+}
+.bottomTip{
+  width:100%;
+  text-align:center;
+  height:60rpx;
+  line-height:54rpx;
+}
+.bottomTip text{
+  color:#333;
+  font-size:26rpx;
+}
+.bottomTip text text{
+  color:#4da1ff;
+  font-size:28rpx;
+}
+.QRcode{
+  width:100%;
+  height:292rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.QRcode image{
+  width:292rpx;
+  height:292rpx;
+}
+.box-bottom{
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+}
+.box-bottom text{
+  width:100%;
+  display: block;
+  color:#333;
+  text-align:center;
+  font-size:24rpx;
+}
+.cancelBox{
+   width:100%;
+   height:180rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.cancelBox image{
+  width:68rpx;
+  height:68rpx;
+}

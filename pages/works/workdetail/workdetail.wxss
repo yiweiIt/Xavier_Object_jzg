@@ -1,0 +1,284 @@
+page{background: #f2f2f2;}
+.upper_apex{
+  width:100%;
+  height:260rpx;
+  background:  url(http://static.jianzhugang.com/mini/image/upper_apex_bg.png) no-repeat 50% 50%;
+  background-size: 100% 100%;
+}
+.left_apex{
+  width:21%;
+  height: 200rpx;
+  float:left;
+  margin: 20rpx 2% 20rpx 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photoBox,.left_apex .photoBox image{
+  width:160rpx;
+  height:160rpx;
+  background:#4da1ff;
+  border-radius:50%;
+}
+.right_apex{
+  width:66%;
+  height:180rpx;
+  float:right;
+  margin: 30rpx 7% 30rpx 0rpx;
+}
+.info,.list{
+  width:100%;
+  height:70rpx;
+  line-height:80rpx;
+}
+.info text{
+  display: inline-block;
+  color:#fff;
+  font-size:30rpx;
+}
+.info text.info_title,.list text.info_title{
+  width:20%;
+  height:100%;
+}
+.infomation{
+  min-width: 20%;
+  max-width: 60%;
+  pading:0rpx 1%;
+  height:100%;
+}
+.sex_icon{
+  width:15%;
+  height:100%;
+}
+.list{
+  height:50rpx;
+  line-height:50rpx;
+}
+.list text{
+  display: inline-block;
+  color:#fff;
+  font-size:28rpx;
+}
+.phone{
+  width:38%;
+  height:100%;
+}
+.phoneBox{
+  width:42%;
+  height:60rpx;
+  line-height:60rpx;
+  background:#fff;
+  float:right;
+  border-radius:6rpx;
+  -moz-box-shadow:1px 1px 6px #fff; 
+  -webkit-box-shadow:1px 1px 6px #fff; 
+  box-shadow:1px 1px 6px #fff;
+  text-align:center;
+  color:#4da1ff;
+  font-size:30rpx;
+  margin-top:-5rpx; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0rpx;
+}
+.phoneView{
+  width:96%;
+  height:54rpx;
+}
+.phoneView button{
+  display: inline-block;
+  font-size:30rpx;
+  height:54rpx;
+  line-height:54rpx;
+  padding:0rpx;
+  border-radius:0;
+}
+.phoneBox button::after{
+  border:none;
+}
+.btn_call{
+  float:left;
+  width:50%;
+  color:#4da1ff;
+}
+.btn_jubao{
+  background:#4da1ff;
+  float:right;
+  width:50%;
+  color:#fff;
+  border-top-right-radius: 6rpx !important;
+  border-bottom-right-radius: 6rpx !important;
+}
+.topic{
+  width:60%;
+  height:80rpx;
+  line-height: 80rpx;
+  margin:10rpx auto;
+}
+.topic_style{
+  width:35%;
+  height:100%;
+  float:Left;
+  background:url(http://static.jianzhugang.com/mini/image/topicStyle_l.png) no-repeat 50% 50%;
+  background-size:80% auto;
+}
+.topicText{
+  width:30%;
+  float:Left;
+  display: inline-block;
+  height:100%;
+  text-align:center;
+  color:#4da1ff;
+  font-size:30rpx;
+}
+.topic .right{
+  -moz-transform:rotate(180deg); 
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.boxStyle{
+  width:92%;
+  background:#fff;
+  border-radius:18rpx;
+  margin:0rpx auto;
+  padding:10rpx 0rpx;
+  color:#222;
+}
+.listBox{
+  width:94%;
+  margin:0rpx auto;
+  border-bottom:1rpx solid #ddd;
+  height:70rpx;
+  line-height: 70rpx;
+}
+.listBox:last-child{
+  border:none;
+}
+.listBox text{
+  display: inline-block;
+  font-size:29rpx;
+  color: "#222";   
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.listBox text:nth-child(1){
+  float:left;
+  width:30%;
+}
+.listBox text:nth-child(2){
+  float:left;
+  width:70%;
+  text-align:right;
+}
+text.advantage{
+  width:94%;
+  padding: 15rpx 0rpx;
+  margin:0rpx auto;
+  display: block;
+  line-height:50rpx;
+  font-size:28rpx;
+}
+.basis{
+  margin:40rpx auto 20rpx auto;
+}
+.no_project{
+   color: #ff5656;
+   text-align:center;
+}
+.accountStatus{
+  color: #2ba940;
+  text-align:center;
+}
+.projectBox{
+  width:94%;
+  margin:0rpx auto;
+  padding:10rpx 0rpx;
+}
+.projectBox .name{
+   width:94%;
+   display: block;
+   position:relative;
+   line-height:42rpx;
+   font-size:28rpx;
+   margin-left:6%;
+   color:#222;
+}
+.projectBox .nameIcon{
+  position:absolute;
+  width:6%;
+  height:42rpx;
+  left:-6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectBox .nameIcon image{
+  width:22rpx;
+  height:22rpx;
+}
+.time{
+  font-size:26rpx !important;
+}
+.caption{
+   width:100%;
+   min-height: 42rpx;
+   padding-top:10rpx;
+}
+.caption .iconBox{
+  width:6%;
+  height:40rpx;
+  float:left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconBox image{
+  width:20rpx;
+  height:24rpx;
+}
+.caption text{
+  display: inline-block;
+  width:90%;
+  height:50rpx;
+  line-hieght:50rpx;
+  float:left;
+   font-size:28rpx;
+}
+.project_content{
+   width:94%;
+   margin:0rpx auto;
+   font-size:26rpx;
+   line-height:42rpx;
+   color:#222;
+}
+.imageBox{
+  width: 92%;
+  margin:0rpx auto;
+  padding-bottom:40rpx;
+}
+.photoList{
+  width:20.12%;
+  float:left;
+  background:rgb(242,242,242);
+  height:120rpx;
+  margin:10rpx 3%;
+  border-radius:10rpx;
+  position:relative;
+}
+.photoList:nth-child(4n+1){
+  margin-left: 0rpx;
+}
+.photoList:nth-child(4n){
+  margin-right: 0rpx;
+}
+.photoList image{
+  position:absolute;
+  width:100%;
+  height:120rpx;
+}
+._project{
+  margin:0rpx auto 30rpx auto;
+}

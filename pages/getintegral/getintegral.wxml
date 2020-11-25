@@ -1,0 +1,26 @@
+<!--pages/getintegral/getintegral.wxml-->
+<view>
+  <text class="tips">如何获取积分</text>
+  <view class="list">
+    <text class="h2">方法一:邀请工友</text>
+    <view class="line">
+      <text>邀请工友进入小程序完成绑定手机号，可获得3-15积分</text>
+      <button open-type="share" data-share="1">去邀请</button>
+    </view>
+  </view>
+   <view class="list">
+    <text class="h2">方法二:分享/转发</text>
+    <view class="line">
+      <text>点击分享，或点击右上角三个点按钮，转发到微信好友、建筑群，每天可获得2积分</text>
+      <button open-type="share">去分享</button>
+    </view>
+  </view>
+   <view class="list">
+    <text class="h2">方法三:签到</text>
+    <view class="line">
+      <text>每天可签到一次，签到一次获取2积分</text>
+      <button wx:if="{{!ishide}}" bindtap="singIn">立即签到</button>
+      <button wx:else class="ishide">已签到</button>    
+    </view>
+  </view>
+</view>

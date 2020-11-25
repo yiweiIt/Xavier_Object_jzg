@@ -1,0 +1,32 @@
+<view class="jbfk">
+   <view class="caveat">
+      <text class="antiFraud">
+          <text class="text_prompt">防骗警示：</text>工作前，请确认好对方身份，拒绝一切先打路费的行为；工作中拍照、录视频保留证据；什么都不问直接就要来工地的要谨慎。
+      </text>
+   </view>
+   <view class="antifraudBox">
+      <view class="name">
+          <text class="left">被举报人姓名:</text>
+          <input type="text" maxlength="18" placeholder='请输入' value="{{beReportor}}"  bindinput='bindBeReportor'></input>
+      </view>
+      <view class="name">
+          <text class="left">被举报人电话:</text>
+          <input type="number" maxlength="11" placeholder='请输入' value="{{beReportor_phone}}" bindinput='bindPhone'></input>
+      </view>
+      <view class="name">
+          <text class="left">您的姓名:</text>
+          <input type="text" maxlength="18" placeholder='请输入' value="{{reportor}}" bindinput='bindReportor'></input>
+      </view>
+      <view class="name">
+          <text class="left">联系电话:</text>
+          <input type="number" maxlength="11" placeholder='请输入' value="{{reportor_phone}}" bindinput='bindReportor_phone'></input>
+      </view>
+   </view>
+   <view class="reportContent">
+      <textarea class="input-area" maxlength="50" value="{{remark}}" placeholder='请输入举报内容' bindinput="bindRemark" adjust-position="false"></textarea>
+   </view>
+   <view class="prompt" wx:if="{{!isSubmitAble}}">
+      <text>{{warnStr}}</text>
+    </view>
+   <view class="buttonBox"  type='submit' style='opacity:{{opacity}}' disabled='{{!isSubmitAble}}' bindtap='doSubmit'>提交保存</view>
+</view>

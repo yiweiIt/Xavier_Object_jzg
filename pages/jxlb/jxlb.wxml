@@ -1,0 +1,267 @@
+<!-- <view class="main"> -->
+  <view class="header">
+    <view class="swiper-tab">
+      <view id='list' class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">工程找机械
+      </view>
+      <view id='list' class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">机械找工程
+      </view>
+      <view id='list' class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">机械手招聘
+      </view>
+      <view id='list' class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">机械手求职
+      </view>
+    </view>
+    <view class='area'>
+      <view class='dq'>
+        <area-third-choose areaTitle="{{areaTitle}}" bindchangeThirdArea="changeThirdArea" ></area-third-choose>
+      </view>
+      <view class='center'>|</view>
+      <view class='gz'>
+        <picker mode="multiSelector" bindchange="bindMechanicalChange" bindcolumnchange="bindMechanicalColumnChange" value="{{typeIndex}}" range="{{typeArray}}">
+          <view class="flter-itm">
+            {{typeName}}
+            <view class='flter-image'>
+              <image src='../../image/xl.jpg'></image>
+            </view>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+    <!-- 找机械 -->
+    <swiper-item>
+      <scroll-view  scroll-y="true" style="height: 100vh"  lower-threshold="250" bindscrolltolower="loadMoreData">
+        <view class="mechanicalBox">
+           <view class="mechanical" wx:if="{{machineries.length > 0}}" wx:for="{{machineries}}" wx:key="unique" data-name="{{item.id}}" bindtap="goMachineDetil">
+              <view class="titleBox">
+                 <text class="mechanicalTitle overhide">{{item.title ? item.title : (item.area ? item.area.fullTitle: item.province+item.city) +'项目-找'+item.machineType.text}}</text>
+                 <view class="tipBox {{item.status.text === '正在招租'?'orange':'gray'}}">
+                    <block wx:if="{{item.status.text === '正在招租'}}">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/Leasing.png"></image>
+                    </block>
+                    <block wx:if="{{item.status.text !== '正在招租'||!item.status}}">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/carryOut.png"></image>
+                    </block>
+                 </view>
+              </view>
+              <view class="listBox">
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/mechanicalIcon.png"></image>
+                    </view>
+                    <view class="infoName overhide">机械数量 :</view>
+                    <view class="infomation overhide">{{item.number}}台</view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/salary.png"></image>
+                    </view>
+                    <view class="infoName overhide">机械价格 :</view>
+                    <view class="infomation overhide">{{item.price?item.price:'面议'}}</view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image class="imageIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/score.png"></image>
+                    </view>
+                    <view class="infoName overhide">星级评分 :</view>
+                    <view class="infomation overhide">
+                      <block wx:for="{{item.starLevel}}" wx:key="unique">
+                        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/star.png"></image>
+                      </block>
+                      <block wx:for="{{5 - item.starLevel}}" wx:key="unique">
+                        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/grayStar.png"></image>
+                      </block>
+                    </view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+                    </view>
+                    <view class="infoName overhide">发布时间 :</view>
+                    <view class="infomation overhide">{{item.createTime}}</view>
+                 </view>
+              </view>
+           </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 机械出租 -->
+    <swiper-item>
+      <scroll-view scroll-y style="height: 100vh;"  lower-threshold="250"  bindscrolltolower="loadMoreData">
+        <view class="mechanicalBox">
+           <view class="mechanical" wx:if="{{machinerents.length > 0}}" wx:for="{{machinerents}}" wx:key="unique" data-name="{{item.id}}" bindtap="gorentDetail">
+              <view class="titleBox">
+                 <text class="mechanicalTitle overhide">{{item.title ? item.title : (item.area ? item.area.fullTitle : item.province+item.city)+'-出租'+item.machineType.text}}</text>
+                 <view class="tipBox {{item.status.text === '正在出租'?'orange':'gray'}}">
+                    <block  wx:if="{{item.status.text === '正在出租'}}">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/rentIcon.png"></image>
+                    </block>
+                    <block wx:if="{{item.status.text !== '正在出租'||!item.status}}">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/carryOut.png"></image>
+                    </block>
+                 </view>
+              </view>
+              <view class="listBox">
+                 <view class="info">
+                    <view class="infoIcon">
+                      <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/salary.png"></image>
+                    </view>
+                    <view class="infoName overhide">机械价格 :</view>
+                    <view class="infomation overhide">{{item.price}}</view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/modelIcon.png"></image>
+                    </view>
+                    <view class="infoName overhide">机械型号 :</view>
+                    <view class="infomation overhide">{{item.version}}</view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image class="imageIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/score.png"></image>
+                    </view>
+                    <view class="infoName overhide">星级评分 :</view>
+                    <view class="infomation overhide">
+                      <block wx:for="{{item.starLevel}}" wx:key="unique">
+                        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/star.png"></image>
+                      </block>
+                      <block wx:for="{{5 - item.starLevel}}" wx:key="unique">
+                        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/grayStar.png"></image>
+                      </block>
+                    </view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+                    </view>
+                    <view class="infoName overhide">发布时间 :</view>
+                    <view class="infomation overhide">{{item.createTime ? item.createTime : item.produceTime}}</view>
+                 </view>
+              </view>
+           </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!--招机手  -->
+    <swiper-item>
+      <scroll-view scroll-y style="height: 100vh;"  lower-threshold="250" bindscrolltolower="loadMoreData">
+        <view class="mechanicalBox">
+           <view class="mechanical manipulator" wx:if="{{mechanicList.length > 0}}" wx:for="{{mechanicList}}" wx:key="unique" data-name="{{item.id}}" bindtap="goMechanicDetail">
+              <view class="hiderTip" wx:if="{{item.isTop==3}}">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/robotRecruitment.png"></image>
+              </view>
+              <view class="titleBox">
+                 <text class="mechanicalTitle overhide">{{item.title}}</text>
+                 <view class="tipBox {{item.status.text === '正在招聘'?'orange':'gray'}}">
+                    <block wx:if="{{item.status.text === '正在招聘'}}">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hiringIcon.png"></image>
+                    </block>
+                    <block wx:if="{{item.status.text !== '正在招聘'||!item.status}}">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/fullIcon.png"></image>
+                    </block>
+                 </view>
+              </view>
+              <view class="listBox">
+                 <view class="info">
+                    <view class="infoIcon">
+                      <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/salary.png"></image>
+                    </view>
+                    <view class="infoName overhide">薪资待遇 :</view>
+                    <view class="infomation overhide">{{item.salary}}</view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image class="imageIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/score.png"></image>
+                    </view>
+                    <view class="infoName overhide">星级评分 :</view>
+                    <view class="infomation overhide">
+                      <block wx:for="{{item.level}}" wx:key="unique">
+                        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/star.png"></image>
+                      </block>
+                      <block wx:for="{{5 - item.level}}" wx:key="unique">
+                        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/grayStar.png"></image>
+                      </block>
+                    </view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+                    </view>
+                    <view class="infoName overhide">发布时间 :</view>
+                    <view class="infomation overhide">{{item.publishedTime}}</view>
+                 </view>
+              </view>
+           </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!--机手求职  -->
+    <swiper-item>
+      <scroll-view scroll-y style="height: 100vh;"  lower-threshold="250"  bindscrolltolower="loadMoreData">
+        <view class="mechanicalBox">
+           <view class="mechanical" wx:if="{{machineapplys.length > 0}}" wx:for="{{machineapplys}}" wx:key="unique" data-name="{{item.id}}" bindtap="gojobDetail">
+              <view class="titleBox">
+                 <text class="mechanicalTitle overhide">{{item.title ? item.title : (item.area ? item.area.fullTitle : item.province + item.city) +'-'+ item.machineType.text + '司机'}}</text>
+                 <view class="tipBox {{item.status.text === '正在求职'?'orange':'gray'}}">
+                    <block wx:if="{{item.status.text === '正在求职'}}">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/jobSearchIcon.png"></image>
+                    </block>
+                    <block wx:if="{{item.status.text !== '正在求职'||!item.status}}">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/foundIcon.png"></image>
+                    </block>
+                 </view>
+              </view>
+              <view class="listBox">
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/mechanicIcon.png"></image>
+                    </view>
+                    <view class="infoName overhide">驾机工龄 :</view>
+                    <view class="infomation overhide">{{item.workYear?item.workYear+'年':'未录入'}}</view> 
+                    <!-- <view class="infomation overhide" wx:if="{{item.workYear}}">{{item.workYear}}年</view>
+                    <view class="infomation overhide" wx:if="{{!item.workYear}}">未录入</view> -->
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/salary.png"></image>
+                    </view>
+                    <view class="infoName overhide">期望薪资 :</view>
+                    <view class="infomation overhide">{{item.pay?item.pay:'无要求'}}</view> 
+                    <!-- <view class="infomation overhide">{{item.pay}}</view> -->
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image class="imageIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/score.png"></image>
+                    </view>
+                    <view class="infoName overhide">星级评分 :</view>
+                    <view class="infomation overhide">
+                      <block wx:for="{{item.starLevel}}" wx:key="unique">
+                        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/star.png"></image>
+                      </block>
+                      <block wx:for="{{5 - item.starLevel}}" wx:key="unique">
+                        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/grayStar.png"></image>
+                      </block>
+                    </view>
+                 </view>
+                 <view class="info">
+                    <view class="infoIcon">
+                       <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+                    </view>
+                    <view class="infoName overhide">发布时间 :</view>
+                    <view class="infomation overhide">{{item.createTime}}</view>
+                 </view>
+              </view>
+           </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <view class="publish" data-name="{{publishName}}" bindtap="goPublish">
+    {{publishTitle}}
+  </view>
+<!-- </view> -->

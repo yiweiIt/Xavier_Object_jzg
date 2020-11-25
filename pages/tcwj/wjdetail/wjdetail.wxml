@@ -1,0 +1,42 @@
+<view class="meworkdetail">
+    <view class="detailsBox">
+       <image src="https://static.jianzhugang.com/mini/image/logo.png"></image>
+    </view>
+    <view class="basis basistip">
+        <text class="basisText"><text class="circle"></text>五金店铺详情</text>
+        <view class="listBox">
+            <text>店铺名称</text>
+            <input type="text" value="{{shopInfo.title}}" disabled/>
+        </view>
+        <view class="listBox">
+            <text>联系人</text>
+            <input type="text" value="{{shopInfo.ownerName==null?shopInfo.title:shopInfo.ownerName}}" disabled/>
+        </view>
+        <view class="listBox">
+            <text>联系方式</text>
+            <input type="number" disabled value="{{phone}}" bindtap="doCallPhone"/>
+        </view>
+        <view class="listBox">
+            <text>销售范围</text>
+            <input type="number" disabled value=" {{shopInfo.saleRange==null?'暂未录入':shopInfo.saleRange}}"/>
+        </view>
+        <view class="listBox">
+            <text>店铺地址</text>
+            <input type="number" disabled  value=" {{shopInfo.displayAddress}}"/>
+        </view>
+    </view>
+    <view class="basis center">
+        <text class="basisText"><text class="circle"></text>星级评价</text>
+        <view class="listBox">
+            <text>店铺星级</text>
+            <view class="star">
+                <block wx:for="{{starArr}}" wx:key="unique">
+                    <image src="http://static.jianzhugang.com/mini/image/star.png" />
+                </block>
+                <block wx:for="{{enStarArr}}"  wx:key="unique">
+                    <image class="no" src="http://static.jianzhugang.com/mini/image/en_star.png"/>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

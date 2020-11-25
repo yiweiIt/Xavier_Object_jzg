@@ -1,0 +1,54 @@
+<!--pages/wd/pointsDetails/pointsDetails.wxml-->
+<view class="pointsDetails">
+  <view class="points">
+     <view class="pointsBoxList">
+        <view class="pointsBox">
+            <text>{{total}}</text>
+            <text>当前积分</text>
+        </view>
+     </view>
+     <view class="selectBox">
+        <view class="left flex {{isIncrease?'active':''}}" bindtap="bindIncrease">
+           <image src="{{isIncrease?'../../../image/sy/increase_1.png':'../../../image/sy/increase.png'}}"></image>
+           <text>积分来源</text>
+        </view>
+        <view class="right flex {{isIncrease?'':'active'}}" bindtap="bindExpend">
+           <image src="{{isIncrease?'../../../image/sy/expend.png':'../../../image/sy/expend_1.png'}}"></image>
+           <text>积分消耗</text>
+        </view>
+     </view>
+  </view>
+  <view class="pointsboxBg">
+     <block wx:for="{{pointsList}}"  wx:if="{{isIncrease}}">
+      <view class="pointsList">
+         <view class="leftIcon flex">
+            <image class="inviteIcon" src="{{item.category.url}}"></image>
+         </view>
+         <view class="centerBox">
+             <text>{{item.category.text}}</text>
+             <text>时间：{{item.time}}</text>
+         </view>
+         <view class="rightNum flex">+{{item.score}}</view>
+      </view>         
+     </block>
+     <block  wx:for="{{useList}}"  wx:if="{{!isIncrease}}">
+       <view class="pointsList">
+         <view class="leftIcon flex">
+            <image class="consumeIcon" src="{{item.category.url}}"></image>
+         </view>
+         <view class="centerBox consume">
+             <text>{{item.category.text}}</text>
+             <text>{{item.title}}</text>
+             <text>时间：{{item.time}}</text>
+         </view>
+         <view class="rightNum flex">-{{item.score}}</view>
+      </view>    
+     </block>
+  </view>
+   <view class="adSlot" wx:if="{{isIncrease&&!pointsCanLoadMore}}">
+      <ad unit-id="adunit-115b03f3c1d81501"></ad>
+   </view>
+   <view class="adSlot" wx:if="{{!isIncrease&&!useCanLoadMore}}">
+      <ad unit-id="adunit-d369eae8ed175819"></ad>
+   </view>
+</view>

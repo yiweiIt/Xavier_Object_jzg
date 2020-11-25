@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "发布招工",
+  "usingComponents": {
+     "area-third-input-modal": "/component/areaThirdInputModal/areaThirdInputModal",
+     "teamType-modal": "/component/teamTypeModal/teamTypeModal",
+     "pushOffBox": "/component/pushOffBox/pushOffBox"
+  }
+}

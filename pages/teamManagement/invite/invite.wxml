@@ -1,0 +1,16 @@
+<!--pages/teamManagement/invite/invite.wxml-->
+<view class="invite">
+    <text class="inviteTitle distant-front">班组邀请</text>
+    <view class="inviteBox">
+      <view class="inviteContent">
+          <text>{{teamType}}班组长{{name}}</text>
+          <text>真诚的邀请您成为他/她的组员，我们期待您的加入！</text>
+      </view>
+    </view>
+    <view class="buttonBox">
+      <button bindtap="joinTeam" type="primary">点击加入</button>
+    </view>
+</view>
+<view class="IMG">
+    <image mode='widthFix' src="https://static.jianzhugang.com/mini/image/building.png"></image>
+</view>

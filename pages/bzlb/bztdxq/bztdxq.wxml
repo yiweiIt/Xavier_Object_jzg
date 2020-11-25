@@ -1,0 +1,64 @@
+
+<view class="meworkdetail">
+  <view class="detailsBox">
+      <image src="{{teamInfo.avatarUrl ? teamInfo.avatarUrl : 'https://static.jianzhugang.com/mini/image/logo.png'}}"></image>
+  </view>
+  <view class="basis basistip">
+      <text class="basisText"><text class="circle"></text>班组信息</text>
+      <view class="listBox">
+        <text>班组负责人</text>
+        <text class="content">{{teamInfo.title ? teamInfo.title : ''}}</text>
+      </view>
+      <view class="listBox"  wx:if="{{judgeMentType}}">
+        <text>联系方式</text>
+        <text class="content" data-name="{{judgeMentType}}" bindtap="makePhoneCall"> {{judgeMentType}}</text>
+      </view>
+      <view class="listBox" wx:else>
+        <text>联系方式</text>
+        <view class="phoneBox">
+            <view class="conceal">{{phone}}</view>
+            <view class="operate">
+                <view class="phoneview"  wx:if="{{showPhone}}">
+                  <form bindsubmit="callphone" report-submit>
+                    <button form-type="submit" class="btn_call">拨打</button>
+                  </form>
+                  <button class="btn_jubao" bindtap='Complain'>举报</button>
+                </view>
+                <view class="getphoneview"  wx:if="{{!showPhone}}">
+                  <button class="btn phone_text" bindtap='payMoney'>获取完整号码</button>
+                </view>
+            </view>
+        </view>
+      </view>
+      <view class="listBox">
+        <text>工种类型</text>
+        <text class="content">{{teamInfo.type ? teamInfo.type : ''}}</text>
+      </view>
+      <view class="listBox">
+        <text>成员数量</text>
+        <text class="content"> {{teamInfo.membersCount ? teamInfo.membersCount : ''}}</text>
+      </view>
+  </view>
+  <view class="basis center">
+      <view class="listBox">
+        <text>班组星级</text>
+        <view class="starBox">
+          <block  wx:for="{{teamInfo.starsLevel}}" wx:key="unique">
+            <image class="ok" src="http://static.jianzhugang.com/mini/image/star.png" />
+          </block>
+          <block  wx:for="{{5 - teamInfo.starsLevel}}" wx:key="unique">
+            <image class="no" src="http://static.jianzhugang.com/mini/image/en_star.png" />
+          </block>
+        </view>
+      </view>
+      <view class="listBox">
+        <text>班组地址</text>
+        <text class="content">{{teamInfo.fullTitle ? teamInfo.fullTitle : ''}}</text>
+      </view>
+  </view>
+  <view class="reportContent">
+      <!-- <text class="basisText"><text class="circle"></text>自身优势</text> -->
+      <textarea class="input-area" maxlength='100' value="{{teamInfo.notes ? teamInfo.notes : '暂无班组备注'}}"  bindinput="bindMark"
+      name="content" adjust-position="false" disabled></textarea>
+  </view>
+</view>

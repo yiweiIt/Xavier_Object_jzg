@@ -1,0 +1,34 @@
+<view class="detail">
+  <view class="titleBox">
+    <image src="{{url}}"></image>
+  </view>
+  <view class="detailsProcess">
+    <view class="process processBottom" wx:if="{{ifFirstTwo}}">
+      <view class="processTitle">流程步骤</view>
+      <view class="processList ">
+        <image src="https://static.jianzhugang.com/mini/newIcon/processIcon1.png"></image>
+        <text>{{type==1?'注册并登录建筑港官网':'登录建筑港小程序'}}</text>
+      </view>
+      <view class="processList ">
+        <image src="https://static.jianzhugang.com/mini/newIcon/processIcon2.png"></image>
+        <text>{{type==1?'完善班组及项目信息':'班组管理模块添加组员'}}</text>
+      </view>
+      <view class="processList ">
+        <image src="https://static.jianzhugang.com/mini/newIcon/processIcon3.png"></image>
+        <text>{{type==1?'线上申请发放工资':'资金管理模块购买保险'}}</text>
+      </view>
+      <view class="processList ">
+        <image src="https://static.jianzhugang.com/mini/newIcon/processIcon4.png"></image>
+        <text>{{type==1?'班组板块"工资订单"模块中查询数据':'填写保险信息完成购买操作'}}</text>
+      </view>
+    </view>
+    <view class="process">
+      <view class="processTitle">{{type==4?'急聘须知':type==3?'充值须知':'流程介绍'}}</view>
+      <view class="processList">
+        <text class="processText">{{content}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="publish" data-type="{{type}}" bindtap="goTeamManagement" wx:if="{{ifFirstTwo}}">去查看</view>
+

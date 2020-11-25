@@ -1,0 +1,13 @@
+<picker mode="multiSelector" bindchange="bindMultiPickerAreaChange" bindcolumnchange="bindMultiPickerColumnAreaChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="title" class="pickerBox">
+    <view class="flter-itm">
+      <view wx:if="{{areaTitle}}">
+        {{areaTitle}}
+      </view>
+      <view wx:else>
+        全部地区
+      </view>
+      <view class='flter-image'>
+        <image src='../../image/xl.png'></image>
+      </view>
+    </view>
+</picker>

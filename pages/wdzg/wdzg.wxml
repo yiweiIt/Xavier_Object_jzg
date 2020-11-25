@@ -1,0 +1,105 @@
+<view class="caseBox">
+  <view class="swiper-tab">
+    <view class="swiper-tab-list flex {{isIncrease?'active':''}}" data-current="0" bindtap="recruit">
+        <image src="{{isIncrease?'http://static.jianzhugang.com/mini/image/recruit_1.png' : 'http://static.jianzhugang.com/mini/image/recruit.png'}}"></image>
+        <text>招工发布</text>
+    </view>
+    <view class="swiper-tab-list flex {{isIncrease?'':'active'}} swiper-tab-list-right" data-current="1" bindtap="related">
+        <image src="{{isIncrease ?'http://static.jianzhugang.com/mini/image/related.png' : 'http://static.jianzhugang.com/mini/image/related_1.png'}}"></image>
+        <text>招工申请</text>
+        <!-- <text>与我相关招工</text> -->
+    </view>
+  </view>
+  <view class="prompt">
+     <text>{{prompt}}</text>
+  </view>
+  <view class="recruitmentForm">
+    <scroll-view scroll-y="true"  wx:if="{{!nodata}}">
+      <view class="recruitmentBox">
+        <block wx:if="{{isIncrease}}" wx:for="{{myPartHires}}" wx:key="unique" >
+          <view class="recruitList"  data-name="{{item.id}}" bindtap="goMyHireDetail">
+            <view class="left" data-index="{{index}}" data-name="{{item.id}}" catchtap="viewRegistration">
+              <text class="logo {{item.count!=0?'':'dpn'}}">{{item.count}}</text>
+              <view class="contentTextBox">
+                  <text class="contentText">查看报名</text>
+              </view>
+            </view>
+            <view class="center">
+              <view class="title" >
+                <view class="_title">
+                    {{item.title}}
+                </view>
+                <view class="urgentlyHire" wx:if="{{item.isTop==3}}">急聘</view>
+              </view>
+              <text class="desc">发布时间 : {{item.publishedTime}}</text>
+              <view class="operate">
+                <view class="operateLeft">
+                    <image class='updata' src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/recruitEdit.png'></image>
+                    <text class='_text' wx:if="{{item.status!== '正在招聘'}}" data-type="0" catchtap='changeStatus' data-index="{{index}}" data-name="{{item.id}}">改为正在招聘</text>
+                    <text class='_text' wx:if="{{item.status === '正在招聘'}}" data-type="1"  catchtap='changeStatus' data-index="{{index}}" data-name="{{item.id}}">改为已招满</text>
+                </view>
+                <!-- <view class="operateRight">查看详情</view> -->
+              </view>
+              
+            </view>
+            <view class="right">
+              <view class="status {{item.status === '正在招聘'?'orange':'grey'}}">
+                  {{item.status=== '正在招聘'?'正在招聘':'已招满'}}
+              </view>
+              <!-- <view class="imgBox1">
+                  <image class="img1" src="../../image/more.png"></image>
+              </view> -->
+              <view class="imgBox" data-id="{{item.id}}" data-item="{{item}}" catchtap="share">
+                  <image class="img" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/partake.png"></image>
+              </view>
+            </view>
+          </view>   
+        </block>
+        <block wx:if="{{!isIncrease}}" wx:for="{{signUpList}}" wx:key="unique">
+          <view class="listBox" data-name="{{item.hireId}}" data-hireStatus="{{item.hireStatus}}" bindtap="goHireDetail">
+            <view class="time"><text class="decoration"></text>申请时间 : <text>{{item.applyTime}}</text></view>
+            <view class="contentInfo">
+              <view class="lefter">
+                <text> 项目名称 : {{item.hireTitle}}</text>
+                <text> 报名状态 : {{item.isSelect==0?'已报名，未查阅':'已查阅'}}</text>              
+              </view>
+              <view class="righter">
+                <image src="../../image/more.png"></image>
+              </view>
+            </view>
+          <view class="full {{item.isSelect==0?'dpn':''}}"> 
+              <image src="http://static.jianzhugang.com/mini/image/viewed.png"></image>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+    <view class="boxBg" wx:else>
+      <view class="noDataTip">
+        <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+        <view  wx:if="{{isIncrease}}">
+          <text>暂无相关招工信息</text>
+          <view class="sim-button" bindtap="simJump">立即发布</view>
+        </view>
+        <view  wx:if="{{!isIncrease}}">
+          <text>暂无报名项目</text>
+        </view>
+      </view>
+    </view>
+    <view class="adSlot" wx:if="{{isIncrease&&!canLoadMore}}">
+      <ad unit-id="adunit-4af50d74fe73e653"></ad>
+    </view>
+    <view class="adSlot" wx:if="{{!isIncrease&&!canLoadMore}}">
+      <ad unit-id="adunit-4c47b752044267d5"></ad>
+    </view>
+  </view>
+</view>
+
+<view class='imagePathBox' hidden="{{maskHidden == false}}" bindtap="closeImg"> 
+    <image src="{{imagePath}}" class='shengcheng'></image>
+    <button class='baocun' open-type="share" catchtap='baocun'>分享招工卡片</button>
+</view>
+  <view hidden="{{maskHidden == false}}" class="mask"></view> 
+<view class="canvas-box">
+    <canvas  style="width: 400px;height: 320px;position:fixed;top:9999px" canvas-id="mycanvas"/>
+</view>  

@@ -1,0 +1,57 @@
+<view class="registrationList">
+  <scroll-view scroll-y="true">
+    <block wx:for="{{registrationList}}" wx:key="id">
+      <view class="listBox">
+        <view class="listBoxBg" wx:if="{{item.isShow!=1}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="individualPay">
+            <view class="boxBgButton">
+              <image src="../../../image/payIcon.png"></image>
+              <text>付款查看</text>
+            </view>
+        </view>
+        <view class="boxContant {{item.isShow==1?'':'pointerNone'}}" style="filter:blur({{item.isShow==1?'0rpx':'10rpx'}});" data-name="{{item.phone}}" data-id="{{item.teamId}}" catchtap='goHireDetail' >
+          <view class="time"><text class="decoration"></text>
+            <text class="_time">{{item.applyTime}}</text>
+            <text class="invite {{!item.canJoinGroup?'dpn':item.isJoinGroup?'isJoinGroup':'noJoinGroup'}}" data-type="{{item.isJoinGroup}}" data-id="{{item.hireApplyAccountId}}" data-index="{{index}}" catchtap="agreeToJoin">{{!item.canJoinGroup?'':item.isJoinGroup?'已入组':'同意入组'}}</text>
+            <!-- <text class="invite {{item.isJoinGroup?'isJoinGroup':'noJoinGroup'}}" data-type="{{item.isJoinGroup}}" data-id="{{item.hireApplyAccountId}}" data-index="{{index}}" catchtap="agreeToJoin">{{item.isJoinGroup?'已入组':'同意入组'}}</text> -->
+          </view>
+          <view class="contentInfo">
+              <view class="logoImg">
+                <image src="{{item.avatarUrl}}"></image>
+              </view>
+              <view class="information">
+                  <view class="name">
+                      <text class="nameLeft"> 姓名: {{item.name}}</text>
+                      <text class="label" wx:if="{{item.distance}}">{{item.distance}}</text>
+                  </view>
+                  <text class="tel_phone" data-name="{{item.phone}}" catchtap="makePhoneCall" wx:if="{{item.phone!=null}}">
+                    <text> 电话 : </text>
+                    <text >{{item.phone}}</text>
+                  </text>
+                  <text class="tel_phone" wx:else>
+                    <text> 电话 : </text>
+                    <text> 暂无</text>
+                  </text>
+                  <text class="teamType">工种 : {{item.teamType}}</text>
+              </view>
+          </view>
+          <view class="goToNext">
+             <image src="../../../image/more.png"></image>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- <view class="payMoney" wx:if="{{isMore && !isPay}}" bindtap="payMoney">
+    <text>点击付款查看全部</text>
+</view> -->
+<view class="boxBg" wx:if="{{registrationList.length==0}}">
+  <view class="noDataTip">
+    <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+    <text>暂无报名人员</text>
+  </view>
+</view>
+  <button wx:if="{{isMore && !isPay}}" bindtap="payMoney">
+  <!-- <button> -->
+    <view class="publish">点击付款查看全部</view>
+  </button>

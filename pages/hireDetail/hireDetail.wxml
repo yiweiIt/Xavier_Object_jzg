@@ -1,0 +1,217 @@
+
+<view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+  <view class='ruleZhezhaoContent'>
+      <view class='ruleZhezhaoText'>
+          <view>查看完整电话需要消耗1积分，邀请工友注册、签到、充值即可获得积分</view>
+      </view>
+      <button type='default' bindtap='hideRule' style='line-height:30px;width:100px;font-size:30rpx'>确定</button>
+  </view>
+</view>
+<modal id="modal" data-id="{{hireId}}" hidden="{{hiddenmodalput}}" title="请选择举报内容" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <view class="check_list">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view wx:for="{{reportCategorys}}" wx:key="unique" data-name="{{item.id}}">
+        <label class="checkbox ck_list">
+        <radio name="{{item.id}}" value="{{item.id}}"/><span class="text">{{item.text}}</span>
+        </label>
+      </view>
+    </radio-group>
+    <view>
+    <textarea wx:if="{{isremark}}" class="textarea-style" value='{{remark}}' bindinput="bindinputValue" bindblur="bindTextAreaBlur" auto-height placeholder="请填写举报内容" placeholder-class='input-d' cursor-spacing='100' fixed="true" adjust-position="false" />
+    </view>
+  </view>
+</modal>
+<pop modal-hidden="{{is_modal_Hidden}}" modal-msg="{{is_modal_Msg}}"></pop>
+<view class="hire-Box" >
+  <view class="hireInformation" wx:if="{{isShow}}">
+    <view class="hireDetails">
+        <view class="hireBox">
+          <view class="box-top">
+            <view class="adress">
+                <view class="adressImg flexStart">
+                    <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hireAdressIcon.png"></image>
+                </view>
+                <text class="overHidden">{{hireInfo.project.displayAddress ? hireInfo.project.displayAddress : hireInfo.area.fullTitle}}</text>
+            </view>
+            <view class="time flexEnd">
+                <view class="adressImg flexStart">
+                    <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+                </view>
+              <text class="overHidden">{{hireInfo.publishedTime}}</text>
+            </view>
+          </view>
+          <view class="hireInfo">
+            <view class="infoTip">
+                <view class="personalImg flexStart">
+                  <image class="personaAvatar" src="{{hireInfo.avatarUrl?hireInfo.avatarUrl:'https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/icon_logo.jpeg'}}"></image>
+                  <!-- <view class="hireMark" wx:if="{{hireInfo.isTop==3}}">
+                    <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hireMark.png"></image>
+                  </view> -->
+                </view>
+                <view class="personalInfo">
+                  <text class="personalName overHidden">{{hireInfo.contacts}}</text>
+                  <view class="personalPhone">
+                    <text class="phoneLeft">{{phone}}</text>
+                    <view class="operate" wx:if="{{!isFullPhone}}">
+                        <button class="btn phone_text" bindtap='getContactPhone'>获取完整号码</button>
+                    </view>
+                      <view class="operate" wx:if="{{isFullPhone}}">
+                        <button class="btn_call" bindtap="Callphone">拨打</button>
+                      <button class="btn_jubao" bindtap='Complain'>举报</button>
+                      </view>
+                  </view>
+                </view>
+            </view>
+            <view class="hireInfoBox">
+                <view class="hireInfoList">
+                    <text class="topic">项目名称：</text>
+                    <text class="topicInfo overHidden">{{hireInfo.title ? hireInfo.title : hireInfo.area.fullTitle + '-招' + hireInfo.teamType.title}}</text>
+                </view>
+                <block wx:if="{{hireInfo.type.id}} != 'PROJECT_TYPE_LAO_WU'">
+                  <view class="hireInfoList">
+                      <text class="topic">所需工种：</text>
+                      <text class="topicInfo overHidden">{{hireInfo.teamType.title}}{{hireInfo.peopleNumber}}人</text>
+                  </view>
+                </block>
+                <view class="hireInfoList">
+                    <text class="topic">薪资待遇：</text>
+                    <text class="topicInfo overHidden">{{hireInfo.salary}}</text>
+                </view>
+            </view>
+          </view>
+          <view class="remarks">
+            <view class="remarksImg">
+                <!-- <view class="adressImg">
+                    <image class="hireRemarkIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hireRemarkIcon.png"></image>
+                </view> -->
+                <text class="remarksText">要求/备注</text>
+            </view>
+            <view class="remarksContent remarksInfo">
+              {{(hireInfo.teamRequire != null && hireInfo.teamRequire != '') ? hireInfo.teamRequire : ''}}
+                    {{(hireInfo.memo != null && hireInfo.memo != '') ? hireInfo.memo : ''}}
+            </view>
+            <view class="addGroup">
+               <text class="addGroupBox" bindtap='copyText' data-text="{{kefuWeChat}}">客服微信 : <text class="wChatNumber">{{kefuWeChat}}</text></text>
+               <text class="addGroupBox" bindtap='callCustomer'>客服电话 ：<text class="wChatNumber">400-860-6025</text></text>
+            </view>
+            <view class="enterName">
+               <button class="_signUp {{!isRegistered?'signUp':'registered'}}" data-id="{{hireInfo.id}}" bindtap="application">{{!isRegistered?'我要报名':'已报名'}}</button>
+            </view>
+          </view>
+        </view>
+        <view class="urgentBox" wx:if="{{hireInfo.isTop==3}}">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/urgentHireBg.png"></image>
+        </view>
+    </view>
+    </view>
+  </view>
+  <block wx:if="{{is_show}}">
+    <view class="bulletin" style="margin-top:0rpx;">
+      <view class="prompt">
+       <image class="hireRemarkIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/buyInsurance_p.png"></image>
+        <text>您查看的该条招工信息已招满，如有需要，可以继续查看更多同类型的其他招工信息</text>
+      </view>
+      <view class="FullBox">
+         <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hireDetailsNo.png"></image>
+         <text >此条招工信息已招满</text>
+      </view>
+    </view>
+
+  </block>
+  <view class="featured">
+      <view class="featuredTitle">
+        <!-- <image class="jobIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/fRecommended.png"></image> -->
+        <text>精选推荐</text>
+        <!-- <image class="jobIcon transform" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/fRecommended.png"></image> -->
+      </view>
+      <view class="listBox"  wx:for="{{hires}}" wx:key="unique" data-name="{{item.id}}" bindtap="goHireDetail">
+        <view class="hiderTip" wx:if="{{item.isTop==3}}">
+          <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hirdeIcon.png"></image>
+        </view>
+        <view class="statusBox">
+          <block wx:if="{{item.status === '正在招聘'}}">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/recruitmentIcon.png"></image>
+          </block>
+          <block wx:else>
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hired1.png"></image>
+          </block>
+        </view>
+        <view class="contentBox">
+          <text class="title overhide">{{item.title ? item.title : item.areaFullTitle + '-招' + item.teamType}}</text>
+          <view class="info">
+              <view class="icon">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/recruitment.png"></image>
+              </view>
+              <view class="infoText">招工需求 :</view>
+              <view class="infomation overhide">{{item.peopleNumber}}人</view>
+          </view>
+          <view class="info">
+              <view class="icon">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/salary.png"></image>
+              </view>
+              <view class="infoText">薪资待遇 :</view>
+              <view class="infomation overhide"> {{item.salary == null ? '':item.salary}}</view>
+          </view>
+          <view class="info">
+              <view class="icon">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/score.png" class="imageIcon"></image>
+              </view>
+              <view class="infoText">星级评分 :</view>
+              <view class="infomation overhide">
+                <block  wx:for="{{item.level}}" wx:key="unique">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/star.png"></image>
+                </block>
+                <block wx:for="{{5 - item.level}}" wx:key="unique">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/grayStar.png"></image>
+                </block>
+              </view>
+          </view>
+          <view class="info">
+              <view class="icon">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+              </view>
+              <view class="infoText">发布时间 :</view>
+              <view class="infomation overhide">{{item.publishedTime}}</view>
+          </view>
+      </view> 
+  </view>
+</view>
+
+<view class="sharePopUp" wx:if="{{!openType}}">
+    <view class="popUp">
+      <text class="title">温馨提示</text>
+      <view class="content"><text>{{shareTitle}}</text></view>
+      <view class="buttonKBox">
+          <button bindtap="cancelSharing">取消</button>
+          <button open-type="share" wx:if="{{firstShare}}">立即分享</button>
+          <button bindtap="getPoints" wx:if="{{!firstShare}}">获取积分</button>
+      </view>
+    </view>
+</view>
+<view class="view-side">
+  <navigator class="side"  url="../index/index" open-type="switchTab" >
+    <image class="small-logo" src="../../image/bottom/sy.png"></image>
+    <text> 首页</text>
+  </navigator>
+   <navigator class="side"  url="../publish/publish" open-type="switchTab" >
+    <image class="small-logo" src="../../image/bottom/fb.png"></image>
+    <text>发布</text>
+   </navigator>
+    <navigator class="side"  url="../wd/wd" open-type="switchTab" >
+    <image class="small-logo" src="../../image/bottom/wd.png"></image>
+    <text>会员中心</text>
+   </navigator>
+</view>
+<image class="side-tool" style="z-index: 11;" src = "http://static.jianzhugang.com/mini/image/share_1.png">
+  分享
+</image>
+<button class="side-tool" style="opacity:0;z-index: 12;" open-type="share">
+</button>
+<view class="addOperationBox" wx:if="{{isShow}}">
+  <view class="buttonBox flexCenter">
+      <button bindtap='goIndex' class="btn-dopushmore">查看更多招工</button>
+  </view>
+  <view class="buttonBox flexCenter">
+      <button bindtap='doPublish' class="btn-dopush">我要发布招工</button>
+  </view>
+</view>

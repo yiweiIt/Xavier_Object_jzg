@@ -1,0 +1,194 @@
+/* pages/mework/mework.wxss */
+page{background:#f2f2f2}
+.sim-button{
+  color: #fff;
+  background-color: #54a3f1;
+  padding: 8px 40px;
+  border-radius: 3px;
+}
+.boxBg{
+  width:100%;
+  height:calc(100vh - 200rpx);
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.boxBg image{
+  width:160rpx;
+  height:160rpx;
+  display:block;
+  margin:0rpx auto;
+}
+.boxBg text{
+  width:100%;
+  display: block;
+  line-height:80rpx;
+  font-size:30rpx;
+  text-align: center;
+  color:#888;
+}
+.dataListBox{
+  width:100%;
+  height:auto;
+  border-radius:6rpx;
+}
+.listBox{
+  width:92%;
+  height:300rpx;
+  background: #fff;
+  margin:24rpx auto;
+  border-top-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  position: relative;
+}
+.list_status{
+  position:absolute;
+  top:0px;
+  left:5%;
+  width:155rpx;
+  height:50rpx;
+}
+.orange{
+   background:url("https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/o_lookJobList.png") no-repeat 50% 50%;
+  background-size:100% 100%; 
+}
+.gray{
+  background:url("https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/g_lookJobList.png") no-repeat 50% 50%;
+  background-size:100% 100%; 
+}
+.shareBox{
+  position:absolute;
+  top:0px;
+  right:2%;
+  width:80rpx;
+  height:80rpx;
+}
+.shareBox image{
+  width:80rpx;
+  height:80rpx;
+}
+._listBox{
+  width:90%;
+  height:210rpx;
+  margin:0px auto;
+  padding-top:55rpx;
+}
+.left{
+  width:22%;
+  height:100%;
+  float:left;
+}
+.leftImgBox{
+  width:100%;
+  height:130rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leftImgBox image{
+  width:110rpx;
+  height:110rpx;
+  border-radius:50%;
+}
+.left text{
+  display: block;
+  width: 100%;
+  height:40rpx;
+  line-height:40rpx;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.left text.name{
+  font-size:30rpx;
+  color:#333;
+}
+.left text.type{
+  font-size:28rpx;
+  color:#4da1ff;
+}
+.right{
+  width:77%;
+  height:100%;
+  float:right; 
+}
+.right .afress,.right .time,.right .memo{
+  width:100%;
+  height:54rpx;
+  line-height:54rpx;
+  color:#666;
+  font-size:28rpx;
+}
+.right .afress .icon,.right .time .icon,.right .memo ._icon{
+  width:10%;
+  height:54rpx;
+  float:left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.right .afress text,.right .time text,.right .memo text{
+  display: inline-block;
+  width:90%;
+  height:54rpx;
+  float:right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.choseStatus{
+  color: #fff;
+  background-color: #4da1ff;
+  padding:0rpx;
+  width:40%;
+  height:40rpx;
+  line-height:40rpx;
+  border-radius: 15px;
+  float:right;
+  font-size:24rpx;
+  margin-top:10rpx;
+}
+.imageBox image,.address image,.time image{
+  width:32rpx;
+  height:32rpx;
+}
+
+.imagePathBox{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+  align-content:center; 
+  flex-wrap:wrap;
+}
+.shengcheng{
+  width: 640rpx;
+  height:512rpx;
+  z-index: 999;
+  background:#fff;
+  /* background-image: linear-gradient(to top right, #5aa6fc, #157aea); */
+}
+.baocun{
+   width:80%;
+   height:80rpx;
+   line-height:80rpx;
+   color:#fff;
+   font-size:30rpx;
+    background-image: linear-gradient(to top right, #5f57ea, #607bee); 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin:40rpx auto 0rpx auto;
+}
+button[class="baocun"]::after{
+  border: 0;
+}

@@ -1,0 +1,241 @@
+page{
+  background-color: rgba(236, 234, 234, 1);
+  color:#333;
+}
+.registrationList{
+  padding-bottom:90rpx ;
+}
+.listBox{
+  width:92%;
+  height:250rpx;
+  background:#fff;
+  margin:20rpx auto;
+  position: relative;
+}
+.pointerNone{
+   pointer-events:none;
+}
+.boxContant{
+  width:100%;
+  height:100%;
+  z-index:1;
+}
+.listBoxBg{
+   position: absolute;
+   width:100%;
+   height:100%;
+   background:rgba(255, 255, 255, 0.8);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.boxBgButton{
+  width:36%;
+  height:70rpx;
+  border-radius:8rpx;
+  background:#4da1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxBgButton image{
+  width:30rpx;
+  height:30rpx;
+  padding:0rpx 10rpx 0rpx 6rpx;
+}
+.boxBgButton text{
+    color:#333;
+    font-weight: bold;
+    font-size:29rpx;
+    color:#fff;
+}
+.time{
+  width:90%;
+  margin:0rpx auto;
+  height:70rpx;
+  line-height:70rpx;
+  border-bottom:1rpx dashed #d2d3d4;
+  font-size:27rpx;
+  color:#888;
+}
+.time text.decoration{
+  display:inline-block;
+  width:14rpx;
+  height:14rpx;
+  margin:30rpx 10rpx 26rpx 0rpx;
+  background:#4da1ff;
+  float:left;
+  border-radius:50%;
+}
+._time{
+   display:inline-block;
+   width:64%;
+   falot:left;
+   margin-left:2%;
+   height: 100%;
+}
+.invite{
+    display:inline-block;
+    width:26%;
+    height:54rpx;
+    line-height: 54rpx;
+    text-align: center;
+    margin-top:10rpx;
+    float:right;
+}
+.noJoinGroup{
+    background:#4da1ff;
+    color:#fff;
+}
+.isJoinGroup{
+  background:rgba(236, 234, 234, 1);
+  color:rgb(97, 95, 95);
+}
+.contentInfo{
+  width:83%;
+  margin-left:5%;
+  float:left;
+  height:180rpx;
+}
+.goToNext{
+   width:7%;
+   float:right;
+   margin-right:5%;
+   height:180rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.goToNext image{
+   width:14rpx;
+   height:25rpx;
+}
+.logoImg{
+  float:left;
+  width:26%;
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+.logoImg image{
+  width:110rpx;
+  height:110rpx;
+  border-radius:50%;
+  background:#4da1ff;
+}
+.information{
+  float:right;
+  width:74%;
+  height:140rpx;
+  margin:10rpx 0rpx;
+}
+.information text.teamType,.information text.tel_phone{
+   display:inline-block;
+    width:100%;
+    height:42rpx;
+    line-height:42rpx;
+    font-size:28rpx;
+}
+.information .name{
+  width:100%;
+  line-height:52rpx;
+  font-size:28rpx;
+  height:52rpx;
+}
+
+.information text.tel_phone{
+   width:80%;
+   flaoat:Left;
+}
+.information text.tel_phone text:nth-child(1){
+     width:22%;
+}
+.information text.tel_phone text{
+   display:inline-block;
+   height:100%;
+   float:left;
+   width:78%;
+}
+.information text.tel_phone text:nth-child(2){
+   color:#4da1ff;
+   text-decoration:underline;
+}
+.boxBg{
+  width:100%;
+  height:100%;
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.boxBg image{
+  width:160rpx;
+  height:160rpx;
+  display:block;
+  margin:0rpx auto;
+}
+.boxBg text{
+  width:100%;
+  display: block;
+  line-height:50rpx;
+  text-align: center;
+  color:#888;
+}
+.information .name text.nameLeft{
+  display: inline-block;
+   width:72%;
+  height:100%;
+  float:left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+.information .name text.label{
+  display:inline-block;
+  max-width:25%;
+  height:32rpx;
+  line-height:32rpx;
+  margin:12rpx 0% 12rpx 2%;
+  background:rgba(255,165,0,1);
+  color:#fff;
+  float:left;
+  font-size:18rpx;
+  border-radius:4rpx;
+  text-align:center;
+  padding: 0rpx 6rpx;
+}
+.payMoney{
+  width:82%;
+  height:80rpx;
+  background:#4da1ff;
+  margin:20rpx auto;
+  border-radius:40rpx;
+}
+.payMoney text{
+  display: block;
+  width:100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size:30rpx;
+  font-weight: bold;
+  color:#fff;
+}
+.publish{
+  background:#4da1ff;
+  color:#fff;
+  position:fixed;
+  width:52%;
+  height:70rpx;
+  line-height: 70rpx;
+  bottom:20rpx;
+  left:24%;
+  font-size:30rpx;
+  text-align:center;
+  border-radius:35rpx;
+  box-shadow:2rpx 0px 6rpx rgb(0, 153, 255);
+}
+.dpn{
+  display: none;
+}

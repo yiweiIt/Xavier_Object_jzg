@@ -1,0 +1,35 @@
+<!--pages/wyrz/gsrz/gsrz.wxml-->
+<!--公司入驻 -->
+<scroll-view scroll-y="true" >
+  <form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+     <view class="boxContain">
+        <view class="list">
+          <text class="prompt"><text >*</text>公司类型:</text>
+          <picker mode="selector" bindchange="bindPickerChange" bindcolumnchange="bindpickercloum" value="{{multiIndex}}" range="{{multiArray}}">
+            <input placeholder='请选择公司类型' disabled="disabled" value="{{multiArray[multiIndex]}}"></input>
+          </picker>
+        </view>
+        <view class="list">
+          <text class="prompt"><text >*</text>公司名称:</text>
+          <input type="text" maxlength="18" placeholder-class='input-d' placeholder='请输入公司名称' value='{{title}}' bindinput="bindTitle"/>
+        </view>
+        <view class="list">
+          <text class="prompt"><text >*</text>机构代码:</text>
+          <input type="text"  maxlength="18" placeholder-class='input-d' placeholder='请输入机构代码' value='{{organizationCode}}' bindinput="bindOrganiza"/>
+        </view>
+        <view class="list">
+          <text class="prompt"><text >*</text>联系人:</text>
+          <input type="text" maxlength="18" placeholder-class='input-d' placeholder='请输入联系人' value='{{contacts}}' bindinput="bindContacts" />
+        </view>
+        <view class="list">
+          <text class="prompt"><text >*</text>联系电话:</text>
+          <input type="text" maxlength="11" placeholder-class='input-d' placeholder='请输入电话' value='{{phone}}' bindinput="bindPhone" />
+        </view>
+     </view>
+     <view class="warnStr"  wx:if="{{!isSubmitAble}}">
+        <text>{{warnStr}}</text>
+     </view>
+     <button class="buttonBox {{!isSubmitAble?'':'opacity'}}"  formType="submit" disabled='{{!isSubmitAble}}' >立即入驻</button>
+  </form>
+</scroll-view>
+

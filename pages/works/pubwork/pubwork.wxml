@@ -1,0 +1,119 @@
+<!--pages/pubwork/pubwork.wxml-->
+<!-- <view class="item top-avatar" >
+    <image src="{{avatarUrl}}"></image>
+    <view class='m_title'>请完善个人信息</view>
+</view>
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+  <view class='item-input'>
+    <view class='left'>
+      <span class='hs'>*</span><text>姓名:</text>
+    </view>
+    <view class='right'>
+      <input maxlength="18" type="text" bindinput="bindName" placeholder="请填写姓名" />
+    </view>
+  </view>
+  <view class='item-input'>
+    <view class='left'>
+      <span class='hs'>*</span><text>工种:</text>
+    </view>
+    <view class='right'>
+        <teamType-modal modalHidden="false" bindchangeTeamType="changeTeamType"></teamType-modal>
+    </view>
+  </view>
+  <view class='item-input'>
+    <view class='left'>
+      <span class='hs'>*</span><text>年龄:</text>
+    </view>
+    <view class='right'>
+      <input maxlength="2" type="number" bindinput="bindAge" placeholder="请填写年龄" />
+    </view>
+  </view>
+  <view class='item-input'>
+    <view class='left'>
+      <span class='hs'>*</span><text>性别:</text>
+    </view>
+    <view class='right' style='height:1.4rem'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <input maxlength="18" value='{{array[index]}}' disabled placeholder='请选择性别' />
+      </picker>
+    </view>
+  </view>
+  <view class='item-input'>
+    <view class='left'>
+      <span class='hs'>*</span><text>接活地区:</text>
+    </view>
+    <view class='right'>
+      <area-third-modal bindchangeThirdArea="changeThirdArea"></area-third-modal>
+    </view>
+  </view>
+  <view class='item-input'>
+    <view class='left'>
+      <span class='hs'>*</span><text>联系电话:</text>
+    </view>
+    <view class='right'>
+      <input type="number" maxlength='11' bindinput="bindPhone" placeholder="请填写联系电话" />
+    </view>
+  </view>
+  <view class='item-input'>
+    <view class='left'>
+      <text>备注:</text>
+    </view>
+    <view class='right'>
+      <textarea class="textarea-style" value='{{remark}}' bindinput="bindMark" bindblur="bindTextAreaBlur" auto-height placeholder="请填写备注" />
+    </view>
+  </view>
+  <button class='button-bg' formType="submit">发布</button>
+</form> -->
+
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+  <view class="meworkdetail">
+    <view class="detailsBox">
+        <image src="{{workdata.avatarUrl ? workdata.avatarUrl : 'https://static.jianzhugang.com/mini/image/logo.png'}}"></image>
+    </view>
+    <view class="basis basistip">
+        <text class="basisText"><text class="circle"></text>基础信息</text>
+        <view class="listBox">
+          <text>姓名</text>
+          <input maxlength="18" type="text" bindinput="bindName" placeholder="请填写姓名" />
+        </view>
+        <view class="listBox">
+          <text>年龄</text>
+          <input maxlength="2" type="number" bindinput="bindAge" placeholder="请填写年龄" />
+        </view>
+        <view class="listBox">
+          <text>性别</text>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <input maxlength="18" value='{{array[index]}}' disabled placeholder='请选择性别' />
+          </picker>
+        </view>
+        <view class="listBox">
+          <text>电话</text>
+          <input type="number" maxlength='11' bindinput="bindPhone" placeholder="请填写联系电话" />
+        </view>
+    </view>
+    <view class="basis center">
+        <text class="basisText"><text class="circle"></text>找活信息</text>
+        <view class="listBox">
+          <text>工种</text>
+          <teamType-modal modalHidden="false" bindchangeTeamType="changeTeamType"></teamType-modal>
+        </view>
+        <view class="listBox">
+          <text>接活地区</text>
+          <area-third-input-modal bindchangeThirdArea="changeThirdArea"></area-third-input-modal>
+        </view>
+        <!-- <view class="listBox">
+          <text>找活状态</text>
+          <picker bindchange="bindPickerChange" value="{{workdata.lookLifeStatus}}" range="{{array}}" name="lookLifeStatus">
+            <input value="{{workdata.lookLifeStatus == 0?'找活中':'已找到'}}" disabled/>
+          </picker>
+        </view> -->
+    </view>
+    <view class="reportContent">
+        <text class="basisText"><text class="circle"></text>自身优势</text>
+        <textarea class="input-area" value='{{remark}}' bindinput="bindMark" bindblur="bindTextAreaBlur" placeholder="请填写备注" />
+    </view>
+  </view>
+  <view class="buttonBox">
+    <button formType="submit">立即发布</button>
+  </view>
+</form>

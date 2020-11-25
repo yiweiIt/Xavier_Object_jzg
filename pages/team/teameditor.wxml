@@ -1,0 +1,111 @@
+<!--pages/team/teameditor.wxml-->
+<view class="form_div">
+  <form bindsubmit="teamSubmit">
+    <button class="ditor"  form-type="submit">{{isEdit?'编辑':'保存'}}</button>
+     <view class="teamBox">
+        <view class="teamList">
+           <view class="listLeft">班组姓名:</view>
+           <view class="listRight">
+              <input type="text"  maxlength="10"  placeholder="请输入班组姓名" value="{{team.name}}" name="title" disabled="{{isEdit}}" bindinput="bindname"></input>
+           </view>
+        </view>
+        <view class="teamList">
+           <view class="listLeft">工种类型:</view>
+           <view class="listRight">
+              <teamType-modal teamTypeName="{{team.profession}}" modalHidden="true" bindchangeTeamType="changeTeamType" isDisabled="{{isEdit}}" value="{{teamTypeId}}" class="{{isEdit==true?'teamTypecolor':''}}">
+            请选择工种类型</teamType-modal> 
+           </view>
+        </view>
+        <view class="teamList">
+           <view class="listLeft">所在地区:</view>
+           <view class="listRight">
+           <area-third-input-modal areaTitle="{{team.address}}"  bindchangeThirdArea="changeThirdArea" isDisabled="{{isEdit}}" class="{{isEdit==true?'teamTypecolor':''}}">         
+            </area-third-input-modal>
+           </view>
+        </view>
+        <view class="teamList">
+           <view class="listLeft">身份证号:</view>
+           <view class="listRight">
+              <input type="text"  placeholder="请输入身份证号" value="{{team.ID_number}}" name="idNumber" disabled="{{isEdit}}" bindinput="bindidNumber"></input>
+            </view>
+        </view>
+        <view class="teamList">
+           <view class="listLeft">开户行:</view>
+           <view class="listRight">
+              <picker bindchange="bindbankInfo" value="{{team.bankInfo}}" range="{{array}}"     name="bankInfo" disabled="{{isEdit}}" class="change_bank">
+                 <view class="picker" class="{{isEdit==true?'pickercolor':''}}">{{team.bankInfo?team.bankInfo:'请选择开户行'}}</view>
+              </picker>              
+           </view>
+        </view>
+        <view class="teamList">
+           <view class="listLeft">银行卡号:</view>
+           <view class="listRight">
+              <input type="number"  placeholder="请输入银行卡号" value="{{team.bankCardNo}}" name="bankCardNo" disabled="{{isEdit}}" bindinput="bindbankCardNo"></input>
+           </view>
+        </view>
+     </view>
+  </form>
+</view>
+<view class="title">
+  <text class="titleLeftText">成员信息</text>
+  <view  class="titleRightButton"  bindtap="add">
+    <text>添加成员</text></view>
+</view>
+<view class="info" wx:for="{{alluser}}" wx:key="unique">
+  <view class="row" data-id='{{item.id}}' bindtap="userinfo">
+    <view class="clo">
+      <text class="z_hide">{{item.title}}</text>
+    </view>
+    <view class="clo">
+      <text>{{item.phone}}</text>
+    </view>
+    <view class="clo">
+      <view class="rad_div">
+        <view class="rad"></view>
+        <view class="rad"></view>
+        <view class="rad"></view>
+     </view>
+    </view>
+  </view>
+</view>
+<!-- style="display:{{isprop}}" -->
+<view class="prop" wx:if="{{isprop}}">
+  <view class="add_model">
+    <text>添加成员</text>
+    <form bindsubmit="formSubmit" class="add_modelform">
+        <view class="row">
+        <label>姓名<span>*</span></label>
+        <input type="text"  name="title" placeholder-class="addinput" placeholder="请输入姓名" value="{{clearuserinfo}}" ></input>
+      </view>
+       <view class="row">
+        <label>身份证号</label>
+        <input type="text"  name="idNumber" placeholder-class="addinput" placeholder="请输入身份证号" value="{{clearuserinfo}}"></input>
+      </view>
+       <view class="row">
+        <label>手机号码 <span>*</span></label>
+        <input type="text"  name="phone" placeholder-class="addinput" placeholder="请输入手机号码" value="{{clearuserinfo}}"></input>
+      </view>
+       <view class="row">
+        <label>开户行</label>
+     <view class="section">
+      <picker bindchange="userbindbankName" value="{{newarray}}" range="{{array}}"  name="bankName">
+        <view class="picker">
+          {{newarray?newarray:'请选择开户行'}}
+        </view>
+      </picker>
+      </view>
+      </view>
+      <view class="row">
+        <label>银行卡号</label>
+        <input type="text" name="cardNumber" placeholder-class="addinput" placeholder="请输入银行卡号" value="{{clearuserinfo}}"></input>
+      </view>
+   
+      <view class="row">
+        <button bindtap="close_model">取消</button>
+        <button form-type="submit" class="confirm">提交</button>
+      </view>
+    </form>
+  </view>
+</view>
+
+

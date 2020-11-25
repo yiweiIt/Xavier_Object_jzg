@@ -1,0 +1,11 @@
+<scroll-view wx:if="{{show}}" scroll-y style='height:auto'>
+<view wx:for="{{worktype}}" wx:key="unique"  wx:if="{{index<4}}">
+  <view class="my-title" style='width:100%;float:left'>{{item.text}}</view>
+  <view>
+  <text class="title-list {{state==item.id?'active':''}}" wx:for="{{item.titles}}" wx:key="unique" data-key="{{index}}" data-id="{{item.id}}" data-name="{{item.title}}" bindtap="onclick">{{item.title}}</text>
+  </view>
+</view>
+</scroll-view>
+<view style='height: 35px;margin-top:5%'>
+  <button wx:if="{{show}}" class="btn-submit" bindtap='submit'>确定</button>
+</view>

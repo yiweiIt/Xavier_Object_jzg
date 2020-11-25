@@ -1,0 +1,35 @@
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+<view class='smrz'>
+    <text class="tiper">必填信息</text>
+    <view class="list">
+      <text>昵称</text>
+      <input type="text" value="{{nickName}}" class="telName" disabled ></input>
+    </view>
+    <view class="list">
+      <text>性别</text>
+      <view class="gebder">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}" color="#666"/>{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="list">
+      <text>手机</text>
+      <input type="number" class="telPhone" placeholder="输入手机号" value='{{phone}}' bindinput="bindPhone" placeholder-style="color:#666;font-size:30rpx;" disabled="{{isEdit}}"></input>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="getPhoneNumber">获取手机号</button>
+    </view>
+    <view class="list" wx:if="{{!isEdit}}">
+      <text>验证码:</text>
+      <input type="number" class="verificationCode" placeholder='输入验证码' bindinput='bindCode' placeholder-style="color:#666;font-size:30rpx;"></input>
+      <block wx:if="{{isInCode===1}}">
+         <button class="verification" bindtap='getVerifyCode'>获取验证码</button>
+      </block>
+      <block wx:else>
+        <button class="verification" style='opacity:0.6;'>{{isCodeTime}}s重新发送</button>
+      </block>
+    </view>
+</view>
+<button class='bind' formType="submit">立即绑定</button>
+</form>

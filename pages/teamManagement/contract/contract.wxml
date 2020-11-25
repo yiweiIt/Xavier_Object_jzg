@@ -1,0 +1,25 @@
+<!--pages/teamManagement/contract/contract.wxml-->
+<view class="contract">
+  <scroll-view scroll-y="true">
+    <block wx:for="{{contractsArr}}" wx:key="id">
+      <view class="contractList">
+          <text class="companyName">{{item.name}}</text>
+          <view class="contractInfo">
+            <text>编号：{{item.contractNo}}</text>
+            <text>名称：{{item.title}}</text>
+            <text>地点：{{item.projectAddress}}</text>
+            <text>时间：{{item.startDate}}至{{item.endDate}}</text>
+          </view>
+          <view class="contractBtn" data-name="{{item.id}}" bindtap="goToPay">
+              申请付款
+          </view>
+      </view>    
+    </block> 
+  </scroll-view>
+</view>
+<view class="boxBg" wx:if="{{contractsArr.length==0}}">
+  <view class="noDataTip">
+    <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+    <text>暂无合约记录</text>
+  </view>
+</view>

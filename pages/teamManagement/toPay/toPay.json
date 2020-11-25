@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "申请付款",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ocr-navigator": "plugin://ocr-plugin/ocr-navigator"
+  }
+}

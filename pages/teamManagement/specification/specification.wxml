@@ -1,0 +1,22 @@
+<!--pages/teamManagement/specification/specification.wxml-->
+<view class="specifications">
+  <view class="selectTime">
+      <text class="title">工种设置</text>
+      <view class="selects">
+        <teamType-modal 
+        teamTypeName="{{teamTypeNameStr}}"  
+        modalHidden="false" 
+        bindchangeTeamType="changeTeamType" 
+        value="{{teamTypeId}}"
+        >
+        工种</teamType-modal>
+      </view>
+   </view>
+   <view class="content">
+      <view class="contentBox">
+         <rich-text nodes="{{regulation}}"  wx:if="{{status==0}}"></rich-text>
+         <rich-text nodes="{{crafts}}"  wx:elif="{{status==1}}"></rich-text>
+         <rich-text nodes="{{quality}}"  wx:else></rich-text>
+      </view>
+   </view>
+</view>

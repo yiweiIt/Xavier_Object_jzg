@@ -1,0 +1,284 @@
+page{background:rgb(242,242,242)}
+.amountBox{
+   width:92%;
+   height:242rpx;
+   background:linear-gradient(to right, rgb(88,132,236), rgb(116,175,246));
+   margin:30rpx auto;    
+   border-radius:12rpx; 
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  align-content:center; 
+  flex-wrap:wrap;
+}
+.amountTip{
+  width:92%;
+  height:150rpx;
+}
+.total,.balance{
+  width:50%;
+  height:150rpx;
+  float:left;
+}
+.total text.title,.total text.amount,.balance text.title,.balance text.amount{
+  display: block;
+  width:100%;
+  color:#fff;
+  text-align:left;
+}
+.balance text.title,.balance text.amount{
+  text-align:right;
+}
+.amountbottom{
+  width:100%;
+  height:60rpx;
+  line-height:70rpx;
+  border-top:1rpx solid #fff;
+}
+.amountbottom text{
+   color:#f5fa48;
+   font-size:26rpx;
+   padding:0rpx 10rpx 0rpx 4%;
+}
+.amountbottom image{
+  width:8rpx;
+  height:21rpx;
+}
+.title{
+  height:60rpx;
+  line-height:60rpx;
+  font-size:30rpx;
+}
+.amount{
+  height:74rpx;
+  line-height:74rpx;
+  font-size:40rpx;
+}
+.operate{
+   width:100%;
+   height:50rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color:#f5fa48;
+   font-size:26rpx;
+   position:relative;
+}
+.operate text{
+  padding:0rpx 10rpx 0rpx 0rpx;
+}
+.operate image{
+  width:7rpx;
+  height:18rpx;
+}
+.operateBox{
+  width:92%;
+  height:310rpx;
+  margin:30rpx auto 15rpx auto;
+  z-index:1;
+  position:relative;
+}
+.box{
+  width:100%;
+  height:130rpx;
+}
+.inviteFriends{
+  width:54%;
+  height:100%;
+  float:left;
+  display: flex;
+  justify-content: flex-start;
+}
+.inviteFriends button{
+  width:100%;
+  height:100%;
+  margin:0rpx ;
+  padding:0rpx;
+  border:none;
+  border-radius:0; 
+}
+.inviteFriends image{
+  width:100%;
+  height:130rpx;
+}
+.tweetQR{
+  width:40%;
+  height:100%;
+  float:right;
+  display: flex;
+  justify-content:flex-end;
+}
+.tweetQR image{
+  width:322rpx;
+  height:130rpx;
+}
+.makeMoney{
+  position:absolute;
+  width:100%;
+  height:180rpx;
+  background:url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/makeMoneyBg.png)50% 50% no-repeat;
+  background-size:100% 100%;
+  z-index:99;
+  bottom:14rpx;
+  right:0rpx;
+}
+.tweetList{
+  width:92%;
+  height:auto;
+  margin:0rpx auto;
+}
+.projectTitle{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:34rpx;
+  color:#333;
+}
+.projectTitle text{
+    font-size:28rpx;
+    color:#666;
+}
+.projectList{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow:row wrap;
+}
+.list{
+  flex: 0 0 23%;
+  height:160rpx;
+  margin:0rpx 0rpx 20rpx 0rpx;  
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  align-content:center; 
+  flex-wrap:wrap;
+}
+.list:nth-child(4n-2){
+  margin:0rpx 1.25% 20rpx 2.625%;
+}
+.list:nth-child(4n-1){
+ margin:0rpx 2.625% 20rpx 1.25%;
+}
+.list image{
+  width:80rpx;
+  height:80rpx;
+}
+.list text.projectName{
+  width:100%;
+  height:70rpx;
+  line-height:70rpx;
+  color:#333;
+  font-size:28rpx;
+  text-align:center;
+}
+.prop{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+  align-content:center; 
+  flex-wrap:wrap;
+}
+
+.add_model{
+  width: 82%;
+  background:rgb(77,161,255);
+  border-radius: 20rpx;
+  z-index: 999;
+  height:700rpx;
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-content:center; 
+  flex-wrap:wrap;
+}
+.tipBoxBg{
+   position:absolute;
+   width:100%;
+   top:-180rpx;
+   height:240rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.tipBoxBg image{
+  width:483rpx;
+  height:240rpx;
+}
+.tipBoxCOntent{
+   width:100%;
+   height:160rpx;
+   position:absolute;
+   bottom:100rpx;
+}
+.bottomBox{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  background:#fff;
+  position: absolute;
+  bottom:0rpx;
+  font-size:34rpx;
+  text-align:center;
+  color:#333;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.scanCodeBoxBg{
+  width:380rpx;
+  height:380rpx;
+  background:#fff;
+  position:absolute;
+  top:55rpx;
+  border-radius:16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scanCodeBoxBg image{
+  width:340rpx;
+  height:340rpx;
+}
+/* .scanCodeBox{
+  width:454rpx;
+  height:370rpx;
+  background:url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/scanCodeBg.png) 50% 50% no-repeat;
+  background-size:100% 100%;
+}
+.scanCodeBox image{
+  display: block;
+  width:146rpx;
+  height:146rpx;
+  margin:10rpx auto 0rpx auto;
+} */
+.tipBoxCOntent text{
+   display: block;
+   width:100%;
+   height:70rpx;
+   line-height:70rpx;
+   font-size:38rpx;
+   color:#fff;
+   text-align:center;
+}
+.cancelBox{
+   width:100%;
+   height:140rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.cancelBox image{
+  width:60rpx;
+  height:60rpx;
+}

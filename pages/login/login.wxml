@@ -1,0 +1,52 @@
+<!--pages/login/login.wxml-->
+<view class="swiper-tab">
+
+  <view id='list1' class="swiper-tab-list {{currentTab==0  ? 'on' : ''}}" data-current="0" bindtap="swichNav">公司登入</view>
+  <!-- <view class='line_center'></view> -->
+  <view id='list2' class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">班组登入</view>
+</view>
+
+<swiper style="height:600rpx" current="{{currentTab}}" class="swiper-box" duration="100"   circular="true" bindchange="bindChange">
+<swiper-item>
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+<view class="input-itm">
+          <view class="input-title"><span class='hs'>*</span>用户名</view>
+          <input maxlength="18" class="input-box" placeholder-class='input-d' type='number' placeholder='请输入用户名' bindinput="bindName"></input>
+      </view>
+      <view class="input-itm">
+          <view class="input-title"><span class='hs'>*</span>密码</view>
+          <input maxlength="18" class="input-box" placeholder-class='input-d' type='password' placeholder='请输入用户密码' bindinput="bindPwd"></input>
+      </view>
+<view class="input-itm notes passwork" style="color:red;margin-top: 10rpx;" wx:if="{{!isSubmitAble}}">
+  {{warnStr}}
+</view>
+<view class='input-itm'>
+  <view class='m-save' style="margin-top:20rpx;">
+ <button class="btn-sub" style="opacity: {{opacity}};" disabled='{{!isSubmitAble}}' formType="submit" >
+ 登入</button>  
+  </view>
+</view>
+</form>
+</swiper-item>
+<swiper-item>
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+<view class="input-itm">
+  <view class="input-title"><span class='hs'>*</span>用户名</view>
+  <input maxlength="18" class="input-box" placeholder-class='input-d' type='text' placeholder='请输入用户名' bindinput="bindName"></input>
+</view>
+<view class="input-itm">
+  <view class="input-title"><span class='hs'>*</span>密码</view>
+  <input maxlength="18" class="input-box" placeholder-class='input-d' password type='password' type='text' placeholder='请输入密码' bindinput="bindPwd"></input>
+</view>
+<view class="input-itm notes passwork" style="color:red;margin-top: 10rpx;" wx:if="{{!isSubmitAble}}">
+  {{warnStr}}
+</view>
+<view class='input-itm'>
+  <view class='m-save' style="margin-top:20rpx;">
+ <button class="btn-sub" style="opacity: {{opacity}};" disabled='{{!isSubmitAble}}'   formType="submit" >
+ 登入</button>  
+  </view>
+</view>
+</form>
+</swiper-item>
+</swiper>

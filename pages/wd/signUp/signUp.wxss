@@ -1,0 +1,107 @@
+page{
+  background-color: rgba(242,242,242,1);
+}
+.listBox{
+  width:94%;
+  height:230rpx;
+  background:#fff;
+  margin:15rpx auto;
+  position:relative;
+}
+.time{
+  width:90%;
+  margin:0rpx auto;
+  height:70rpx;
+  line-height:70rpx;
+  border-bottom:1rpx dashed #d2d3d4;
+  font-size:30rpx;
+  font-size:27rpx;
+  color:#888;
+}
+.time text{
+  display:inline-block;
+  float: right;
+}
+.time text.decoration{
+  display:inline-block;
+  width:14rpx;
+  height:14rpx;
+  margin:30rpx 10rpx 26rpx 0rpx;
+  background:#4da1ff;
+  float:left;
+  border-radius:50%;
+}
+.contentInfo{
+  width:90%;
+  margin:0rpx auto;
+  height:160rpx;
+}
+.contentInfo .left{
+   width:90%;
+   height:100%;
+   float:left;
+}
+.contentInfo .right{
+  width:10%;
+  height:100%;
+  float:right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contentInfo .right image{
+  width:14rpx;
+  height:25rpx;
+}
+.contentInfo text{
+   display:block;
+    width:100%;
+    height:60rpx;
+    line-height:60rpx;
+    font-size:28rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.contentInfo text:first-child{
+  margin-top:20rpx;
+}
+.boxBg{
+  width:100%;
+  height:100%;
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.boxBg image{
+  width:160rpx;
+  height:160rpx;
+  display:block;
+  margin:0rpx auto;
+}
+.boxBg text{
+  width:100%;
+  display: block;
+  line-height:50rpx;
+  text-align: center;
+  color:#888;
+}
+.full{
+  position:absolute;
+  z-index:99;
+  top:30rpx;
+  right:20rpx;
+  width:100rpx;
+  height:100rpx;
+  display: flex;
+  align-items:  center;
+  justify-content: center;
+}
+.full image{
+  width:100rpx;
+  height:100rpx;
+}
+.dpn{
+  display: none;
+}

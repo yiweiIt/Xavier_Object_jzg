@@ -1,0 +1,67 @@
+
+<view class="experience">
+  <view class="listBox">
+      <text class="left"><text>*</text>项目名称</text>
+      <input class="input_type" value="{{hireTitle}}" placeholder="请输入项目名称" maxlength='15' bindinput="bindHireTitle"></input>
+  </view>
+  <view class="listBox">
+      <text class="left"><text>*</text>项目工期</text>
+      <view class="startDate date">
+         <picker mode="date" value="{{startDate}}" start="2007-09-01" end="2030-09-01" data-type="start" bindchange="bindDateChange">
+            <input value="{{startDate}}" placeholder="开工时间" disabled='true'></input>
+         </picker> 
+      </view>  
+      <view class="lineBox">
+         <view class="line"></view>
+      </view>
+      <view class="endDate date">
+         <picker mode="date" value="{{endDate}}" start="2007-09-01" end="2030-09-01" data-type="end" bindchange="bindDateChange">
+            <input value="{{endDate}}" placeholder="完工时间" disabled='true'></input>
+         </picker>
+      </view>  
+  </view>
+  <view class="listBox">
+      <text class="left"><text>*</text>所在地区</text>
+      <area-third-modal areaTitle="{{areaTitle}}" bindchangeThirdArea="changeThirdArea">
+      </area-third-modal>
+  </view>
+  <view class="project">
+      <text class="projectText"><text>*</text>项目详情</text>
+      <view class="textareaBox" >
+         <textarea  maxlength='200' value="{{hireRequest}}"  name="content" bindinput="bindHireRequest" adjust-position="false" auto-height="true" placeholder="请输入项目详情">
+         </textarea>
+      </view>
+      <view class="photoBox" style="height:{{imgArrLen}}rpx">
+         <block  wx:if="{{imgArr.length==0}}">
+             <view class="photoList">
+               <view class="photo" data-index ="0"  bindtap='uploadIdBack'>
+                  <image mode="aspectFit" src="http://static.jianzhugang.com/mini/image/addProjectIcon.png"></image>
+               </view>    
+             </view> 
+         </block>
+         <block wx:for="{{imgArr}}" wx:key="{{unique}}">
+            <view class="photoList">
+               <icon class="clear" type="clear" size="18" data-index ="{{index}}" bindtap='clearIdBack' color="#717171"/>
+               <view class="photo">
+                  <image src="{{item.img}}" mode="aspectFit"></image>
+               </view>  
+            </view> 
+         </block>
+         <view class="photoList" wx:if="{{imgArr.length>0&imgArr.length<maxImg}}">
+            <view class="photo" data-index ="{{imgArr.length}}"  bindtap='uploadIdBack'>
+               <image mode="aspectFit" src="http://static.jianzhugang.com/mini/image/keepAdd.png"></image>
+            </view>
+         </view>
+      </view>
+  </view>
+  <view class="current">  {{current}} / {{max}}  </view> 
+   <view class="buttonBox">
+     <block wx:if="{{isAdd}}">
+         <button class="complete" bindtap="{{!buttonClicked?'saveBusinessCard':''}}">保存</button> 
+     </block>
+     <block wx:else>
+         <button class="half halfLeft" bindtap="deleteBack">删除</button>
+         <button class="half halfRight" bindtap="{{!buttonClicked?'changeBack':''}}">保存修改</button>    
+     </block>
+   </view>
+</view>

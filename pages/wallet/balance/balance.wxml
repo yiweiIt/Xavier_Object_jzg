@@ -1,0 +1,19 @@
+<view class="balance">
+   <view class="balanceTop">
+      <view class="balanceTopBox">
+         <text class="text">当前推客余额</text>
+         <text class="number">￥{{currentCapital}}</text>
+      </view>
+   </view>
+   <view class="balanceInfo">
+      <view class="balanceInfoBox">
+         <view class="balanceInfo_title">增加推客余额:</view>
+         <view class="balanceInfo_list"  bindtap="goTwitterCode">
+            <image src="https://static.jianzhugang.com/mini/newIcon/balanceInfo1.png"></image>
+         </view>
+         <view class="balanceInfo_list" bindtap="goTiro">
+            <image src="https://static.jianzhugang.com/mini/newIcon/balanceInfo2.png"></image>
+        </view>
+      </view>
+   </view>
+</view>

@@ -1,0 +1,34 @@
+<view class="board">
+   <view class="boardTip">
+      <text class="prompt">
+         <text class="promptTip">公告:</text>班组所有成员均可讨论，希望大家文明使用
+      </text>
+   </view>
+   <scroll-view class="boardListBox" scroll-y="true" scroll-into-view='{{toView}}' style='height: {{scrollHeight}}'>
+      <block wx:key wx:for='{{msgList}}' wx:for-index="index">
+        <view class="myself right" wx:if='{{item.flag==true}}' id='msg-{{index}}'>
+          <text class="name rightName"><text class="time">{{item.createTime}}</text>{{item.name}}</text>
+          <view class="box">
+            <image src="{{item.avatarUrl?item.avatarUrl:'http://static.jianzhugang.com/mini/image/ico-35.png'}}" class="personalImg right"></image>
+            <view class="dialogBox bgColor">
+              <text class="content">{{item.content}}</text>
+            </view>       
+          </view>
+        </view>
+        <view class="others left" id='msg-{{index}}' wx:else>
+          <text class="name">{{item.name}}<text class="time">{{item.createTime}}</text></text>
+          <view class="box">
+            <image src="{{item.avatarUrl?item.avatarUrl:'http://static.jianzhugang.com/mini/image/ico-35.png'}}" class="personalImg left"></image>
+            <view class="dialogBox">
+              <text class="content">{{item.content}}</text>
+            </view>        
+          </view>
+        </view>    
+      </block>
+   </scroll-view>
+   <view class="inputBox" style="bottom:{{inputBottom}}px">
+     <input type="text" class="interInput" placeholder="请输入..." value="{{saveContent}}" bindinput="bindSave"  bindfocus='focus' bindblur='blur'  adjust-position="{{false}}" />
+     <button class="send" bindtap="save">发送</button>
+   </view>
+</view>
+

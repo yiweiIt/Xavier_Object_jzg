@@ -1,0 +1,77 @@
+
+<view class="serviceHired">
+  <view class="header">
+    <view class="titleBox">
+      <view class="inputBox">
+          <input type="text" class="search" bindinput="bindSearchStr" value="{{queryWord}}" placeholder='根据联系方式搜索招工信息' placeholder-class="searchText"  bindconfirm="doSearch"  confirm-type="search"></input>
+          <view class="imageBox" bindtap="doSearch">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/search.png"></image>
+          </view>
+      </view>
+    </view>
+    <view class="areaBox">
+      <view class='dq'>
+        <area-modal modalHidden="true" areaTitle="{{areaTitle}}" bindchangeArea="changeArea"></area-modal>
+      </view>
+      <view class='center'>|</view> 
+      <view class='gz' >
+        <LabourTeam-Type modalHidden="true" bindchangeTeamType="changeTeamType"></LabourTeam-Type>
+      </view>
+    </view>
+  </view>
+  <view class="hiredBox">
+    <view class="listBox" wx:for="{{hires}}" wx:key="unique" data-name="{{item.id}}" bindtap="goHireDetail">
+      <view class="hiderTip" wx:if="{{item.isTop==3}}">
+        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hirdeIcon.png"></image>
+      </view>
+      <view class="statusBox">
+        <block wx:if="{{item.status === '正在招聘'}}">
+           <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/recruitmentIcon.png"></image>
+        </block>
+        <block wx:else>
+           <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hired1.png"></image>
+        </block>
+      </view>
+      <view class="contentBox">
+         <text class="title overhide">{{item.title ? item.title : item.areaFullTitle + '-招' + item.teamType}}</text>
+         <view class="info">
+            <view class="icon">
+              <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/recruitment.png"></image>
+            </view>
+            <view class="infoText">招工需求 :</view>
+            <view class="infomation overhide">{{item.peopleNumber}}人</view>
+         </view>
+         <view class="info">
+            <view class="icon">
+              <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/salary.png"></image>
+            </view>
+            <view class="infoText">薪资待遇 :</view>
+            <view class="infomation overhide"> {{item.salary == null ? '':item.salary}}</view>
+         </view>
+         <view class="info">
+            <view class="icon">
+              <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/score.png" class="imageIcon"></image>
+            </view>
+            <view class="infoText">星级评分 :</view>
+            <view class="infomation overhide">
+              <block  wx:for="{{item.level}}" wx:key="unique">
+                 <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/star.png"></image>
+              </block>
+              <block wx:for="{{5 - item.level}}" wx:key="unique">
+                 <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/grayStar.png"></image>
+              </block>
+            </view>
+         </view>
+         <view class="info">
+            <view class="icon">
+              <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+            </view>
+            <view class="infoText">发布时间 :</view>
+            <view class="infomation overhide">{{item.publishedTime}}</view>
+         </view>
+      </view> 
+    </view>
+  </view>
+</view> 
+<image class="side-tool" style="z-index: 11;" src="http://static.jianzhugang.com/mini/image/share_1.png"></image>
+  <button class="side-tool" style="opacity:0;z-index: 12;" open-type="share"></button>

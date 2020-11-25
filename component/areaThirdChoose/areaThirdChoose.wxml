@@ -1,0 +1,15 @@
+<!--component/areaThirdChoose/areaThirdChoose.wxml-->
+<picker mode="multiSelector" bindchange="bindMultiPickerAreaChange" bindcolumnchange="bindMultiPickerColumnAreaChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="title">
+  <view wx:if="{{areaTitle}}" class="flter-itm">
+    {{areaTitle}}
+    <view class='flter-image'>
+      <image src='../../image/xl.jpg'></image>
+    </view>
+  </view>
+  <view wx:else class="flter-itm">
+    全部地区
+    <view class='flter-image'>
+      <image src='../../image/xl.jpg'></image>
+    </view>
+  </view>
+</picker>

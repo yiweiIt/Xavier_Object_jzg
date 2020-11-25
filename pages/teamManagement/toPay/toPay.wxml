@@ -1,0 +1,59 @@
+<!--pages/teamManagement/toPay/toPay.wxml-->
+<view class="toPay">
+  <scroll-view scroll-y="true">
+    <view class="payInfo">
+       <view class="list">
+          <text>合约名称</text>
+          <text>{{contractsInfo.contractNo}}</text>
+       </view>
+       <view class="list">
+          <text>申请人</text>
+          <text>{{contractsInfo.team.title}}</text>
+       </view>
+       <view class="list">
+          <text>申请时间</text>
+          <text>{{contractsInfo.startDate}}</text>
+       </view>
+       <view class="oddnumber">
+          <text>工程审核支付单号</text>
+          <input type="text" disabled="true" placeholder="不填(系统自动生成)"></input>
+       </view>
+       <view class="remark">
+          <text>备注/摘要</text>
+          <input type="text" placeholder="(工资单所属项目/月份)" bindinput="bindRemark"></input>
+       </view>
+    </view>
+    <view class="salary">
+       <text class="salaryTitle">工资明细(工资总金额:<text class="totalNumber">{{totalNumber}}</text>元)</text>
+       <block  wx:for="{{detailsArr}}" wx:key="id">
+          <view class="money">
+              <view class="list">
+                <text>组员名称</text>
+                <text>{{item.workerName}}</text>
+              </view>
+              <view class="remark">
+              <text>开户银行</text>
+                <picker data-index="{{index}}" bindchange="userbindbankName" range="{{array}}"  name="bankName">
+                    <input class="bank" type="text" placeholder="请选择开户行" value="{{arrayBank[index]}}"></input>
+                </picker>           
+              </view>
+              <view class="remark scan">
+                  <text>银行卡号</text>
+                  <input data-index="{{index}}" class="cardNumber" value="{{item.cardNumber}}" placeholder="银行卡号" type="number"  bindinput='bindCardNumber'></input>
+                  <ocr-navigator bind:onSuccess="bankSuccess" data-index="{{index}}" certificateType="bankCard" selectedOptions="{{['bankName','number','validDate']}}" class="scanCard">
+                     <image src="http://static.jianzhugang.com/mini/image/camera.png"></image>
+                  </ocr-navigator>
+              </view>
+              <view class="remark">
+                  <text>发放金额</text>
+                  <input type="digit" data-index="{{index}}" value="0" class="amount" data-iname='{{item.memberId?item.memberId:item.teamId}}' bindinput='calculation'></input>
+              </view>
+          </view>       
+       </block>
+       <form bindsubmit="formSubmit" report-submit="true">
+          <button formType="submit" class="Dispatch" data-type="1">保存</button>
+          <button formType="submit" class="submitOrders" data-type="2">提交</button>
+       </form>
+    </view>
+  </scroll-view>
+</view>

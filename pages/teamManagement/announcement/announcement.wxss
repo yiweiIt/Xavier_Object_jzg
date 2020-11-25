@@ -1,0 +1,159 @@
+/* pages/announcement/announcement.wxss */
+page{background:rgba(242, 242, 242, 1)}
+.announcement{
+  margin:0px;
+  padding:0px;
+}
+.selectTime{
+  position:absolute;
+  z-index:3;
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  background:rgba(242, 242, 242, 1);
+}
+.selectTime text{
+  float:left;
+  width:40%;
+  margin-left:4%;
+}
+.selectTime view.selects{
+   float:right;
+   width:50%;
+   margin-right:4%;
+   text-align: right;
+}
+.selectTime view.selects image{
+   width:23rpx;
+   height:16rpx;
+   margin:0px 2rpx;
+}
+.NoData{
+   width:100%;
+   height: calc(100vh - 155rpx);
+   z-index:1;
+   position:absolute;
+   display:flex; 
+   justify-content:center;     
+   align-items:center;
+}
+.noDataTip{
+  z-index:4;
+  width:220rpx;
+  height:280rpx;
+}
+.noDataTip image{
+  width:220rpx;
+  height:220rpx;
+  display: block;
+  margin:0px auto;
+}
+.noDataTip text{
+  display:block;
+  width:220rpx;
+  height:60rpx;
+  line-height:60rpx;
+  text-align:center;
+  color:#aaa;
+}
+.dataList{
+  width:100%;
+  /* height:100%; */
+  position:absolute;
+}
+.dataListBox{
+  overflow: hidden;
+  margin-bottom:155rpx;
+  /* height: calc(100vh - 155rpx); */
+}
+.listBox{
+  width:100%;
+  height:auto;
+  background:#fff;
+  padding:20rpx 0rpx;
+  margin:10rpx auto;
+}
+.listContent{
+  width:92%;
+  height:auto;
+  margin:0rpx auto;
+  height:50rpx;
+  /* border:1px solid rgb(209, 206, 206); */
+  padding:10rpx 0rpx;
+  color:#333;
+}
+.listContent text{
+   display:inline-block;
+   font-size:30rpx;
+   height:50rpx;
+   line-height: 50rpx;  
+   width:80%;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   float:left;
+}
+.listContent .delete{
+  display: inline-block;
+  width:20%;
+  height:50rpx;
+  float:right;
+  margin-right:0rpx;
+}
+.listContent .delete image{
+   width:44rpx;
+   height:44rpx;
+   display:block;
+   margin:3rpx auto;
+}
+.listMsg{
+   width:92%;
+   height:100rpx;
+   margin:10rpx auto 0rpx auto;
+}
+.listMsg text{
+    height:50rpx;
+    line-height: 50rpx;
+    font-size:26rpx; 
+    color:#aaa;
+}
+.listMsg text.listName{
+   display: block;
+   width:100%;
+}
+.listMsg text.listTime,.listMsg text.listRead{
+  display:inline-block;
+}
+.listMsg text.listTime{
+  float:left;
+  width:60%;
+}
+.listMsg text.listRead{
+  float:right;
+  width:40%;
+  text-align:right;
+}
+.footer{
+  position:fixed;
+  bottom:0rpx;
+  left:0rpx;
+  width:100%;
+  height:156rpx;
+  background:rgba(2, 167, 240, 1);
+}
+.footer button{
+  height:156rpx;
+  line-height:156rpx;
+  border:none;
+  background:none;
+  outline: none; 
+  text-align:center; 
+  color:#fff;
+  font-size:32rpx;
+}
+.footer button::after{
+  border:none;
+}
+.dpn{
+  display:none;
+}

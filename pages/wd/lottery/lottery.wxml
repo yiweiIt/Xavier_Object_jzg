@@ -1,0 +1,57 @@
+<view class="turntable">
+    <view class="lottery">
+        <image src="https://static.jianzhugang.com/mini/image/lucky_lottery.png"></image>
+    </view>
+    <view  class="wrapper">
+      <view class="main">
+        <view class="canvas-container" style='margin:0 auto;'>
+          <view animation="{{animationData}}" class="canvas-content" style='margin:0 auto;'>
+            <!-- <canvas class="canvas-element" canvas-id="lotteryCanvas"></canvas> -->
+            <view class="canvas-line">
+              <view class="canvas-litem" wx:for="{{awardsList}}" wx:key="unique" style="-webkit-transform: rotate({{item.lineTurn}});transform:rotate({{item.lineTurn}})"></view>
+            </view>
+            <view class="canvas-cicle">
+              <view class="circle" wx:for="{{awardsList}}" wx:key="unique" style='-webkit-transform: rotate({{item.lineTurn}});transform:rotate( {{item.lineTurn}})'></view>
+            </view>
+            <view class="canvas-cicle">
+              <view class="circle" wx:for="{{awardsList}}" wx:key="unique" style='-webkit-transform: rotate({{item.awardLineTurn}});transform:rotate( {{item.awardLineTurn}})'></view>
+            </view>
+            <view class="canvas-list">
+              <view class="canvas-item" wx:for="{{awardsList}}" wx:key="unique">
+                <view class="canvas-item-text" style='-webkit-transform: rotate({{item.turn}});transform:rotate( {{item.turn}})'>
+                  <text class='canvas-item-text-inner'> {{item.award}}</text>
+                  <image src="{{item.ico}}"></image>
+                </view>
+              </view>
+            </view>  
+          </view>
+          <view class="btnfont canvas-btn" bindtap="{{!buttonClicked?'getLottery':''}}">
+            抽 奖
+            </view> 
+        </view>
+      </view>
+    </view>
+    <view class="titleBox">
+      <text class="frequency">您今天还有<text>{{count}}</text>次抽奖机会</text>
+    </view>
+    <view class="lottery_bottom">
+
+    </view>
+    <view class="QRcode_box">
+      <view class="QRcode">
+        <text class="frequency">扫码进入，参与抽奖，大额现金红包等你来拿</text>
+        <image src="https://static.jianzhugang.com/mini/image/mini_logo2.jpg"></image>
+        <!-- <text class="frequency">【提示】扫码进入没有现金红包奖项，建议删除小程序重新扫码进入</text> -->
+        <text class="frequency">【提示】拉上亲朋好友，打开微信扫一扫，识别二维码，即可出现隐藏红包，要是没有红包就五分钟后再回来。</text>
+      </view>
+      <view class="rule">
+        <text class="title">抽奖规则</text>
+        <view class="list">1.每人每天有三次免费机会抽奖</view>
+        <view class="list">2.扫描小程序码进入小程序，参与抽奖，有机会获得大额现金红包</view>
+        <view class="list">3.本次活动最终解释权归建筑港所有</view>
+      </view>
+    </view>
+</view>
+<view class="backImg" bindtap="backHome">
+    <image src="../../../image/backToHome.png"></image>
+</view>

@@ -1,0 +1,229 @@
+
+page{background:rgb(242,242,242)}
+.urgentlyHired{
+  width:100%;
+}
+.header{
+  position: fixed;
+  width:100%;
+  height:186rpx;
+  top:0rpx;
+  left:0rpx;
+  z-index:99;
+}
+.titleBox{
+  width:100%;
+  height:106rpx;
+  background:#4da1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputBox{
+  width:92%;
+  height:68rpx;
+  color:#333;
+  background:#fff;
+  border-radius:10rpx;
+}
+.search{
+  width:80%;
+  padding:0rpx 2%;
+  background:#fff;
+  border-radius:6rpx;
+  font-size:30rpx;
+  color:#333;
+  height:100%;
+  float:Left;
+  border-top-right-radius:0rpx;
+  border-bottom-right-radius:0rpx;
+}
+.imageBox{
+   width:16%;
+   background:green;
+   height:100%;
+   float:right;
+   background:#fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-top-right-radius:10rpx;
+   border-bottom-right-radius:10rpx;
+}
+.imageBox image{
+  width:32rpx;
+  height:35rpx;
+}
+.searchText{
+  font-size:30rpx;
+  color:#999;
+}
+.areaBox{
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  height: 80rpx;
+  background: #fff;
+  box-shadow: 0px 7px 7px -7px rgba(74, 74, 74, 0.15);
+}
+.areaBox .dq ,.areaBox .gz{
+  font-size: 30rpx;
+  color:#333;
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.areaBox .center {
+  color: rgb(102, 102, 102);
+  height: 50rpx;
+  flex: 1;
+  margin-top:15rpx;
+  text-align:center;
+}
+.hiredBox{
+  width:100%;
+  height:100%;
+  margin-top:186rpx;
+  overflow:hidden;
+}
+.listBox{
+  width:92%;
+  height:355rpx;
+  background:#fff;
+  border-radius:12rpx;
+  margin:26rpx auto;
+  box-shadow: 3rpx 3rpx  8rpx rgba(74, 74, 74, 0.15); 
+  position:relative;
+}
+.contentBox{
+   width:88%;
+   height:310rpx;
+   position:absolute;
+   top:19rpx;
+   left:6%;
+   z-index:3;
+}
+.hiderTip{
+   z-index:11;
+   width:76rpx;
+   height:78rpx;
+   position:absolute;
+   top:0rpx;
+   left:0rpx;
+}
+.hiderTip image{
+  width:100%;
+  height:100%;
+}
+.statusBox{
+   z-index:9;
+   width:22%;
+   height:70rpx;
+   position:absolute;
+   top:0rpx;
+   right:1%;
+   display: flex;
+   justify-content: center;
+}
+.statusBox image{
+   width:103rpx;
+   height:66rpx;
+}
+.title{
+  display:block;
+  width:80%;
+  height:68rpx;
+  line-height:68rpx;
+  color:#333;
+  font-size:30rpx;
+}
+.overhide{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.info{
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+  display: flex;
+}
+.icon{
+  flex:0 0 8%;
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+.icon image{
+  width:34rpx;
+  height:34rpx;
+}
+.icon image.imageIcon{
+  width:32rpx;
+  height:32rpx;
+}
+.infoText{
+  flex:0 0 22%;
+  height:100%;
+  color:#666;
+  font-size:28rpx;
+}
+.infomation{
+  flex:auto;
+  height:100%;
+  color:#666;
+  font-size:28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.infomation image{
+   width:30rpx;
+   height:28rpx;
+   padding:0rpx 8rpx 0rpx 0rpx;
+}
+.getMore{
+  width:100%;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size:30rpx;
+  color: rgb(77,161,255);
+}
+.boxBg{
+  width:100%;
+  height:500rpx;
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.boxBg image{
+  width:160rpx;
+  height:160rpx;
+  display:block;
+  margin:0rpx auto;
+}
+.boxBg text{
+  width:100%;
+  display: block;
+  line-height:80rpx;
+  text-align: center;
+  color:#888;
+  font-size:28rpx;
+}
+.sim-button{
+  color: #fff;
+  background-color: #54a3f1;
+  padding:15rpx 40rpx;
+  border-radius: 6rpx;
+  font-size:28rpx;
+}
+.side-tool{
+  position: fixed;
+  bottom: 20%;
+  right: 0rpx;
+  width: 100rpx;
+  height: 100rpx;
+}

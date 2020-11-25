@@ -1,0 +1,201 @@
+/*实名认证  */
+/*姓名  */
+page{background:rgba(242,242,242,1)}
+.smrz{
+  width:92%;
+  height:auto;
+  background:#fff;
+  padding:20rpx 0rpx;
+  margin:16rpx auto;
+  border-radius:6rpx;
+}
+.smrz text.tiper{
+  width:92%;
+  height:70rpx;
+  line-height:70rpx;
+  margin:0rpx auto;
+  display: block;
+  color:rgb(110, 110, 110);
+  border-bottom: 2rpx solid rgba(242,242,242,1);
+}
+.list{
+  width:92%;
+  height:100rpx;
+  margin:0rpx auto;
+  border-bottom: 2rpx solid rgba(242,242,242,1);
+}
+.list:last-child{
+  border:none;
+}
+.list text{
+  display: inline-block;
+  float:left;
+  width:20%;
+  height:100rpx;
+  line-height: 100rpx;
+  font-size:32rpx;
+}
+.list input.telName{
+  display: inline-block;
+  width:78%;
+  float: right;
+  height:100rpx;
+  line-height:100rpx;
+}
+.list input.telPhone{
+  display: inline-block;
+  width:50%;
+  float: left;
+  height:100rpx;
+  line-height:100rpx;
+}
+.list button.getPhoneNumber{
+   width:22%;
+   float:right;
+   font-size:22rpx;
+   height:50rpx;
+   line-height:50rpx;
+   background:#fff;
+   border:1rpx solid #666;
+   margin:25rpx 0rpx;
+   border-radius:0;
+   padding:0rpx;
+}
+.list button.getPhoneNumber::after{
+   background:none;
+   border-radius:0;
+}
+.list input.verificationCode{
+  display: inline-block;
+  width:48%;
+  float: left;
+  margin-left:2%;
+  height:100rpx;
+  line-height:100rpx;
+}
+.list button.verification{
+  display: inline-block;
+  float:right;
+  width:30%;
+  background:#4da1ff;
+  border-radius: 0rpx;
+  height:60rpx;
+  line-height:60rpx;
+  
+  text-align:center;
+  font-size:28rpx;
+  margin:15rpx 0rpx;
+  color:#fff;
+}
+.list button::after{
+  border:none;
+}
+.bind{
+  width:90%;
+  margin:30rpx auto;
+  background:#4da1ff;
+  color:#fff;
+  border-radius:6rpx;  
+  height:80rpx;
+  line-height:80rpx;
+  font-size:30rpx;
+}
+.gebder{
+  display: inline-block;
+  width:78%;
+  float: right;
+  height:100rpx;
+  line-height:100rpx;
+}
+.gebder .radio{
+ font-size:26rpx;
+ padding:0rpx 20rpx;
+}
+
+.gebder radio {
+  transform:scale(0.8);
+}
+/* .name{
+  border-bottom: 1rpx solid #f0f0f0;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  padding-bottom: 15rpx;
+  width: 650rpx;
+}
+.name .nm{
+  padding-left: 10rpx;
+  width: 27%;
+  margin-top: 10rpx;
+}
+.name .p_nm{
+  font-size: 30rpx;
+  margin-left: 100rpx;
+}
+.phone{
+  float: left;
+  border-bottom: 1rpx solid #f0f0f0;
+  margin: 30rpx 0rpx 0rpx 40rpx;
+  width: 650rpx;
+  padding-bottom: 15rpx;
+}
+.phone .pn{
+  float: left; 
+  padding-left: 10rpx;
+  margin-top: 10rpx;
+}
+.phone .p_pn{
+  font-size: 30rpx;
+  margin-left: 145rpx;
+}
+
+.btn{
+  color:#fff;
+  background-color:#3692df;
+  border-color:#2386d9;
+  float:left;
+  font-size:35rpx;
+  padding:5rpx;
+  margin-left:5rpx;
+  line-height:30px;
+}
+
+.yzm{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}
+.btn2{
+  float:left;
+  width: 90%;
+  background-color:#3692df;
+  color:white;
+  line-height:80rpx;
+  margin: 10% 5%;
+}
+.input-itm{
+  float: left;
+}
+.card{
+  margin: 10px;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.card-box .left{
+  float: left;
+  margin-top: 40px;
+}
+.card-box .right{
+  text-align: center;
+}
+.card-img{
+  width: 150px;
+  height: 100px;
+  margin-top: 20rpx;
+}
+.cardup{
+  width: 150px;
+  height: 100px;
+}
+.ui_uploader_item_icon{
+  display:block;
+  float:right;
+  margin-top:40px;
+} */

@@ -1,0 +1,39 @@
+<view class='area'>
+  <view class='dq'>
+    <area-modal modalHidden="true" bindchangeArea="changeArea"></area-modal>
+  </view>
+  <view class='center'>|</view>
+  <view class='gz'>
+    <teamType-modal modalHidden="true" bindchangeTeamType="changeTeamType"></teamType-modal>
+  </view>
+</view>
+<view class='content-list-box' style="'height:100%;overflow:hidden'">
+    <view class="listBg"  wx:if="teams.length > 0">
+      <block wx:for="{{teams}}" wx:key="unique">
+          <view class="listBox"  data-name="{{item.id}}" bindtap="goTeamDetail">
+            <view class="time">
+              <text class="decoration"></text>入驻时间 : <text>{{item.createTime ? item.createTime : ''}}</text>
+            </view>
+            <view class="contentInfo">
+                <view class="logoImg">
+                  <image src="{{item.avatarUrl?item.avatarUrl:'https://static.jianzhugang.com/mini/image/logo.png'}}"></image>
+                </view>
+                <view class="information">
+                    <text> 联系人 : {{item.title ? item.title : item.teamType.title}}</text>
+                    <text> 工种类型 : {{item.teamType}}</text>
+                    <text> 班组地址 : {{item.address}}</text>
+                </view>
+            </view>
+            <view class="goToNext">
+              <image src="/image/more.png"></image>
+            </view>
+          </view>
+      </block>
+    </view>
+    <view class="boxBg" wx:else>
+      <view class="noDataTip">
+        <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+        <text>未查询到同城班组</text>
+      </view>
+    </view>
+</view>

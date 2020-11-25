@@ -1,0 +1,101 @@
+
+<view class="announcement">
+  <view class="promptBox">
+      <text class="text_prompt">公告：</text>加客服微信号:<text class="phone" bindtap='copyText' data-text="{{kefuWeChat}}">{{kefuWeChat}}</text>拉你进建筑微信群，我们会不定期对用户进行电话回访，请注意接听！
+  </view>
+</view>
+<view class="muiBox">
+    <scroll-view class="mui-bg" scroll-y="true" style="height: 100%;overflow: scroll">
+      <form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+        <view class="list">
+          <i>*</i>
+          <text>项目名称:</text>
+          <input type="text" value='{{hireInfo.title}}' disabled></input>
+        </view>
+        <view class="list">
+          <i>*</i>
+          <text>项目地址:</text>
+          <input type="text" value='{{hireInfo.area.fullTitle}}' disabled></input>  
+        </view>
+        <view class="list">
+          <view class="_list">
+            <i>*</i>
+            <text>工种人数:</text>
+            <input type="number" value="{{hireInfo.teamType.title}}" disabled></input>
+          </view>
+          <view class="_list_">
+              <input type="number"  value=" {{hireInfo.peopleNumber}}人" disabled></input>
+          </view>
+        </view>
+        <view class="list" wx:if="{{hireInfo.company.title != null}}">
+          <i>*</i>
+          <text>发布公司:</text>   
+          <input  value="{{hireInfo.company.title}}"  type='text' disabled></input>
+        </view>
+        <view class="list">
+          <i>*</i>
+          <text>发布时间:</text>   
+          <input  value="{{hireInfo.publishedTime}}"  type='text' disabled></input>
+        </view>
+        <view class="list">
+          <i>*</i>
+          <text>薪资/价格:</text>   
+          <input value=" {{hireInfo.salary ? hireInfo.salary : '面议'}}" type='text'  disabled></input>
+        </view>
+        <view class="list">
+          <i>*</i>
+          <text>联系人:</text> 
+          <input type="text" value="{{hireInfo.contacts}}" disabled></input>
+        </view>
+        <view class="list">
+          <i>*</i>
+          <text>联系电话:</text> 
+          <input type="number" value=" {{hireInfo.phone}}" disabled></input>
+        </view>
+        <view class="list">
+          <i>*</i>
+          <text>招工状态:</text>
+          <picker mode="selector" bindchange="changeHiretatus" value="{{hireStatusIdx}}" range="{{hireStatus}}" range-key="text">
+            <input placeholder='请选择招工类型' disabled="disabled" value="{{hireStatus[hireStatusIdx].text}}" class="pickerInput"></input>
+          </picker>  
+        </view>
+        <!-- <view class="list">
+          <i>*</i>
+          <text>发布类型:</text>   
+          <view class="release">
+              <view class="left" bindtap="ordinary" data-type="0">
+                <text class="releaseText {{isOrdinary?'active':''}}">普通招工</text>
+              </view>
+              <view class="right" bindtap="ordinary" data-type="1">
+                <image class="imageBox" src="http://static.jianzhugang.com/mini/image/recommend.png"></image>
+                <text class="releaseText {{!isOrdinary?'active':''}}">急聘招工</text>
+              </view>
+              <view class="prompt"  bindtap='typeDescription'>
+                <image src="http://static.jianzhugang.com/mini/image/prompt.png"></image>
+                <text>类型说明</text>
+              </view>
+          </view>
+        </view> -->
+        <view class="list">
+          <i>*</i>
+          <text>招工详情:</text>  
+        </view>
+        <view class="details"> 
+          <view class="input-area viewBox"> 
+            <text class="_viewBox">{{hireInfo.memo ? hireInfo.memo : ''}}</text>
+          </view>  
+        </view>
+        <button class="btn-submit" data-name="{{hireInfo.id}}" bindtap='doReSendHire'>一键重发</button>
+      </form>
+    </scroll-view>
+</view>
+<modal id="modal" title="招工发布类型说明" confirm-text="已阅读"  bindconfirm="confirm"  no-cancel="true" hidden="{{hiddenStamp}}">
+  <view class="check_list">
+      <view class="check_box"><text class="check_name">普通发布</text>
+          免费发布招工，您的招工信息有一定的机率会被系统推送给工友。
+      </view>
+      <view class="check_box"><text class="check_name">急聘发布</text>
+          发布急聘招工时，支付人民币20元，即可在首页-急聘专区中置顶24小时。与此同时我们将会把此条招工信息推送给多名与招工类型相符优质工友。
+      </view>
+  </view>
+</modal>

@@ -1,0 +1,157 @@
+<view class="person">
+   <view class="titleBg"></view>
+   <view class="{{userInfo?'titleLoginBox':'titleBox'}}">
+      <view class="material">
+         <view class="logo">
+            <image src="{{avatarUrl?avatarUrl:userInfo.avatarUrl?userInfo.avatarUrl:'http://static.jianzhugang.com/mini/image/ico-35.png'}}" bindtap="goAuth"></image>
+         </view>
+         <view class="notLogo">
+            <text class="goLogin {{userInfo?'dpn':''}}">授权登录</text>
+            <view class="box {{userInfo?'':'dpn'}}">
+              <text class="name">{{realName}}</text>
+              <text class="personData" bindtap="goUser">个人资料</text>
+            </view>
+            <text class="integral {{userInfo?'':'dpn'}}">积分：<text>{{mScore}}</text></text>
+         </view>
+      </view>
+      <view class="prompt {{userInfo?'dpn':''}}">
+        <text>授权登录后可以解锁小程序全部功能，方便你能更快捷的招工找活</text>
+      </view>
+   </view>
+   <form bindsubmit="formSubmit" report-submit="true">
+      <view class="listBoxBg {{userInfo?'functionList':'functionListLogin'}}">
+          <view class="wallet">
+             <view class="receive" bindtap="goWallet">
+                <view class="photoImg">
+                   <image src="http://static.jianzhugang.com/mini/personalIcon/receiveImg.png"></image>
+                </view>
+                <view class="photoText">收付款项目</view>
+             </view>
+             <view class="balance" bindtap="goBalance">
+                <view class="photoImg">
+                   <image src="http://static.jianzhugang.com/mini/personalIcon/balanceImg.png"></image>
+                </view>
+                <view class="photoText">我的余额</view>
+             </view>
+          </view>
+          <!-- <view class="pushGuest"  bindtap="goPushGuest">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/pushGuestBg.png"></image>
+          </view> -->
+          <view class="listBox">
+            <view class="optionalTitle">
+                <image class="jobIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/optionalService.png"></image>
+                <text>自有服务</text>
+                <image class="jobIcon transform" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/optionalService.png"></image>
+            </view>
+            <view class="optionalService">
+              <view class="list settleIn"  bindtap="goWyrz">
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/settleIn.png"></image>
+                  <text>入驻中心</text>
+                  <view class="textMsg" wx:if="{{isPerfect}}">
+                        <text>未完善</text>
+                  </view>
+                </button>
+              </view>
+              <view class="list center authenticate"  bindtap='goMyRealName'>
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/legalize.png"></image>
+                  <text>实名认证</text>
+                  <view class="textMsg">
+                        <text class="pending" wx:if="{{isCert == 0}}">待审核</text>
+                        <text class="pass" wx:if="{{isCert == 2}}">未通过</text>
+                        <text class="verified" wx:if="{{isCert == 1}}">已认证</text>
+                        <text class="notCertified" wx:if="{{isCert == null}}">未认证</text>
+                  </view>
+                </button>
+              </view>
+              <view class="list" bindtap='getJifen'>
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/integral.png"></image>
+                  <text>获取积分</text>
+                </button>
+              </view>
+              <view class="list seccond" bindtap="goPointsDetails">
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/pointsRecord.png"></image>
+                  <text>积分明细</text>
+                </button>
+              </view>
+              <view class="list center seccond recruit"  bindtap='goMyHire'>
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/workers.png"></image>
+                  <text>我的招工</text>
+                  <view class="messageTip" wx:if="{{checked}}">
+                      <!-- {{count}} -->
+                  </view>
+                </button>
+              </view>
+              <view class="list  seccond"  bindtap='goMyWork'>
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/hiring.png"></image>
+                  <text>我的找活</text>
+                </button>
+              </view>
+              <!-- <view class="list seccond" bindtap='goSignUp'>
+                  <image src="http://static.jianzhugang.com/mini/image/signUp.png"></image>
+                  <text>报名记录</text>
+              </view>  -->
+              <view class="list  seccond" bindtap='goMyMachine'>
+                <button formType="submit">
+                    <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/mechanical.png"></image>
+                    <text>我的机械</text>
+                </button>
+              </view>
+              <view class="list center seccond pushGuestTip" bindtap="goPushGuest">
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/pushGuestIcon.png"></image>
+                  <text>我的推客</text>
+                  <view class="pushGuestMsg">
+                      <image src="http://static.jianzhugang.com/mini/image/recommend.png"></image>
+                  </view>
+                </button>
+              </view>
+              <view class="list seccond" bindtap='goGuide'>
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/guidance.png"></image>
+                  <text>使用指南</text>
+                </button>
+              </view>
+              <view class="list " bindtap='goReportList'>
+                 <button formType="submit">
+                   <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/Report.png"></image>
+                   <text>举报骗子</text>
+                 </button>
+              </view>
+              <view class="list center">
+                  <button open-type='feedback'>
+                    <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/feedback.png"></image>
+                    <text>意见反馈</text>
+                  </button>
+              </view>
+            </view>
+          </view>
+          <view class="listBox miniListBox">
+            <view class="optionalTitle">
+                <image class="jobIcon" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/ThreewayService.png"></image>
+                <text>第三方服务</text>
+                <image class="jobIcon transform" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/ThreewayService.png"></image>
+            </view>
+            <view class="optionalService">
+              <view class="list" data-type="1" bindtap="goThree">
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/ThreeBankIcon.png"></image>
+                  <text>前海财险</text>
+                </button>
+              </view>
+              <view class="list center" data-type="2"  bindtap="goThree">
+                <button formType="submit">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/ThreeUnicom.png"></image>
+                  <text>联通5G卡</text>
+                </button>
+              </view>
+            </view>
+          </view>
+      </view>
+   </form>
+</view>

@@ -1,0 +1,63 @@
+page{background:#f2f2f2;}
+.settleIn{
+  width:100%;
+  background:#fff;
+}
+.listBox,.caveat{
+  width:92%;
+  height:110rpx;
+  line-height:110rpx;
+  margin:0rpx auto;
+  border-bottom:1rpx solid #f2f2f2;
+}
+.listLeft{
+  width:26%;
+  height:100%;
+  float:left;
+  font-size:30rpx;
+  display: flex;
+  align-items: center;
+  color:#222;
+}
+.listLeft text.tip{
+  padding:0rpx 4rpx;
+  color:red;
+}
+.listRight{
+  width:74%;
+  height: 70rpx;
+  float:left;
+  background:pink;
+  margin-top:18rpx;
+  border-radius:4rpx;
+  background:rgb(242,242,242);
+  position:relative;
+}
+.listRight input,.listRight picker,.listRight picker input,.listRight picker view{
+  width:100%;
+  height:70rpx;
+  line-height:70rpx;
+  text-indent:10rpx;
+  position:absolute;
+  font-size:30rpx;
+}
+.caveat{
+    font-size: 30rpx;
+    color:red;
+}
+.settleInBtn{
+  width:92%;
+  height:120rpx;
+  margin:20rpx auto;
+  display: flex;
+  align-items: center;
+}
+.btn-submit{
+  width:80%;
+  height:90rpx;
+  line-height: 90rpx;
+}
+.btn_color{
+  color: #fff !important;
+  background: #4e9fe3 !important;
+}

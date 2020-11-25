@@ -1,0 +1,40 @@
+<view class="recharge">
+   <view class="totalRecharge flexCenter">
+       <view class="rechargeBox flexCenter">
+          <text class="number">{{mScore}}</text>
+          <text class="tiper">当前积分</text>
+       </view>
+   </view>
+   <view class="chargeBox">
+      <view class="titleBox flexCenter">
+         <text class="title">积分充值</text>
+      </view>
+      <view class="ulSelectBox">
+         <ul>
+            <li class="flexCenter">
+               <view class="ulSelectList">
+                 <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/integralIcon.png"></image>
+                 <text class="moneyTitle">{{6 * scoreRatio}}积分</text>
+                 <text class="toPay {{_num == 600? 'on' : ''}}"  data-name="600" data-type="2" bindtap='changeclick'>￥6.00</text>
+               </view>
+            </li>
+            <li class="flexCenter">
+               <view class="ulSelectList">
+                 <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/integralIcon.png"></image>
+                 <text class="moneyTitle">{{12 * scoreRatio}}积分</text>
+                 <text class="toPay {{_num == 1200? 'on' : ''}}" data-name="1200" data-type="3" bindtap='changeclick'>￥12.00</text>
+               </view>
+            </li>
+            <li  class="flexCenter">
+               <view class="ulSelectList">
+                 <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/integralIcon.png"></image>
+                 <text class="moneyTitle">{{18 * scoreRatio}}积分</text>
+                 <text class="toPay {{_num == 1800? 'on' : ''}}" data-name="1800" data-type="4" bindtap='changeclick'>￥18.00</text>
+               </view>
+            </li>
+         </ul>
+      </view>
+       <text class="problem">如有充值问题，请联系客服：4008-6060-25</text>
+   </view>
+</view>
+<pushOffBox modal-hidden="{{is_modal_Hidden}}" total="{{total}}" use ="{{usePay}}"  bind:payDirectly="payDirectly" bind:balancePayment="balancePayment" bind:modal_click_Hidden="modal_click_Hidden"/>

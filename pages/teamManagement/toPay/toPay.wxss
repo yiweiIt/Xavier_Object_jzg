@@ -1,0 +1,129 @@
+/* pages/teamManagement/toPay/toPay.wxss */
+scroll-view{
+  width:100%;
+  height:100%;
+}
+.payInfo{
+   width:92%;
+   height:500rpx;
+   margin:0rpx auto;
+   padding:20rpx 0rpx;
+   border-bottom:2rpx solid rgba(242,242,242,1);
+}
+.salary{
+   width:92%;
+   height:auto;
+   margin:0rpx auto;
+   padding:20rpx 0rpx;
+}
+.payInfo .list,.payInfo .oddnumber,.payInfo .remark,.money .list,.money .remark{
+   width:100%;
+   height:100rpx;
+   line-height:100rpx;
+   font-size: 30rpx;
+   color:#333;
+}
+.payInfo .list text,.payInfo .remark text,.money .list text,.money .remark text{
+  display:inline-block;
+  height:100rpx;
+  line-height:100rpx;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+.payInfo .list text:nth-child(1),.payInfo .remark text:nth-child(1),.money .list text:nth-child(1),.money .remark text:nth-child(1){
+  width:30%;
+  float:left;
+}
+.payInfo .list text:nth-child(2),.money .list text:nth-child(2){
+  width:70%;
+  float:right;
+  text-align:right;
+}
+.oddnumber text{
+  display:inline-block;
+  width:44%;
+  float:left;
+  height:80rpx;
+}
+.oddnumber input,.payInfo .remark input,.money .remark input{
+  width:55%;
+  float:right;
+  background:#efefef;
+  border-radius:6rpx;
+  height:74rpx;
+  line-height:74rpx;
+  border:2rpxc solid #eee;
+  text-indent:20rpx;
+  margin-top:13rpx;
+}
+.salary{
+   height:auto;
+}
+.salaryTitle{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  border-left:8rpx solid #4da1ff;
+  padding-left:12rpx;
+}
+.money{
+   width:100%;
+   height:410rpx;
+   padding:0rpx;
+   margin:16rpx auto;
+   border-bottom:2rpx solid rgb(242,242,242,1);
+}
+
+.money view.inputBox{
+   width:100%;
+
+}
+.money input{
+  padding-left: 12rpx;
+} 
+.Dispatch,.submitOrders{
+  border:none;
+  background:none;
+  outline: none;
+  width:48%;
+  height:90rpx;
+  line-height: 90rpx;
+  font-size:32rpx;
+  background:rgba(22, 155, 213, 1);
+  color:#fff;
+  float:left;
+  margin:30rpx 0rpx;
+}
+.submitOrders{
+  margin-left:4%
+}
+.Dispatch::after,.submitOrders::after{
+  border: none;
+}
+.totalNumber{
+  color: rgba(22, 155, 213, 1);
+}
+.scan{
+  position:relative;
+}
+.scan input{
+  z-index:9;
+}
+.scanCard{
+  position: absolute;
+  width:12%;
+  height:70rpx;
+  float:right;
+  right:-10rpx;
+  top:15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index:11;
+}
+.scanCard image{
+  display:block;
+  width:44rpx;
+  height:44rpx;
+}

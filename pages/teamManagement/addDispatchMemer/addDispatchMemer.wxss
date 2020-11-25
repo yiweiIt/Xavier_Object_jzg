@@ -1,0 +1,294 @@
+/* pages/teamManagement/addDispatchMemer/addDispatchMemer.wxss */
+page{background:rgba(242,242,242,1)}
+.dataListBox{
+  padding:0rpx;
+  margin:0rpx;
+  width:100%;
+  /* height: calc(100vh - 156rpx); */
+  height:100%;
+  padding-bottom:160rpx;
+}
+.dispatchBox{
+  width: 100%;
+  height:110rpx;
+  background:#fff;
+  border-bottom:8rpx solid rgba(242,242,242,1)
+}
+.boxList{
+  width:92%;
+  margin:0rpx auto;
+  height:100%;
+}
+.checkBox{
+  width:10%;
+  height:100%;
+  float:left;
+  display: flex;
+  justify-content:center;     
+  align-items:center;
+}
+
+.boxInfo{
+  width:90%;
+  height:100%;
+  float:right;  
+}
+.boxInfo text{
+  display:inline-block; 
+   height:110rpx;
+  line-height:110rpx;
+  font-size: 28rpx;
+}
+.boxInfo text.name{
+  width:24%;
+  overflow: hidden;
+  float:left;
+}
+.orange{
+  color:rgb(47,128,218);
+}
+
+.gray{
+  color: rgb(153,153,153);
+}
+.boxInfo .project{
+   width:43%;
+   height:100%;
+   float:left;
+   margin-left:1%;
+   overflow: hidden;
+   white-space: normal;
+   text-overflow: ellipsis;
+}
+.boxInfo text.status{
+   width:26%;
+   height:100%;
+   float:left;
+   text-align:right;
+}
+.statusImg{
+   width:6%;
+   height:100%;
+   float:right;
+   text-align:center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.statusImg image{
+    width:10rpx;
+    height:24rpx;
+}
+.footer{
+  bottom:40rpx;
+  left:4%;
+  position:fixed;
+  width:92%;
+  height:90rpx;
+  z-index:99;
+}
+.footer button{
+  width:50%;
+  height:90rpx;
+  line-height:90rpx;
+  border:none;
+  background:none;
+  outline: none; 
+  text-align:center; 
+  color:#fff;
+  font-size:32rpx;
+  border-radius:0rpx;
+  float:left;
+}
+.footer button:first-child{
+  background:rgb(77,161,255);
+  border-top-left-radius: 45rpx;
+  border-bottom-left-radius: 45rpx;
+}
+.footer button:last-child{
+  background:rgb(40,131,232);
+  border-top-right-radius: 45rpx;
+  border-bottom-right-radius: 45rpx;
+}
+.footer button::after{
+  border:none;
+}
+.boxBg{
+  width:100%;
+  height:100%;
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.boxBg image{
+  width:160rpx;
+  height:160rpx;
+  display:block;
+  margin:0rpx auto;
+}
+.boxBg text{
+  width:100%;
+  display: block;
+  line-height:50rpx;
+  text-align: center;
+  color:#888;
+}
+.dpn{
+  display:none;
+}
+.checkboxTip{
+  width:100%;
+  height:140rpx;
+  background:#fff;
+}
+.checkboxTip text._promptBox{
+  display: block;
+   width:96%;
+   height:100rpx;
+   line-height:50rpx;
+   margin:0rpx auto;
+   padding:20rpx 0rpx;
+   font-size:30rpx;
+   color:#333;
+}
+.checkboxTip text._promptBox text.promptBox{
+   display: inline-block;
+   color:#f0940d;
+   padding:0rpx 10rpx 0rpx 0rpx;
+}
+._dataListBox{
+  padding:0rpx;
+  margin:0rpx;
+  width:100%;
+  height: calc(100vh - 296rpx);
+}
+.checkboxList{
+   width:96%;
+   height:220rpx;
+   background:#fff;
+   margin:15rpx auto;
+   border-radius:6rpx;
+}
+.boxHead{
+   width:96%;
+   height:80rpx;
+   line-height:80rpx;
+   margin-left:4%;
+   border-bottom:1rpx solid rgba(242,242,242,1);
+}
+.leftBox{
+  width:50%;
+  height:100%;
+  float:left;
+}
+.rightBox{
+  width:160rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  float:right;
+  text-align:center;
+  font-size:27rpx;
+  color:#fff;
+}
+.checkboxLabel{
+  width:80rpx;
+  height:100%;
+  float:left;
+  display: flex;
+  justify-content:center;     
+  align-items:center;
+}
+.checkboxLabel checkbox{
+  transform: scale(0.7,0.7);
+}
+.dispatchContent{
+  width:92%;
+  height:120rpx;
+  margin:0rpx auto;
+}
+.leftContent{
+   width:20%;
+   height:100%;
+   float:left;
+   display: flex;
+   justify-content:center;     
+   align-items:center;
+}
+.leftContent image{
+  width:100rpx;
+  height:100rpx;
+}
+.rightContent{
+   width:80%;
+   height:110rpx;
+   float:right;
+   margin-top:5rpx;
+}
+.contentTip{
+  width:98%;
+  height:60rpx;
+  line-height:60rpx;
+  margin:0rpx auto;
+}
+text.contentLeft{
+   display: inline-block;
+   float:Left;
+   max-width:50%;
+   font-size:30rpx;
+   color:#333;
+   padding:0rpx 2% 0rpx 0rpx;
+   overflow:hidden;
+   text-overflow:ellipsis;
+   white-space:nowrap;
+}
+.contentStart{
+   float:left;
+   width:45%;
+   height:100%;
+}
+.contentStart image{
+  width:34rpx;
+  height:34rpx;
+  display: inline-block;
+  float:left;
+  margin-top:13rpx;
+}
+.dispatchText{
+  display: block;
+  width:98%;
+  height:40rpx;
+  line-height: 40rpx;
+  margin:0rpx auto;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-size:28rpx;
+  color:#888;
+}
+/* checkbox {
+  width: 240rpx;
+  height: 90rpx;
+} */
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius:50%;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #4da1ff;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

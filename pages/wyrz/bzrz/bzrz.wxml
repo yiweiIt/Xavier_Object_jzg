@@ -1,0 +1,69 @@
+<view class="settleIn">
+  <form report-submit="true" bindreset="formReset">
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>班组姓名</text>
+        </view>
+        <view class="listRight">
+          <input maxlength="18" placeholder-class='input-d' type='text' placeholder='请输入班组姓名' bindinput="bindName"></input>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>工种类型</text>
+        </view>
+        <view class="listRight">
+            <teamType-modal modalHidden="false" teamTypeName="{{workerType}}" value="{{teamTypeId}}" bindchangeTeamType="changeTeamType">
+            </teamType-modal>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>所在地区</text>
+        </view>
+        <view class="listRight">
+            <area-third-input-modal areaTitle="{{localType}}" bindchangeThirdArea="changeThirdArea"></area-third-input-modal>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip"></text>
+            <text>开户行</text>
+        </view>
+        <view class="listRight">
+            <picker class="changebank" bindchange="userbindbankName" value="{{array[index]}}" range="{{array}}" name="bankName">
+              <view class="picker">
+                {{array[index]?array[index]:'请选择开户行'}}
+              </view>
+            </picker>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip"></text>
+            <text>银行卡号</text>
+        </view>
+        <view class="listRight">
+            <input placeholder-class='input-d' type='text'  placeholder='请输入银行卡号'  bindinput="bindCardNumber"></input>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip"></text>
+            <text>身份证号</text>
+        </view>
+        <view class="listRight">
+            <input placeholder-class='input-d' type='text' placeholder='身份证号'  bindinput="bindIdnumber"></input>
+        </view>
+    </view>
+    <view class="caveat">
+    {{warnStr}}
+    </view>
+  </form>
+</view>
+  <view class="settleInBtn" bindtap="formSubmit">
+      <button style="opacity: {{opacity}};" disabled='{{!isSubmitAble}}' class="btn-submit btn_color"  formType="submit" >入驻</button>
+  </view>

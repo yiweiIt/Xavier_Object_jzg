@@ -1,0 +1,20 @@
+<view class="dispatchBox">
+  <scroll-view class="dataListBox" scroll-y="true" wx:if="{{choiceLogs.length>0}}">
+    <view wx:for="{{choiceLogs}}" wx:key="id" data-name="{{item.id}}" bindtap="goChoiceDetail">
+      <view class="dispatchList">
+        <text class="name">{{item.content}}</text>
+        <!-- <text class="status {{item.isRight == true ? 'orange':'grey'}}">{{item.isRight == true ? '正确':'错误'}}</text> -->
+        <view class="bottom">
+          <text class="time">答题时间 : {{item.createTime}}</text>
+          <image src="{{item.isRight == true ? 'http://static.jianzhugang.com/mini/image/correct.png':'http://static.jianzhugang.com/mini/image/failing.png'}}"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="boxBg" wx:else>
+    <view class="noDataTip">
+      <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+      <text>暂无考试记录</text>
+    </view>
+  </view>
+</view>

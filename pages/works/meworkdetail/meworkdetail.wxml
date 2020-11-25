@@ -1,0 +1,160 @@
+<form bindsubmit="formSubmit" report-submit="true">
+   <view class="upper_apex">
+      <view class="left_apex">
+         <view class="photoBox">
+         <image src="{{workdata.avatarUrl ? workdata.avatarUrl : 'https://static.jianzhugang.com/mini/image/logo.png'}}"  mode="aspectFit"></image>
+         </view>
+      </view>
+      <view class="right_apex">
+          <text class="right_apex_title">信息完整度</text>
+          <view class="progressBox">
+              <view class="skills" style="width:{{completion}}">{{completion}}</view>
+          </view>
+          <text class="right_apex_tip">信息越完善，找活成功的机率越大</text>
+      </view>
+   </view>
+   <view class="topic">
+      <image class="jobIcon" src="http://static.jianzhugang.com/mini/image/newJobInfo.png"></image>
+      <text>个人资料</text>
+      <image class="jobIcon transform" src="http://static.jianzhugang.com/mini/image/newJobInfo.png"></image>
+   </view>
+   <view class="boxStyle">     
+      <view class="listBox">
+        <text>姓名</text>
+        <input type="text" value="{{workdata.userName}}" maxlength="10" placeholder="请填写姓名" name="userName" bindinput="bindName"/>
+      </view>     
+      <view class="listBox">
+        <text>年龄</text>
+        <input type="number" bindinput="bindAge"   value="{{workdata.age}}" maxlength="2"  placeholder="请填写年龄" name="age"/>
+      </view>     
+      <view class="listBox">
+        <text>性别</text>
+        <block wx:if="{{source==0||source==2}}">
+          <picker bindchange="bindPickerChangeSex" value="{{arrayIndex}}" range="{{arrayGenger}}">
+            <input maxlength="18" value='{{arrayGenger[arrayIndex]}}' disabled placeholder='请选择性别' />
+          </picker>
+        </block>
+        <block wx:else>
+          <picker bindchange="bindgender" value="{{workdata.sex == 1 ? '男' : workdata.sex == 2 ?'女':'请选择性别'}}" range="{{sexarray}}" range-key="name" name="sex">
+            <view class="picker">
+               {{workdata.sex == 1 ? '男' : workdata.sex == 2 ?'女':'请选择性别'}}
+            </view>
+          </picker>
+        </block>
+      </view>
+      <view class="listBox">
+        <text>电话</text>
+        <input type="number" maxlength='11' value="{{workdata.contactNumber}}" placeholder="请填写联系电话" name="contactNumber" bindinput='bindPhone'/>   
+      </view>
+      <view class="listBox" wx:if="{{!isShow}}">
+        <text>验证码</text>
+        <input type="number"  placeholder="请填写验证码" class="vode" value=""  bindinput='bindHireCode'/>  
+        <block wx:if="{{isInCode===1}}">
+            <button class="btn" bindtap='sendCode'>获取验证码</button>
+        </block>
+        <block wx:else>
+            <button class="btn">{{isCodeTime}}s后再发送</button>
+        </block>
+      </view>
+   </view>
+   <view class="topic">
+      <image class="jobIcon_2" src="http://static.jianzhugang.com/mini/image/newJobInfo_2.png"></image>
+      <text>找活信息</text>
+      <image class="jobIcon_2 transform" src="http://static.jianzhugang.com/mini/image/newJobInfo_2.png"></image>
+   </view>
+   <view class="boxStyle">     
+      <view class="listBox">
+        <text>工种</text>
+        <teamType-modal modalHidden="false" teamTypeName="{{workdata.teamTypeName}}" value="{{teamTypeId}}" bindchangeTeamType="changeTeamType">
+        </teamType-modal>
+      </view>
+      <view class="listBox" wx:if="{{source==1}}">
+        <text>找活状态</text>
+        <view class="imgClass">
+          <image src='../../../image/xl.jpg'></image>
+        </view>
+        <picker bindchange="bindPickerChange" value="{{workdata.lookLifeStatus}}" range="{{array}}" name="lookLifeStatus">
+          <view class="picker" style="color:#09f;">
+            {{workdata.lookLifeStatus == 0?'找活中':'已找到'}}
+          </view>
+        </picker>
+      </view>
+      <view class="listBox">
+        <text style="width:25%">所在地区</text>
+        <view class="userPosition">
+            <text class="adressText">{{workdata.address}}</text>
+            <button bindtap="checkHasLocationPermissionByMP">获取定位</button>
+        </view>
+      </view>
+   </view>
+   <view class="topic">
+      <image class="jobIcon_3"  src="http://static.jianzhugang.com/mini/image/newJobInfo_3.png"></image>
+      <text>自身优势</text>
+      <image class="jobIcon_3 transform"  src="http://static.jianzhugang.com/mini/image/newJobInfo_3.png"></image>
+   </view>
+   <view class="boxStyle">     
+      <textarea class="input-area" maxlength='100' value="{{workdata.content}}"  bindinput="bindMark" 
+        name="content" adjust-position="false"></textarea>
+   </view>
+   <view class="topic project_b">
+      <image class="jobIcon_4"  src="http://static.jianzhugang.com/mini/image/newJobInfo_4.png"></image>
+      <text>项目经验</text>
+      <image class="jobIcon_4 transform"  src="http://static.jianzhugang.com/mini/image/newJobInfo_4.png"></image>
+      <view class="addBox" wx:if="{{experience.length>0}}"  bindtap="addProject">
+           <image class="addImageIcon" src="../../../image/addImageIcon.png"></image>
+       </view>
+   </view>
+   <block wx:for="{{experience}}" wx:key="{{unique}}" wx:for-item="ite"  wx:if="{{experience.length>0}}">
+      <view class="boxStyle project_b  _project"  data-type="{{index}}" bindtap="editProject">
+        <image class="delete" src="http://static.jianzhugang.com/mini/image/delete.png" data-type="{{index}}" catchtap="deleteProject"></image>
+        <view class="projectBox">
+          <view class="name">
+              <view class="nameIcon">
+                <image src="http://static.jianzhugang.com/mini/image/experienceIcon.png"></image>
+              </view>
+              <text>{{ite.hireTitle}}</text>
+          </view>
+          <text class="name time">{{ite.startDate}} - {{ite.endDate}} {{ite.areaTitle}} </text>
+          <view class="caption">
+            <view class="iconBox">
+              <image src="http://static.jianzhugang.com/mini/image/particularIcon.png"></image>
+            </view>
+            <text>项目详情</text>
+          </view>
+          <view class="project_content">{{ite.hireRequest}}</view>
+          <view class="imageBox" style="height:{{ite.imgArrLength*130}}rpx" wx:for-item="item" wx:if="{{ite.imgArr.length>0}}">
+            <block wx:for="{{ite.imgArr}}" wx:key="{{unique}}">
+              <view class="photoList">
+                  <image mode="aspectFit" src="{{item.img}}"></image>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{experience.length==0}}">
+      <view class="boxStyle">
+          <text class="no_project">添加项目经验，可提升您的可信度</text>
+          <button class="b_project" bindtap="addProject">去添加</button>
+      </view>
+    </block>
+   <view class="topic">
+      <image class="jobIcon_5" src="http://static.jianzhugang.com/mini/image/newJobInfo_5.png"></image>
+      <text>班组管理</text>
+      <image class="jobIcon_5" src="http://static.jianzhugang.com/mini/image/newJobInfo_5.png"></image>
+   </view>
+   <view class="boxStyle">     
+      <text class="no_project">添加班组成员，增强自身班组实力</text>
+      <button class="b_project" bindtap="goTeamManagement">去添加</button>
+   </view>
+    <view class="buttonBox">
+       <button formType="submit">{{source==1?'一键更新':'立即发布'}}</button>
+    </view>
+</form>
+<modal id="modal" title="招工发布类型说明" confirm-text="已阅读"  bindconfirm="confirm"  no-cancel="true" hidden="{{hiddenStamp}}">
+  <view class="check_list">
+      <view class="check_box">
+            欢迎来到建筑港，当您完善找活信息后，为了方便联系，招工、用工方可以查看您的联系方式以及找活需求！
+      </view>
+  </view>
+</modal> 

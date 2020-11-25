@@ -1,0 +1,164 @@
+page{background:rgba(242,242,242,1);}
+.board{
+  width:100%;
+  height:100%;
+}
+.boardTip{
+  width:100%;
+  background:#fff;
+}
+.prompt{
+  width:92%;
+  display:block;
+  line-height:40rpx;
+  padding:20rpx 0rpx;
+  margin:0rpx auto;
+  color:#666;
+  font-size:28rpx;
+}
+.promptTip{
+  padding:0rpx 10rpx 0rpx 0rpx;
+  display:inline-block;
+  color:#f0940d;
+}
+.boardListBox{
+  width:92%;
+  margin:0rpx auto;
+  /* height:calc(100vh - 200rpx); */
+}
+.inputBox{
+  position:fixed;
+  width:100%;
+  height:120rpx;
+  background:#fff;
+  bottom:0rpx;
+}
+.others,.myself{
+  width:90%;
+  padding:20rpx 0rpx;
+}
+.myself{
+  float:right;
+  margin-right:0rpx;
+}
+.left{
+  float:left;
+  margin-left:0rpx;
+}
+.right{
+  float:right;
+  margin-right:0rpx;
+}
+.personalImg{
+  display:inline-block;
+  width:88rpx;
+  height:88rpx;
+  background:rgb(206, 205, 205);
+  border-radius:50%;
+  margin-top:-34rpx;
+}
+.name{
+  width:calc(90vw - 160rpx);
+  display: block;
+  height:60rpx;
+  font-size:27rpx;
+  line-height:60rpx;
+  color: #666;
+  text-indent:30rpx;
+  margin-left:100rpx;
+}
+.rightName{
+  text-align:right;
+  margin-left:0rpx;
+  margin-right:100rpx;
+}
+.rightName .time{
+  display:inline-block;
+  padding:0rpx 30rpx 0rpx 0rpx;
+}
+.time{
+  display:inline-block;
+  padding:0rpx 0rpx 0rpx 30rpx;
+  font-size:24rpx;
+}
+.dialogBox{
+  position:relative;
+  width:auto;
+  max-width:calc(90vw - 200rpx);
+  background:#fff;
+  display: inline-block;
+  padding:20rpx 10rpx;
+  border-radius:10rpx;
+}
+.dialogBox::after {
+  position:absolute;
+  display: block;
+  content: ' ';
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width:26rpx;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #fff;
+}
+.others .dialogBox{
+  margin-left:30rpx;
+  float:left;
+}
+.others .dialogBox::after{
+  left: -38rpx;
+  top: 4rpx; 
+  transform: rotate(-80deg);
+  -webkit-transform: rotate(-80deg);
+}
+.myself .dialogBox{
+  float:right;
+  margin-right:30rpx;
+}
+.bgColor{
+  background:#98e165;
+}
+.bgColor::after{
+  border-bottom-color: #98e165;
+}
+.myself .dialogBox::after{
+  right:-38rpx;
+  top: 4rpx; 
+  transform: rotate(80deg);
+  -webkit-transform: rotate(80deg);
+
+}
+.dialogBox text.content{
+   display:inline-block;
+   width:100%;
+   line-height:40rpx;
+   font-size:26rpx;
+   color:#232323;
+   word-wrap: break-word;
+   word-break:break-all;
+}
+.interInput{
+  width:65%;
+  height:70rpx;
+  left:5%;
+  top:25rpx;
+  position:absolute;
+  padding:0rpx 2.5%;
+  border-radius:10rpx;
+  background:#f2f2f2;
+}
+.send{
+  width:15%;
+  height:64rpx;
+  line-height:64rpx;
+  background:rgb(11, 168, 11);
+  position:absolute;
+  right:5%;
+  top:28rpx;
+  font-size:25rpx;
+  color:#fff;
+}
+.send::after{
+  border:none;
+}

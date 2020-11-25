@@ -1,0 +1,22 @@
+<!--pages/addDispatch/addDispatch.wxml-->
+<form bindsubmit="formSubmit" report-submit="true" >
+    <block wx:for="{{memberIds}}" wx:key="id">
+      <view class="listBox">
+        <view class="list">
+          <text>派单人员:</text>
+          <input type="text" maxlength='18' disabled value='{{item.name}}' class="noBg"/>
+        </view>
+        <view class="list">
+          <text>派单详情:</text>
+        </view>
+        <view class="section">
+          <view class="sectionBox">
+            <textarea class="input-area" data-index="{{index}}" maxlength='100' value="{{item.memo}}" placeholder='请输入派单详情' bindinput="bindHireRequest"  adjust-position="false"> </textarea>
+          </view>
+        </view>
+      </view>
+    </block>
+  <view class="backTip">
+    <button formType="submit" class="Dispatch">确定派单</button>
+  </view>
+</form>

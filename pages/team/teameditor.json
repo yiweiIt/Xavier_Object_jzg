@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "班组信息",
+  "usingComponents": {
+    "area-modal": "/component/areaModal/areaModal",
+    "teamType-modal": "/component/teamTypeModal/teamTypeModal",
+    "area-third-input-modal": "/component/areaThirdInputModal/areaThirdInputModal"
+  }
+}

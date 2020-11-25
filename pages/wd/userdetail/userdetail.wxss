@@ -1,0 +1,134 @@
+/* pages/userdetail/userdetail.wxss */
+page{background:rgba(242,242,242,1)}
+.inputBox{
+  width:96%;
+  margin:20rpx auto;
+  background:#fff;
+  padding:14rpx 0rpx;
+  border-radius:10rpx;
+}
+.item {
+    border-color: #eee;
+    background-color: #fff;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 16px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-shadow: 0 0 0 0!important;
+}
+.top-avatar {
+    background-image: url('https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/ico-02.png');
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    top: -1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+}
+
+.top-avatar image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    border: solid 3px rgba(255, 255, 255, 0.5);
+}
+.item .m_title{
+  font-size: 14px;
+  color: #1a65a4;
+}
+form{
+  display:block;
+  padding:5px;
+  color: #444;
+}
+.item-input{
+  border-bottom:2rpx solid rgba(242,242,242,1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:92%;
+  margin:0rpx auto;
+  height: 100rpx;
+  line-height:100rpx;
+}
+
+.item-input:last-child{
+  border:none;
+}
+
+.item-input .left{
+  width:25%;
+  float:left;
+  line-height: 1.6rem;
+}
+.item-input .left text{
+  font-size: 32rpx;
+}
+.item-input .right input{
+  font-size: 32rpx;
+}
+.item-input .right text{
+  font-size: 30rpx;
+}
+.item-input  view{
+  font-size: 30rpx;
+}
+.item-input .right{
+  line-height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.item-input .right input{
+  text-align: right;
+}
+.item-input .right .userimg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.button-bg{
+  background: #4fc1dd;
+  color: #fff;
+  margin-top: 20px;
+}
+.textarea-style{
+  margin-left: 25%;
+}
+.btn-t{
+  color:#fff;
+  background:#34a123;
+  padding:2px;
+  border-radius:5px;
+  float: right;
+  width: 50px;
+  text-align: center;
+}
+.fh{
+  width: 15rpx;
+  height: 25rpx;
+  display: inline-block;
+  margin-left: 12rpx;
+}
+.btn-submit{
+  margin-top:60rpx;
+  margin-bottom:20rpx;
+  color: #fff !important;
+  background-color: #1989fa !important;
+}
+.g_picker{
+  width: 70%;
+  text-align: right;
+}

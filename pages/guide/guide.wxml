@@ -1,0 +1,16 @@
+
+<view wx:if="{{isWd==0}}">
+    <image class="img3" src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/WechatIMG521.jpeg'></image>
+</view>
+<view wx:elif="{{isWd==1}}">
+   <image class="img1"  mode="widthFix" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/newcomers.jpg"></image> 
+</view>
+<view wx:else>
+   <image class="img1"  mode="widthFix" src="{{url}}"></image> 
+</view>
+  <button bindtap="gopublish" wx:if="{{isWd==2}}" bindtap="callphone">
+    <view class="publish">拨打</view>
+  </button>
+  <button bindtap="gopublish" wx:if="{{isWd==3}}" bindtap="goTeamManagement">
+    <view class="publish">购买保险</view>
+  </button>

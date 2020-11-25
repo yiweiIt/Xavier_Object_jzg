@@ -1,0 +1,72 @@
+
+page{background:rgba(242,242,242,1);}
+.boxContain{
+  width:92%;
+  padding:20rpx 0rpx;
+  background:#fff;
+  margin:20rpx auto;
+  border-radius:6rpx;
+}
+
+.list{
+    width:92%;
+    margin:0rpx auto;
+   height:100rpx;
+   line-height:100rpx;
+   font-size:28rpx;
+   border-bottom:2rpx solid rgba(242,242,242,1)
+}
+.list:last-child{
+  border:none;
+}
+.list text.prompt{
+  width:30%;
+  float:left;
+  display:inline-block;
+  height:100%;
+}
+.list text.prompt text{
+  color: red;
+  font-size:28rpx;
+  padding:0rpx 10rpx 0rpx 0rpx;
+}
+.list input,.list picker{
+  width:69%;
+  float:right;
+  display: inline-block;
+  height:100%;
+}
+.list picker input{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  text-align:left;
+}
+.warnStr{
+  width:92%;
+  line-height:100rpx;
+  background:#fff;
+  margin:20rpx auto;
+  border-radius:6rpx;
+}
+.warnStr text{
+   display: block;
+   width:92%;
+   margin:0rpx auto;
+   color:red;
+}
+.buttonBox{
+   width:92%;
+   height:90rpx;
+   line-height:90rpx;
+   margin:40rpx auto;
+   background:#4e9fe3;
+   color:#fff;
+   font-size: 29rpx;
+}
+.buttonBox::after{
+  border:none;
+}
+button[disabled] {
+  background: #9cc7eb !important;
+}

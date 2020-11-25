@@ -1,0 +1,176 @@
+page{
+  background:rgba(242,242,242,1);
+  color:#333;
+}
+.area{
+  position: fixed;
+  width: 100%;
+  height: 120rpx;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.area picker{
+  color:rgb(73, 73, 73);
+}
+/*地区  */
+.area .dq {
+  font-size: 28rpx;
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area .gz {
+  font-size: 28rpx;
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float:left;
+}
+/*中间分隔线  */
+.area .center {
+  color: rgba(0, 0, 0, 0, 0.3);
+  height: 50rpx;
+  flex: 1;
+  text-align: center;
+}
+/* .area .dq {
+  float: left;
+  font-size: 28rpx;
+  flex: 2.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area .gz {
+  font-size: 28rpx;
+  flex: 2.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.center{
+  height: 100%;
+  width: 1rpx;
+  flex: 1;
+  color:#888;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-list-box {
+  float: left;
+  width: 94%;
+  margin-top:120rpx;
+  margin-left:3%;
+}
+.listBg{
+  width:100%;
+}
+.listBox{
+  width:100%;
+  height:260rpx;
+  background:#fff;
+  margin:20rpx auto;
+}
+.time{
+  width:90%;
+  margin:0rpx auto;
+  height:70rpx;
+  line-height:70rpx;
+  border-bottom:1rpx dashed #d2d3d4;
+  font-size:27rpx;
+  color:#888;
+}
+.time text{
+  display:inline-block;
+  float: right;
+}
+.time text.decoration{
+  display:inline-block;
+  width:14rpx;
+  height:14rpx;
+  margin:30rpx 10rpx 26rpx 0rpx;
+  background:#4da1ff;
+  float:left;
+  border-radius:50%;
+}
+.contentInfo{
+  width:83%;
+  margin-left:5%;
+  float:left;
+  height:180rpx;
+}
+.goToNext{
+   width:7%;
+   float:right;
+   margin-right:5%;
+   height:150rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.goToNext image{
+   width:14rpx;
+   height:25rpx;
+}
+.logoImg{
+  float:left;
+  width:26%;
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+.logoImg image{
+  width:110rpx;
+  height:110rpx;
+  border-radius:50%;
+  background:#4da1ff url('https://static.jianzhugang.com/mini/image/logo.png') no-repeat 50% 50%;
+  background-size:100% 100%;
+}
+.information{
+  float:right;
+  width:74%;
+  height:160rpx;
+  margin:10rpx 0rpx;
+}
+.information text{
+   display:block;
+    width:100%;
+    height:52rpx;
+    line-height:52rpx;
+    font-size:28rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+.boxBg{
+  width:100%;
+  height:calc(100vh - 200rpx);
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.boxBg image{
+  width:160rpx;
+  height:160rpx;
+  display:block;
+  margin:0rpx auto;
+}
+.boxBg text{
+  width:100%;
+  display: block;
+  line-height:50rpx;
+  text-align: center;
+  color:#888;
+}

@@ -1,0 +1,32 @@
+<!--pages/register/register.wxml-->
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+  <view class='smrz'>
+    <image src="http://jianzhugang.xzgapp.com/ceb449d2-d48e-4888-bc20-4c928a956d09.jpg" style="width: 100%;height: 140px;"></image>
+    <text class="tiper">开工复工备案</text>
+    <text class="tiper">联系建筑港4008-6060-25</text>
+    <view class="list">
+      <text>所在地</text>
+      <input type="text" placeholder="输入工作所在地（省市）" class="telName" value="{{address}}" bindinput="bindAddress"></input>
+    </view>
+    <view class="list">
+      <text>项目名</text>
+      <input type="text" placeholder="输入项目名称" class="telName" value="{{projectName}}" bindinput="bindProjectName"></input>
+    </view>
+    <view class="list scan">
+      <text>身份证</text>
+      <input type="text" placeholder="输入身份证号" value="{{idNumber}}" class="idNumber" bindinput="bindidNumber" />
+      <ocr-navigator bind:onSuccess="success" certificateType="idCard" opposite="{{false}}" class="scanCard">
+        <image src="http://static.jianzhugang.com/mini/image/camera.png"></image>
+      </ocr-navigator>
+    </view>
+    <view class="list">
+      <text>姓名</text>
+      <input type="text" placeholder="输入姓名" class="telName" value="{{name}}" bindinput="bindName"></input>
+    </view>
+    <view class="list">
+      <text>电话</text>
+      <input type="number" placeholder="输入手机号" class="telName" placeholder-style="color:#666;font-size:30rpx;" value="{{phone}}" bindinput="bindPhone"></input>
+    </view>
+  </view>
+  <button class='bind' formType="submit">提交</button>
+</form>

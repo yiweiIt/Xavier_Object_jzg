@@ -1,0 +1,54 @@
+<!--pages/userdetail/userdetail.wxml-->
+<!-- <view class="item top-avatar">
+  <image src="{{data.avatarUrl ? data.avatarUrl : userInfo.avatarUrl}}"></image>
+</view> -->
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+  <view class="inputBox">
+      <view class='item-input' data-src="{{data.avatarUrl ? data.avatarUrl : userInfo.avatarUrl}}"  bindtap="chooseimage">
+        <view class='left'>
+          <text>头像:</text>
+        </view>
+        <view class='right'>
+          <image src="{{data.avatarUrl ? data.avatarUrl : userInfo.avatarUrl}}" class="userimg"></image>
+        </view>
+      </view>
+      <view class='item-input'>
+        <view class='left'>
+          <text>账号:</text>
+        </view>
+        <view class='right'>
+          <text style="font-size:13px">{{data.wxOpenId ? data.wxOpenId : openId}}</text>
+        </view>
+      </view>
+      <view class='item-input'>
+        <view class='left'>
+          <text>性别:</text>
+        </view>
+        <picker bindchange="bindgender" value="{{userInfo.gender}}" range="{{array}}" class="g_picker" name="gender" range-key="name">
+            <view class="picker">
+              {{userInfo.gender ? (userInfo.gender == 1 ? '男' : '女') : ''}}
+            </view>
+          </picker>
+      </view>
+      <view class='item-input' bindtap="bindName" >
+        <view class='left'>
+          <text>姓名:</text>
+        </view>
+        <view class='right'>
+          <!-- <text>{{data.name ? data.name : ''}}</text> -->
+          <input type="text" value="{{data.name ? data.name : ''}}"  disabled="disabled"/>
+          <image src='../../../image/fh.jpg' class="fh"></image>
+        </view>
+      </view>
+
+      <view class='item-input' bindtap="changphone">
+        <view class='left'>
+          <text>手机号:</text>
+        </view>
+        <view class='right'>
+          <text>{{data.mobile ? data.mobile : ''}}</text>
+          <image src='../../../image/fh.jpg' class="fh"></image>
+        </view>
+      </view>
+  </view>
+</form>

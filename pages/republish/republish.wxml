@@ -1,0 +1,141 @@
+
+<scroll-view class="mui-bg" scroll-y="true" style="height: 100%;overflow: scroll">
+  <form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+    <view class="list">
+      <i>*</i>
+      <text>项目名称:</text>
+      <input type="text" maxlength='18' placeholder='请输入项目名称' value='{{hireTitle}}' bindinput="bindHireTitle"></input>
+    </view>
+    <view class="list">
+      <i>*</i>
+      <text>详细地址:</text>
+      <view class="areaModal">
+        <area-third-input-modal areaTitle="{{localType}}" bindchangeThirdArea="changeThirdArea"></area-third-input-modal>
+      </view>
+       <!-- <area-third-input-modal areaTitle="{{localType}}" bindchangeThirdArea="changeThirdArea">   </area-third-input-modal>    -->
+    </view>
+    <view class="list">
+      <view class="_list">
+        <i>*</i>
+        <text>工种人数:</text>
+        <view class="teamTypeModal">
+          <teamType-modal modalHidden="false" teamTypeName="{{workerType}}" value="{{workerTypeId}}" bindchangeTeamType="changeTeamType">
+          </teamType-modal>
+        </view>
+
+      </view>
+      <view class="_list_">
+        <input type="number" maxlength='6' value="{{hirePepoleNum}}" bindinput='bindHirePepoleNum' placeholder='请输入招聘人数'></input>
+      </view>
+    </view>
+    <view class="list">
+      <i>*</i>
+      <text>薪资/价格:</text>
+      <input maxlength='10' value="{{hireSalary}}" bindinput='bindHiresalary' placeholder='请输入价格' type='text'></input>
+    </view>
+    <view class="list">
+      <i>*</i>
+      <text>联系人:</text>
+      <input type="text" maxlength='10' placeholder='请输入联系人' value="{{hireContacts}}" bindinput="bindHireContacts"></input>
+    </view>
+    <view class="list">
+      <i>*</i>
+      <text>联系电话:</text>
+      <input type="number" maxlength='11' bindinput='bindHirePhone' bindblur='blurfocusPhone' value="{{hirePhone}}" placeholder='请输入手机号'></input>
+    </view>
+    <block wx:if="{{!isShow}}">
+      <view class="list">
+        <i>*</i>
+        <text>验证码:</text>
+        <input type='number' placeholder='请输入验证码' bindinput='bindHireCode' class="vocd"></input>
+        <block wx:if="{{isInCode===1}}">
+          <button class="btn" bindtap='getVerifyCode'>获取验证码</button>
+        </block>
+        <block wx:else>
+          <button class="btn" style='opacity:0.6;'>{{isCodeTime}}s后再发送</button>
+        </block>
+      </view>
+    </block>
+    <view class="list">
+      <i>*</i>
+      <text>发布类型:</text>
+      <view class="release">
+          <view class="left" bindtap="ordinary" data-type="0">
+             <text class="releaseText {{isOrdinary?'active':''}}">普通招工</text>
+          </view>
+          <view class="right" bindtap="ordinary" data-type="1" wx:if="{{platform != 'ios'|| platform == 'devtools'}}">
+             <image class="imageBox" src="http://static.jianzhugang.com/mini/image/recommend.png"></image>
+             <text class="releaseText {{!isOrdinary?'active':''}}">急聘招工</text>
+          </view>
+          <view  class="right" bindtap="iosTarget" wx:if="{{platform == 'ios'}}">
+             <image class="imageBox" src="http://static.jianzhugang.com/mini/image/recommend.png"></image>
+             <text class="releaseText {{!isOrdinary?'active':''}}">急聘招工</text>
+          </view>
+          <view class="prompt"  bindtap='typeDescription'>
+             <image src="http://static.jianzhugang.com/mini/image/prompt.png"></image>
+             <text>类型说明</text>
+          </view>
+      </view>
+    </view>
+    <view class="list">
+      <i>*</i>
+      <text>招工详情:</text>
+    </view>
+    <view class="details">
+      <textarea class="input-area" maxlength='100' value="{{hireRequest}}"  placeholder='请输入招工详情' bindinput="bindHireRequest"  adjust-position="false"  hidden="{{hireRequestFlag}}">
+      </textarea>
+      <view class="input-area viewBox" hidden="{{!hireRequestFlag}}">
+         <text class="_viewBox">{{hireRequest}}</text>
+      </view>
+    </view>
+    <view class="quickInput">
+      <text class="quickLeft">快捷输入</text>
+      <view class="quickRight">
+        <block  wx:for="{{quickInput}}" wx:key="{{unique}}">
+            <text data-tap="{{item.tipName}}" bindtap='setInfo'>{{item.tipName}}</text>
+        </block>
+        <block wx:for="{{labels}}" wx:key="{{unique}}">
+            <text data-tap="{{item.tipName}}" bindtap='setInfo'>{{item.tipName}}</text>
+        </block>
+      </view>
+    </view>
+    <button class="btn-submit" bindtap='doSubmit'>发布招工</button>
+  </form>
+</scroll-view>
+
+<modal id="modal" title="招工发布类型说明" confirm-text="已阅读"  bindconfirm="confirm"  no-cancel="true" hidden="{{hiddenStamp}}">
+  <view class="check_list">
+      <view class="check_box"><text class="check_name">普通发布</text>
+          免费发布招工，您的招工信息有一定的机率会被系统推送给工友。
+      </view>
+      <view class="check_box"  wx:if="{{platform == 'android' || platform == 'devtools'}}"><text class="check_name">急聘发布</text>
+          发布急聘招工，仅需支付人民币20元，即可在首页-急聘专区置顶24小时，并且系统会自动给周边优秀工友推送百条短信。
+      </view>
+      <view class="check_box"><text class="check_name">官方提示</text>
+          根据微信官方规定，苹果手机暂时无法发布急聘，请有需要的用户使用安卓手机登录小程序发布。
+      </view>
+  </view>
+</modal>
+<view class="prop"  wx:if="{{isprop}}">
+    <view class="add_model">
+      <view class="modelTip">
+        <text>如需发布急聘招工,请点击下方二维码添加客服</text>
+      </view>
+      <view class="modalBottom">
+        <view class="bottomTip"  bindtap='copyText' data-text="momaoou">
+            <text>微信号：<text>jzg-css</text></text>
+        </view>
+        <view class="QRcode"  bindtap='saveQR'>
+           <image src="{{dataImgUrl}}"></image>
+        </view>
+        <view class="box-bottom">
+            <text>点击二维码－保存至相册-添加客服微信</text>
+        </view>
+      </view>
+    </view>
+    <view class="cancelBox"  bindtap="close_model">
+       <image src="../../image/addModalCancel.png"></image>
+    </view>
+</view>
+
+<pushOffBox modal-hidden="{{is_modal_Hidden}}" total="{{total}}" use ="{{use}}"  bind:payDirectly="payDirectly" bind:balancePayment="balancePayment" bind:modal_click_Hidden="modal_click_Hidden"/>

@@ -1,0 +1,233 @@
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+<view class='sy'>
+  <view class='sy_all'>
+    <view class='bj'>
+      <!-- 轮播图  -->
+      <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
+        <block wx:for="{{banners}}" wx:key="{{unique}}">
+          <swiper-item class="swpier-it" data-name="{{item.articleUrl}}" data-type="{{item.type}}" bindtap="goBannerArticle">
+            <navigator url="{{bannerLink}}" hover-class="navigator-hover">
+              <image src="{{item.imgUrl}}" class="stable content-listlide-image"></image>
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="_logoBoxBg">
+         <view class='logoBox'>
+            <view class="logoList">
+              <button formType="submit" bindtap='goApplyJob'>
+                <view class="listImage">
+                    <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/applyJob.png'></image>
+                </view>
+                <text class="listTip">急聘专区</text>
+              </button>
+            </view>
+            <view class="logoList">
+              <button formType="submit" bindtap='goHireList'>
+               <view class="listImage">
+                  <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/service.png'></image>
+               </view>
+               <text class="listTip">劳务招工</text>
+              </button>
+            </view>
+            <view class="logoList">
+              <button formType="submit"  bindtap='goManageHireList'>
+               <view class="listImage">
+                  <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/management.png'></image>
+               </view>
+               <text class="listTip">管理招工</text>
+              </button>
+            </view>
+            <view class="logoList">
+              <button  formType="submit" bindtap='goTeamManagement'>
+                <view class="listImage">
+                  <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/team.png'></image>
+                </view>
+                <text class="listTip">班组•培训</text>
+              </button>
+            </view>
+            <view class="logoList">
+              <button  formType="submit" bindtap='goCityList'>
+                <view class="listImage">
+                  <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/sameCity.png'></image>
+                </view>
+                <text class="listTip">同城班组</text>
+              </button>
+            </view>
+            <view class="logoList">
+              <button  formType="submit" bindtap='goMachineryList'>
+                <view class="listImage">
+                  <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/mechanical.png'></image>
+                </view>
+                <text class="listTip">同城机械</text>
+              </button>
+            </view>
+            <view class="logoList">
+              <button  formType="submit" bindtap='goRegister'>
+                <view class="listImage">
+                  <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/hardware.png'></image>
+                </view>
+                <text class="listTip">同城五金</text>
+              </button>
+            </view>
+            <view class="logoList">
+              <button  formType="submit" bindtap='goWorking'>
+               <view class="listImage">
+                 <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/findJob.png'></image>
+               </view>
+               <text class="listTip">工人找活</text>
+              </button>
+            </view>
+         </view>
+      </view>
+      <view class="{{ showNote? 'affiche':'hide'}}">
+        <view class="announcement">
+            <view class="notice">
+              <image src='https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/indexIcon/announcementIcon.png'></image>
+            </view>
+            <view class='affiche_text'>
+              <swiper class="tab-right" bindtap='goOutUrl' data-id="{{index}}" data-name="{{notes}}" bindchange='onSlideChangeEnd' vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='1'>
+                <view class="right-item">
+                  <block wx:for-index="idx" wx:for='{{aa}}' wx:key="{{unique}}">
+                    <swiper-item>
+                      <view class='content-item'>
+                        <text class='name'>{{item.nickName}}</text>
+                      </view>
+                    </swiper-item>
+                  </block>
+                </view>
+              </swiper>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view class='new'>
+      <view class="hiredBox">
+         <view class="hiredTitle">
+            <text class="contnetTitle">急聘专区</text>
+         </view>
+         <view class="hiredmore"  bindtap='goApplyJob'>
+            <text class="more">更多</text>
+         </view>
+         <view class="hiredIcon"  bindtap='goApplyJob'>
+            <image src="../../image/grayNext.png"></image>
+         </view>
+      </view>
+    </view>
+    <view class="urgentlyHiredBox">
+      <view class="listBox"  wx:for="{{hires}}" wx:key="unique" data-name="{{item.id}}" bindtap="goHireDetail">
+        <view class="hiderTip" wx:if="{{item.isTop==3}}">
+          <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hirdeIcon.png"></image>
+        </view>
+        <view class="statusBox">
+          <block wx:if="{{item.status === '正在招聘'}}">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/recruitmentIcon.png"></image>
+          </block>
+          <block wx:if="{{item.status !== '正在招聘'}}">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hired1.png"></image>
+          </block>
+        </view>
+        <view class="contentBox">
+          <text class="title overhide">{{item.title ? item.title : item.areaFullTitle + '-招' + item.teamType}}</text>
+          <view class="info">
+              <view class="icon">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/recruitment.png"></image>
+              </view>
+              <view class="infoText">招工需求 :</view>
+              <view class="infomation overhide">{{item.peopleNumber}}人</view>
+          </view>
+          <view class="info">
+              <view class="icon">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/salary.png"></image>
+              </view>
+              <view class="infoText">薪资待遇 :</view>
+              <view class="infomation overhide">{{item.salary == null ? '':item.salary}}</view>
+          </view>
+          <view class="info">
+              <view class="icon">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/score.png" class="imageIcon"></image>
+              </view>
+              <view class="infoText">星级评分 :</view>
+              <view class="infomation overhide">
+                <block  wx:for="{{item.level}}" wx:key="unique">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/star.png"></image>
+                </block>
+                <block wx:for="{{5 - item.level}}" wx:key="unique">
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/grayStar.png"></image>
+                </block>
+              </view>
+          </view>
+          <view class="info">
+              <view class="icon">
+                <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+              </view>
+              <view class="infoText">发布时间 :</view>
+              <view class="infomation overhide">{{item.publishedTime}}</view>
+          </view>
+        </view> 
+      </view> 
+      <navigator class='more-btn' bindtap='goApplyJob'>点击查看更多招工信息</navigator>
+      <ad unit-id="adunit-95b4246493102756"></ad>
+    </view>
+  </view>
+</view>
+  <button formType="submit" data-type="1"  bindtap='singIn' wx:if="{{isDrawLucky}}">
+    <view class="singin">
+      <image src="http://static.jianzhugang.com/mini/image/lottery.png"></image>
+    </view>
+  </button>
+  <button formType="submit" bindtap='situation' wx:if="{{isWorkRegister}}">
+    <view class="situation" style="border-radius:50%; overflow:hidden;">
+      <image src="http://static.jianzhugang.com/mini/image/putOnRecord.png"></image>
+    </view>
+  </button>
+  <button formType="submit" bindtap='singIner' wx:if="{{isDrawIntegral}}">
+    <view class="singiner">获取积分</view>
+  </button>
+  <button formType="submit" data-type="2" bindtap="gopublish">
+    <view class="publish">一键发布</view>
+  </button>
+  <view class="pushGuest">
+    <button formType="submit"  catchtap="goPushGuest">
+      <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/pushGuestIndex.png"></image>
+    </button>
+  </view>
+</form>
+<!-- style="display:{{isprop}}" -->
+<view class="prop" wx:if="{{isprop}}">
+    <view class="add_model">
+        <view class="modelTitle">
+           <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/indexTeamIcon.png"></image>
+        </view>
+        <view class="titleText">
+           <view class="boderBox">
+              <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/indexTeamTab.png"></image>
+           </view>
+           <view class="textTip">班组•培训</view>
+           <view class="boderBox transform">
+               <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/indexTeamTab.png"></image>
+           </view>
+        </view>
+        <view class="modeContent">
+          更多组员管理、组员培训学习功能，请进入班组管理版块查看使用~
+        </view>
+        <view class="examine" bindtap="lookOver">去查看</view>
+    </view>
+    <view class="cancelBox"  bindtap="close_model">
+       <image src="../../image/addModalCancel.png"></image>
+    </view>
+</view>
+ <!-- style="display:{{pushOffBox}}" -->
+<view class="prop" wx:if="{{!isprop&pushOffBox}}">
+    <view class="pushOffBox">
+      <view class="pushOffBox_cancel" bindtap="pushOffBox_cancel">
+         <image src="../../image/addModalCancel.png"></image>
+      </view>
+      <view class="pushOffBoxBg">
+         <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/participateBg.png"></image>
+      </view>
+    </view>
+    <view class="participate"  bindtap="goPushGuest">
+       <image class="participateImg" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/participate.png"></image>
+    </view>
+</view>

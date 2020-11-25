@@ -1,0 +1,26 @@
+<view class="twitterCode">
+   <view class="twitterCodeTop">
+      <image src="https://static.jianzhugang.com/mini/newIcon/twitterCodeTopBg.png"></image>
+   </view>
+   <view class="twitterCodeBox">
+       <view class="content"  data-url="{{invitationCodeUrl}}"  bindtap='save'>
+           <view class="contentBox flexCenter">
+               <image src="https://static.jianzhugang.com/mini/newIcon/twitterCodeTitle.png"></image>
+           </view>
+           <view class="content_box flexCenter">
+              <image src="{{invitationCodeUrl}}"></image>
+           </view>
+           <view class="contentTip">
+              <view class="optionalTitle">
+                <image class="jobIcon transform" src="https://static.jianzhugang.com/mini/newIcon/twitterCodeIcon.png"></image>
+                <text>使用说明</text>
+                <image class="jobIcon" src="https://static.jianzhugang.com/mini/newIcon/twitterCodeIcon.png"></image>
+              </view>
+              <view class="contentText">
+                 <text>保存该二维码，其他用户在扫描您的二维码并注册小程序后将会成为您的受邀人。受邀人的任何充值行为均会给您带来固定比例的推客余额奖励。</text>
+              </view>
+           </view>
+           <view class="downLoadTip">点击二维码下载我的推客码</view>
+       </view>
+   </view>
+</view>

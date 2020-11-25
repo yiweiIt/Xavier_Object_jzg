@@ -1,0 +1,62 @@
+<view wx:if="{{lookinglifes.length > 0}}">
+  <scroll-view class="dataListBox" scroll-y="true">
+    <block wx:for="{{lookinglifes}}" wx:key="unique">
+      <view class="listBox" data-name="{{item.id}}" bindtap="goHireDetail">
+          <view class="list_status {{item.lookLifeStatus == 1?'gray':'orange'}}"></view>
+          <view class="shareBox" data-item="{{item}}" data-id="{{item.id}}" catchtap="share">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/shareBoxLooking.png"></image>
+          </view>
+          <view class="_listBox">
+             <view class="left">
+                <view class="leftImgBox">
+                  <image src="{{item.avatarUrl ? item.avatarUrl : 'https://static.jianzhugang.com/mini/image/ico-35.png'}}"></image>
+                </view>
+                <text class="name">{{item.userName}}</text>
+                <text class="type">{{item.teamTypeName}}</text>
+             </view>
+             <view class="right">
+                <view class="memo">
+                  <view class="_icon imageBox">
+                      <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/ownAdvantageIcon.png"></image>
+                   </view>
+                   <text>{{item.content?item.content:'尚未添加自身优势'}}</text>
+                </view>
+                <view class="afress">
+                   <view class="icon address">                      
+                     <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/addressIcon.png"></image>
+                  </view>
+                   <text>{{item.address}}</text>
+                </view>
+                <view class="time time">
+                   <view class="icon">
+                      <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/hardWareTime.png"></image>
+                   </view>
+                   <text>{{item.sendTime}}</text>
+                </view>
+                <block  wx:if="{{item.lookLifeStatus == 1}}">
+                  <button class="choseStatus" data-type="0" catchtap='changeStatus' data-name="{{item.id}}">改为正在找活</button>
+                </block>
+                <block  wx:if="{{item.lookLifeStatus == 0}}">
+                  <button class="choseStatus" data-type="1" catchtap='changeStatus' data-name="{{item.id}}">改为已找到</button>
+                </block>
+             </view>
+          </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view class="boxBg"  wx:if="{{lookinglifes.length == 0}}">
+  <view class="noDataTip">
+    <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+    <text>还没发布找活哦</text>
+     <view class="sim-button" bindtap="goWorking">立即发布</view>
+  </view>
+</view>
+<view class='imagePathBox' hidden="{{maskHidden == false}}" bindtap="closeImg"> 
+    <image src="{{imagePath}}" class='shengcheng'></image>
+    <button class='baocun' open-type="share" catchtap='baocun'>分享找活卡片</button>
+</view>
+  <view hidden="{{maskHidden == false}}" class="mask"></view> 
+<view class="canvas-box">
+    <canvas  style="width: 400px;height: 320px;position:fixed;top:9999px" canvas-id="mycanvas"/>
+</view>  

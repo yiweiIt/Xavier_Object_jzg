@@ -1,0 +1,188 @@
+page{
+  background-color: rgba(242,242,242,1);
+  color:#333;
+}
+.dataListBox{
+  padding:0rpx;
+  margin:0rpx;
+  width:100%;
+  height: calc(100vh - 150rpx);
+}
+.questionBg{
+  width:100%;
+  height:200rpx;
+  background:  url(http://static.jianzhugang.com/mini/image/upper_apex_bg.png) no-repeat 50% 50%;
+  background-size: 100% 100%;
+  position: relative;
+}
+.answerSheet{
+   width:92%;
+   background:#fff;
+   margin:0rpx auto;
+   position:absolute;
+   top:80rpx;
+   left:4%;
+   border-radius:10rpx;
+}
+.dayTopic{
+  position:absolute;
+  width:100%;
+  height:114rpx;
+  background: url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/dayTopic.png) no-repeat 50% 50%;
+  background-size:auto 100%;
+  top:-42rpx;
+}
+.topic{
+   width:94%;
+   line-height:60rpx;
+   margin:100rpx auto 20rpx auto;
+   font-size:30rpx;
+   padding:0rpx;
+}
+.topic text{
+  color:#333;
+}
+.topic text.thematic{
+   color:#b59c23 ;
+   padding:0rpx 10rpx 0rpx 0rpx;
+}
+.optionBox{
+  width:93%;
+  margin:20rpx auto;
+  position:relative;
+  background:green;
+}
+.buttonBox{
+  position:absolute;
+  top:15rpx;
+  left:-12%;
+  width:10%;
+  float:left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectButton{
+  width:40rpx;
+  height:40rpx;
+  line-height:38rpx;
+  text-align:center;
+  font-size:28rpx;
+  border-radius:50%;
+  border:1rpx solid #8f8f8e;
+  color:#888;
+  margin-top:6rpx;
+}
+.buttonBox image{
+   width:42rpx;
+   height:42rpx;
+}
+.selectContent{
+  position:relative;
+  width:89%;
+  line-height:60rpx;
+  letter-spacing:2rpx;
+  float:right;
+  font-size:29rpx;
+  padding:10rpx 0rpx;
+}
+.optionBox:last-child .selectContent{
+  padding-bottom:70rpx;
+}
+.dpn{
+  display: none;
+}
+.resolve{
+  width:92%;
+  background:#fff;
+  margin-left:4%;
+  border-radius:10rpx;
+  font-size:29rpx;
+  padding:0rpx 0rpx 40rpx 0rpx;
+}
+.Parsing{
+   display: block;
+   width:180rpx;
+   height:60rpx;
+   line-height:60rpx;
+   background:#fda067;
+   color:#fff;
+   text-align:center;
+   border-top-left-radius:10rpx;
+   border-bottom-right-radius:10rpx;
+}
+.correct,.resolveContent{
+  display: block;
+  width:92%;
+  margin:0rpx auto;
+  line-height:60rpx;
+  font-size:30rpx;
+}
+.resolveTitle{
+    color:rgb(255,77,77);
+}
+.side-tool{
+  position: fixed;
+  bottom: 30%;
+  right: 5rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.footer{
+  position:fixed;
+  bottom:0rpx;
+  left:0rpx;
+  width:100%;
+  height:136rpx;
+  background:rgba(242, 242, 242, 1);
+}
+.footer button{
+  width:100%;
+  height:136rpx;
+  line-height:136rpx;
+  border:none;
+  outline: none; 
+  text-align:center; 
+  color:#fff;
+  border-radius:0;
+  font-size:32rpx;
+  background:rgb(86,166,255);
+}
+.footer button::after{
+  border:none;
+  border-radius:0;
+}
+.upper_apex{
+  width:100%;
+  height:200rpx;
+  background:  url(http://static.jianzhugang.com/mini/image/upper_apex_bg.png) no-repeat 50% 50%;
+  background-size: 100% 100%;
+}
+.upperBox{
+  position:absolute;
+  top:60rpx;
+  height:630rpx;
+  width:80%;
+  background:#fff;
+  left:10%;
+  border-radius:20rpx;
+}
+.upperBox text{
+  display: block;
+  height:160rpx;
+  text-align:center;
+  line-height:160rpx;
+  font-size:30rpx;
+  color:#333;
+}
+.imageBox{
+  width:100%;
+  height:460rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upperBox image{
+   width:300rpx;
+   height:302rpx;
+}

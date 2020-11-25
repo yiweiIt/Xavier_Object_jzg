@@ -1,0 +1,154 @@
+page{background:rgba(242,242,242,1)}
+.dispatchBox{
+  width:100%;
+  height:100%;
+}
+.dispatTip{
+   width:100%;
+   height:180rpx;
+   background:#fff;
+   margin:10rpx auto;
+}
+.tipList{
+  width:92%;
+  height:90rpx;
+  line-height: 90rpx;
+  margin:0rpx auto;
+  border-bottom:2rpx solid rgba(242,242,242,1);
+}
+.tipList:last-child{
+  border:none;
+}
+.tipList text{
+  display: inline-block;
+  float:left;
+  width:30%;
+  font-size:29rpx;
+  color:#333;
+}
+.tipList picker{
+  float: left;
+}
+.tipList text.right,.tipList picker{
+   width:64%;
+   text-align:right;
+   font-size:27rpx;
+   color:rgb(88, 88, 88)
+}
+.tipList image{
+  display: inline-block;
+  width:15rpx;
+  height:26rpx;
+  margin-top:32rpx;
+  float:right;
+}
+.dataListBox{
+  width:100%;
+  /* height:calc(100vh - 198rpx); */
+  height:auto;
+  overflow: hidden;
+}
+.dispatchList{
+  padding:10rpx 0rpx;
+  width:94%;
+  height:auto;
+  background:#fff;
+  margin:10rpx auto 16rpx auto;
+  position:relative;
+}
+.dispatchList text.status{
+   position: absolute;
+   top:0rpx;
+   right:0rpx;
+   width:140rpx;
+   height:46rpx;
+   line-height:46rpx;
+   text-align:center;
+   color:#fff;
+   font-size:26rpx;
+}
+.orange{
+  background-color: rgba(255,165,0,1);
+}
+.grey{
+  background-color: rgba(188,188,188,1);
+}
+.dispatchList text{
+  display: block;
+  width:90%;
+  margin: 0rpx auto;
+}
+.dispatchList text.name{
+  font-size:29rpx;
+  height:70rpx;
+  line-height:70rpx;
+}
+.dispatchList text.memo{
+   line-height:45rpx;
+   font-size:28rpx;
+   padding:0rpx 0rpx 16rpx 0rpx;
+   color:rgb(88, 88, 88);
+   border-bottom:2rpx dashed rgb(216, 215, 215);
+}
+.bottom{
+  width:90%;
+  height:80rpx;
+  line-height: 80rpx;
+  margin:0rpx auto;
+}
+.bottom text.time{
+  display: inline-block; 
+  width:60%;
+  height:100%;
+  float:left;
+  font-size:28rpx;
+}
+.bottom image{
+   display: inline-block;
+   width:46rpx;
+   height:46rpx;
+   float:right;
+   margin-top:17rpx;
+}
+.changeStatus{
+  display: inline-block; 
+  float:right;
+  width:36%;
+  height:100%;
+}
+.changeStatus text{
+   display: inline-block;
+   float:right;
+   margin:21rpx 0rpx 4rpx 0rpx;
+   width:140rpx;
+   height:50rpx;
+   line-height:50rpx;
+   background:#4da1ff;
+   color:#fff;
+   text-align:center;
+   font-size:28rpx;
+}
+.boxBg{
+  width:100%;
+  height:calc(100vh - 500rpx);
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.boxBg image{
+  width:160rpx;
+  height:160rpx;
+  display:block;
+  margin:0rpx auto;
+}
+.boxBg text{
+  width:100%;
+  display: block;
+  line-height:80rpx;
+  text-align: center;
+  color:#888;
+}
+.dpn{
+  display:none
+}

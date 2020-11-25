@@ -1,0 +1,67 @@
+page{background: -moz-linear-gradient(top, #4da1ff, #7dc5eb); background: -webkit-gradient(linear,top,from(#4da1ff),to(#7dc5eb));background: -webkit-linear-gradient(top, #4da1ff, #7dc5eb);background: -o-linear-gradient(top, #4da1ff, #7dc5eb);}
+
+.inviteTitle{
+  display:block;
+  width:100%;
+  height:240rpx;
+  line-height: 240rpx;
+  text-align: center;
+  font-size:50rpx;
+  letter-spacing: 4rpx;
+  color:#333;
+}
+.distant-front:after {
+  filter: url(#distant-front);
+}
+.inviteBox{
+  width:70%;
+  height:250rpx;
+  margin:0rpx auto;
+  font-size:32rpx;
+}
+.inviteContent{
+  width:100%;
+  display:block;
+  line-height:60rpx;
+}
+.inviteContent text{
+  display: block;
+  width:100%;
+  text-align: center;
+}
+.checkBox{
+   width: 92%;
+   margin:20rpx auto;
+   height:80rpx;
+   line-height: 80rpx;
+   font-size:28rpx;
+}
+.buttonBox{
+  width:80%;
+  height:90rpx;
+  margin:40rpx auto 0rpx auto;
+}
+.buttonBox button{  
+  height:80rpx;
+  line-height:80rpx;
+  border:none;
+  color:#fff;
+  font-size:30rpx;
+}
+.buttonBox button::after{
+  border:none;
+}
+.IMG{
+  width:100%;
+  position:fixed;
+  bottom:0rpx;
+  left:0rpx;
+}
+.IMG image{
+  margin:0rpx;
+  padding:0rpx;
+  width:100%;
+  display: block;
+  bottom:0rpx;
+  left:0rpx;
+}

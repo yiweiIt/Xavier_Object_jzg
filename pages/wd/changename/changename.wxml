@@ -1,0 +1,13 @@
+<!--pages/wd/changename/changename.wxml-->
+<form bindsubmit="submitname" report-submit="true" bindreset="formReset">
+    <view class="box-contain mui-bg-body">
+      <view class="input-itm">
+        <view class="input-title">
+          <span class='hs'>*</span>姓名</view>
+        <input type="text" maxlength='11' placeholder-class='input-d' class="input-box"    placeholder='请输入姓名' name="username" value="{{name}}">
+        </input>
+        </view>
+      <button class="btn-submit" formType="submit">保存</button>
+    </view>
+  </form>
+

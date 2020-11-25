@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "机械入驻",
+  "usingComponents": {
+    "area-modal": "/component/areaModal/areaModal"
+  }
+}

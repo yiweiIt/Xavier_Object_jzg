@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "建筑港平台-招工详情",
+  "usingComponents": {
+    "pop": "../pop/pop" 
+  }
+}

@@ -1,0 +1,275 @@
+
+.announcement{
+  width:100%;
+  background:#fff;
+  margin:0rpx auto 6rpx auto;
+  padding:20rpx 0rpx;
+  border-bottom:1rpx solid rgba(242, 242, 242, 1);
+}
+.announcement .promptBox{
+   display:block;
+   width:94%;
+   margin:0rpx auto;
+   line-height:46rpx;
+   font-size:30rpx;
+   color: #666;
+}
+.announcement text.text_prompt{
+  color:#f0940d;
+}
+.announcement text.phone{
+   display: inline-block;
+   color:#4da1ff;
+   font-weight:bold;
+   padding:0rpx 4rpx;
+}
+
+.btn{
+  width:25%;
+  display: inline-block;
+  height:70rpx;
+  line-height:70rpx;
+  padding:0rpx 8rpx;
+  top:10rpx;
+  color: #fff;
+  border-radius: 2px;
+  background-color:#1989fa;
+  border-color:#1989fa;
+  font-size: 28rpx !important;
+}
+
+.btn-submit{
+  width:94%;
+  font-size:30rpx;
+  margin:20rpx auto;
+  color: #fff !important;
+  background-color: #1989fa !important;
+}
+.mui-bg{
+  position: relative;
+  width:96%;
+  margin:20rpx auto 5rpx auto;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent
+}
+._texts{
+  text-align: right;
+}
+._text{
+  width:20%;
+  display:inline-block;
+  text-align:center;
+  color:#4e9fe3;
+  font-size: 26rpx;
+}
+@keyframes myfirst
+{
+  0%   {margin-left:750rpx;}
+  100% {margin-left:-1500rpx;}
+}
+.hide{
+  display: none;
+}
+.input-itm {
+  padding: 8rpx 0rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+}
+.input-itm .input-box{
+  flex: 1;
+  height: 60rpx;
+  border:none;
+  font-size: 28rpx !important;
+}
+.input-title{
+  width: 24% !important;
+  font-size: 30rpx !important;
+}
+.input-itm .error{
+  color:red;
+  float:right;
+  margin-top:-60rpx;
+  margin-right:10rpx;
+}
+.input-itm .error_code{
+  color:red;
+  float:right;
+  margin-top:-70rpx;
+  margin-right:195rpx;
+}
+.info{
+  display:inline-block;
+  color:#45a3f1;
+  padding:5rpx 12rpx;
+  text-align:center;
+  border-radius:5px;
+  border:1px solid #45a3f1;
+  margin: 5rpx 10rpx;
+  font-size:28rpx;
+}
+.input-d{
+  color: #666666;
+  font-size: 30rpx !important;
+}
+.input-area{
+  width:90%;
+  height:150rpx;
+  line-height:30rpx;
+  font-size: 30rpx !important;
+  background:rgba(242,242,242,1);
+  margin:0rpx auto;
+  border:none;
+}
+.input-itm-area{
+  border-bottom: none !important;
+}
+._tips{
+  color: #ccc; 
+  font-size: 14px; 
+  float: right; 
+  right: 2%;
+  position: absolute;
+  bottom: 2%;
+}
+/* .releaseBox,.details */
+.details{
+  width:100%;
+  background:#fff;
+  border-radius:4rpx;
+}
+.list{
+  width:100%;
+  height:90rpx;
+  line-height:90rpx;
+}
+._list{
+  width:70%;
+  float:Left;
+  height:100%;
+}
+._list_{
+  width:28%;
+  float:right;
+  margin-right:2%;
+  height:100%;
+}
+.list i{
+  font-style: normal;
+  float:left;
+  color:red;
+  display:inline-block;
+}
+.list text{
+  display: inline-block;
+  font-size:32rpx;
+  width:26%; 
+  height: 100%;
+  float:left;
+  margin-left:1%;
+}
+._list text{
+   width:38%; 
+}
+.list input,.arear,.list picker view,.list .release{
+  width:66%;
+  float:left;
+  height:70rpx;
+  line-height:70rpx;
+  margin:10rpx 0rpx;
+  padding:0rpx 2%;
+  border-radius:6rpx;
+  background:rgba(242, 242, 242, 1);
+  font-size:28rpx;
+}
+._list input{
+  width:52%;
+}
+._list_ input{
+  width:100%;
+}
+.list .release{
+  padding:0rpx;
+   background:rgb(255, 255, 255);
+}
+.list picker view input{
+  height:56rpx;
+  line-height:56rpx;
+  width:100%;
+}
+.list input.vocd,.list picker input.vocd{
+  width:34%!important;
+  margin-right:2%;
+}
+.release .left,.release .right{
+  width:35%;
+  float:left;
+  position:relative;
+}
+.imageBox{
+   position:absolute;
+   width:42rpx;
+   height:42rpx;
+   top:-6rpx;
+   right:6rpx;
+   border-radius:50%;
+}
+
+.release text.releaseText{
+  display: inline-block;
+  float:left;
+  width:90%;
+  height:100%;
+  font-size:28rpx;
+  background:rgba(242, 242, 242, 1);
+  text-align:center;
+  color:#888;
+  border-radius:6rpx;
+}
+.release text.active{
+   background:#1989fa;
+   color:#fff;
+}
+.prompt{
+    width:30%;
+    float:right;
+    height:100%;
+}
+.prompt image{
+  display: block;
+  width: 33rpx;
+  height:33rpx;
+  margin:0rpx auto;
+}
+.prompt text{
+  display: block;
+  width: 100%;
+  height:37rpx;
+  line-height:37rpx;
+  font-size:24rpx;
+  text-align:center;
+  color:rgb(250, 146, 10);
+}
+.check_list{
+  width:100%;
+  font-size:28rpx;
+}
+.check_list .check_box{
+  width:100%;
+  line-height:56rpx;
+  color:#888;
+}
+.check_list  text.check_name{
+  color:#fff;
+  height:32rpx;
+  font-size:22rpx;
+  line-height: 32rpx;
+  margin-top:13rpx;
+  padding:0rpx 8rpx;
+  border-radius:4rpx;
+  background:red;
+  display: inline-block;
+}

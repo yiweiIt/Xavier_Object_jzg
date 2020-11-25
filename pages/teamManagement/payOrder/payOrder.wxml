@@ -1,0 +1,31 @@
+<view class="selectBox">
+  <view class="titleSelect">
+    <view class="left flex {{isIncrease?'active':''}}" bindtap="saved">  
+        <image src="{{isIncrease?'http://static.jianzhugang.com/mini/image/save_1.png':'http://static.jianzhugang.com/mini/image/save.png'}}"></image>
+        <text>已提交</text>
+    </view>
+    <view class="right flex {{isIncrease?'':'active'}}" bindtap="submitted">   
+        <image src="{{isIncrease?'http://static.jianzhugang.com/mini/image/submitted.png':'http://static.jianzhugang.com/mini/image/submitted_1.png'}}"></image>
+        <text>班组到账</text>
+    </view>
+  </view>
+</view>
+<view class="payOrder">
+  <scroll-view scroll-y="true">
+    <block wx:for="{{contractsArr}}" wx:key="id">
+      <view class="orderList" data-id="{{item.id}}" bindtap="goOrderInfo">
+        <text class="name">{{item.projectName}}</text>
+        <text class="order">订单号：{{item.auditNo}}</text>
+        <text class="company">签约公司：{{item.companyName}}</text>
+        <text class="amount">申请金额：{{item.applyAmount}}元</text>
+        <text class="time">申请时间：{{item.applyDate}}</text>
+      </view>
+    </block> 
+  </scroll-view>
+</view>
+<view class="boxBg" wx:if="{{contractsArr.length==0}}">
+  <view class="noDataTip">
+    <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+    <text>暂无工资订单记录</text>
+  </view>
+</view>

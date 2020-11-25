@@ -1,0 +1,26 @@
+<!--pages/wd/changephone/changephone.wxml-->
+<form bindsubmit="submitphone" report-submit="true" bindreset="formReset">
+    <view class="box-contain mui-bg-body">
+      <view class="input-itm">
+        <view class="input-title">
+          <span class='hs'>*</span>手机号</view>
+        <input type="number" maxlength='11' placeholder-class='input-d' class="input-box"  bindinput='bindphone'  placeholder='请输入手机号' name="phone">
+        </input>
+        </view>
+      <block>
+        <view class="input-itm">
+          <view class="input-title" style="line-height:70rpx;">
+            <span class='hs'>*</span>验证码</view>
+          <input class="input-box"  maxlength="18" type='number' placeholder-class='input-d' placeholder='请输入验证码'  style="width:40%; display:inline-block;" name="phonecode"></input>
+          <span class="error_code" wx:if="">{{warnStr_3}}</span>
+          <block wx:if="{{isInCode===1}}">
+          <button class="btn" bindtap='getVerifyCode'>获取验证码</button>
+          </block>
+          <block wx:else>
+            <button class="btn" style='opacity:0.6;'>{{isCodeTime}}s后再发送</button>
+          </block>
+        </view>
+      </block>
+      <button class="btn-submit" formType="submit">确认更换</button>
+    </view>
+  </form>

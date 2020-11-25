@@ -1,0 +1,50 @@
+<view class="questionResolve">
+  <scroll-view class="dataListBox" scroll-y="true">
+    <block wx:if="{{dataMsg==''}}">
+        <view class="questionBox">
+          <view class="questionBg"></view>
+          <view class="answerSheet">
+            <view class="dayTopic"></view>
+            <view class="topic">
+              <text>{{content}}</text>
+            </view> 
+            <block wx:for="{{items}}" wx:key="index" >
+              <view class="optionBox" data-index="{{index}}" data-name="{{item.index}}" bindtap="selectOption">
+                <view class="selectContent">
+                    <view class="buttonBox">
+                      <tetx class="selectButton {{index==indexItem?'dpn':''}}">{{item.index}}</tetx>
+                      <image class="{{index==indexItem?'':'dpn'}}" src="http://static.jianzhugang.com/mini/image/selectedIcon.png"></image>
+                      
+                    </view>
+                    <text>{{item.value}}</text>
+                </view>
+              </view>        
+            </block>
+          </view>
+      </view>
+      <view class="resolve" style='margin-top:{{height}}'  wx:if="{{!isRight}}">
+          <text class="Parsing">答案解析</text>
+          <text class="correct">回答错误，正确答案: {{answer}} </text>
+          <text class="resolveContent">
+            <text class="resolveTitle">解析:</text> {{description}}
+          </text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="upper_apex"></view>
+      <view class="upperBox">
+         <text>{{dataMsg}}</text>
+         <view class="imageBox">
+             <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/teamAnswerBg.png"></image>
+         </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view class="footer">
+  <button bindtap="getMultipleChoiceLogs">考试记录</button>
+</view>
+<!-- <image class="side-tool" style="z-index: 11;" src="http://static.jianzhugang.com/mini/image/subscribe.png">
+  关注
+</image> -->
+

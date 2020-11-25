@@ -1,0 +1,101 @@
+page{
+    background-color: rgba(242, 242, 242,1);
+  }
+
+.authorization{
+    width:100%;
+}
+.tip{
+    width:100%;
+    height:410rpx;
+    background:#4da1ff;
+    
+}
+.zationTitle{
+    width:100%;
+    height:240rpx;
+} 
+.zationTitle text{
+    display:block;
+    width:100%; 
+    text-align:center; 
+    color:#fff;
+}
+.zationTitle text.name{
+    height:160rpx;
+    line-height:200rpx;
+    font-weight:bolder;
+    font-size: 60rpx;
+    text-shadow:#333 1rpx 0 0;
+}
+.zationTitle text.name_title{
+    height:80rpx;
+    line-height:60rpx;
+    font-size: 30rpx;
+    font-weight:bold;
+    letter-spacing: 8rpx;
+}
+.tip image{
+    width:130rpx;
+    height:130rpx;
+    border-radius:50%;
+    display: block;
+    margin:0rpx auto;
+    z-index:9;
+}
+.center{
+   width:100%;
+   height:120rpx;
+   /* background:rgb(255, 255, 254,0.6); */
+   margin-top:-50rpx;
+   position:relative;
+   overflow:hidden;
+}
+.info {
+    height:300%;
+    width: 200%;
+    border-radius:50%;
+    position:absolute;
+    left:-90%;
+    overflow:hidden;
+    background:rgb(242, 242, 242,0.8);
+}
+.info2 {
+    height:300%;
+    width: 200%;
+    border-radius:50%;
+    position:absolute;
+    right:-90%;
+    overflow:hidden;
+    background:rgb(242, 242, 242,0.8);
+}
+.tiper{
+    width:100%;
+    height:150rpx;
+    margin:20rpx auto;
+    padding:30rpx 0rpx 50rpx 0rpx;
+}
+.tiper text{
+    display:block;
+    width:100%;
+    height:75rpx;
+    line-height: 75rpx;
+    font-size:30rpx;
+    text-align:center;
+    letter-spacing: 8rpx;
+    font-weight: 400;
+}
+.experience{
+    width:44%;
+    height:74rpx;
+    line-height:74rpx;
+    margin:50rpx auto;
+    border-radius:50rpx;
+    background:#4da1ff;
+    color:#fff;
+    border:1rpx solid rgb(219, 219, 219);
+    font-size:30rpx;
+}
+.experience::after{
+    border:none;
+}

@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "班组列表",
+  "usingComponents": {
+    "area-modal": "/component/areaModal/areaModal",
+    "teamType-modal": "/component/teamTypeModal/teamTypeModal"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "添加项目经验",
+  "usingComponents": {
+    "area-third-modal": "/component/areaThirdModal/areaThirdModal"
+  }
+}

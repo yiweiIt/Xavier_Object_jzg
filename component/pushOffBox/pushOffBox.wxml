@@ -1,0 +1,17 @@
+<view  class='mask_layer' hidden='{{modalHidden}}'>  
+  <view class='mask_label'>  
+      <view class="titleBox"></view>
+      <view class="titleContent">
+         <text class="tiper">尊敬的用户您好，您是否要消耗推客余额支付该急聘招工费用？</text>
+         <text class="total">推客余额：{{total}}元 </text>
+         <text class="use">急聘消耗：<text>{{use}}元</text></text>
+         <view class="oprate">
+             <view class="left flexStart" bindtap="_payDirectly"><text>直接付款</text></view>
+             <view class="right flexEnd" bindtap="_balancePayment"><text>使用推客余额</text></view>
+         </view>
+      </view>
+  </view>
+  <view class="features flexCenter" bindtap="modal_click_Hidden">
+       <image src="../../image/addModalCancel.png"></image>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+/* pages/meinfo/meinfo.wxss */
+.line{
+  height: 35px;
+  border-bottom: 1px solid #ddd;
+  margin: 10px;
+}
+.line .left{
+  float: left;
+  font-weight: 600;
+}
+.line .right{
+  text-align: right;
+}
+.sim-img{
+  width: 200px;
+  height: 100px;
+}
+.bimg{
+  background-color: antiquewhite;
+  border: 5px solid burlywood;
+}
+.sim-window{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 60%;
+  width: 60%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.btns{
+  color:#fff;
+  background-color:#54a3f1;
+  width:90%;
+  margin-top:10%;
+}
+.text{
+  color:#959595;
+  text-align:center;
+  margin:30px;
+}
+.prompt{
+  text-align: center;
+  color: #54a3f1;
+  margin-top:30%;
+}
+.tl{
+  padding: 5%;
+}

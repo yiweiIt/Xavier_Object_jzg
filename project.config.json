@@ -1,0 +1,96 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.8.3",
+  "appid": "wx5359af066afe9589",
+  "projectname": "jzgminiapp",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "idcard",
+          "pathName": "pages/idcard/idcard",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "wdjx",
+          "pathName": "pages/wdjx/wdjx",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "jxlb",
+          "pathName": "pages/jxlb/jxlb",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "machinepublish",
+          "pathName": "pages/machinepublish/machinepublish",
+          "query": "id=rent",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

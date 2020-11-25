@@ -1,0 +1,27 @@
+<view class="registrationList">
+  <scroll-view scroll-y="true">
+    <block wx:for="{{signUpList}}" wx:key="id">
+        <view class="listBox" data-name="{{item.hireId}}" data-hireStatus="{{item.hireStatus}}" bindtap="goHireDetail">
+          <view class="time"><text class="decoration"></text>申请时间 : <text>{{item.applyTime}}</text></view>
+          <view class="contentInfo">
+            <view class="left">
+              <text> 项目名称 : {{item.hireTitle}}</text>
+              <text> 招工状态 : {{item.hireStatus!='HIRE_TYPE_AUDITED'?'已招满':'招工中'}}</text>              
+            </view>
+            <view class="right">
+               <image src="../../../image/more.png"></image>
+            </view>
+          </view>
+          <view class="full {{item.hireStatus!='HIRE_TYPE_AUDITED'?'':'dpn'}}">
+             <image src="http://static.jianzhugang.com/mini/image/Full.png"></image>
+          </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view class="boxBg" wx:if="{{signUpList.length==0}}">
+  <view class="noDataTip">
+    <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+    <text>暂无报名项目</text>
+  </view>
+</view>

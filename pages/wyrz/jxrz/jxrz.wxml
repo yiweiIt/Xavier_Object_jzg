@@ -1,0 +1,174 @@
+<!-- 
+<view>
+
+  <swiper style="height:{{height}}rpx" current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+      <swiper-item>
+        <view style="padding: 0rpx 20rpx;">
+          <view class="input-itm">
+              <view class="input-title"><span class='hs'>*</span>型号规格</view>
+              <input maxlength="18" class="input-box" placeholder-class='input-d' type='text' placeholder='型号规格' bindinput='bindShuomingInput'></input>
+          </view>
+
+          <view class="input-itm">
+              <view class="spc"><span class='hs'>*</span>机械分类</view>
+              <picker  style="display:inline-block;" mode="multiSelector" bindchange="bindMechanicalFormChange" bindcolumnchange="bindMechanicalFormColumnChange" value="{{jxlIndex}}" range="{{jxlNamesArray}}">
+                  <view class="flter-itm special">
+                    {{jxlName}}
+                  <view class='flter-image'> <image src='../../../image/xl.jpg'></image>  </view>
+                  </view>
+              </picker>
+          </view>
+          <view class="input-itm">
+              <view class="input-title"><span class='hs'>*</span>数量</view>
+              <input maxlength="18" class="input-box" placeholder-class='input-d' type='number' placeholder='数量' bindinput='bindAmountInput'></input>
+          </view>
+
+          <view class="input-itm">
+              <view class="input-title"><span class='hs'>*</span>价格</view>
+              <input maxlength="18" class="input-box" placeholder-class='input-d' type='number' placeholder='价格' bindinput='bindPriceInput'></input>
+          </view>
+          <view class="input-itm">
+              <view class="spc inputLeft"><span class='hs'>*</span>地区</view>
+              <view class="inputRight">
+                 <area-modal modalHidden="true" areaTitle="{{areaTitle}}" bindchangeArea="changeArea"></area-modal>
+              </view>
+          </view>
+          <view class="input-itm">
+              <view class="input-title"><span class='hs'>*</span>联系人</view>
+              <input class="input-box" placeholder-class='input-d' type='text' placeholder='联系人' bindinput='bindContactsInput'></input>
+          </view>
+          <view class="input-itm">
+              <view class="input-title"><span class='hs'>*</span>联系电话</view>
+              <input maxlength="18" class="input-box" placeholder-class='input-d' type='number' placeholder='联系电话' bindinput='bindMoblieInput'></input>
+          </view>
+           <view class="input-itm">
+              <view class="input-title"><span class='hs'>*</span>验证码</view>
+              <input maxlength="18" style="width:44%" class="input-box" placeholder-class='input-d' type='number' placeholder='验证码' bindinput='bindCodeInput'></input>
+
+        <block wx:if="{{isInCode===1}}">
+           <button class="btn" bindtap='getVerifyCode'>获取验证码</button>
+        </block>
+        <block wx:else>
+          <button class="btn" style='opacity:0.6;'>{{isCodeTime}}s后再发送</button>
+        </block>
+          </view>
+          <view class="input-itm">
+              <view class="input-title"><span class='hs'>*</span>备注</view>
+              <input maxlength="18" class="input-box" placeholder-class='input-d' type='text' placeholder='备注' bindinput='bindShuoInput'></input>
+          </view>
+            <view class="input-itm notes passwork" style="margin-top: 10rpx;" wx:if="{{!isSubmitAble}}">
+    {{warnStr}}
+  </view>
+          <view class='remark'>
+            <button class="btn-sub" style="opacity: {{opacity}};" bindtap='machineSubmit' disabled='{{!isSubmitAble}}' >入驻</button>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+</view>
+
+ -->
+<view class="settleIn">
+  <form report-submit="true" bindreset="formReset">
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>型号规格</text>
+        </view>
+        <view class="listRight">
+          <input  maxlength="18" placeholder-class='input-d' type='text' placeholder='请输入型号规格'   bindinput='bindShuomingInput'></input>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>机械分类</text>
+        </view>
+        <view class="listRight">
+          <picker  style="display:inline-block;" mode="multiSelector" bindchange="bindMechanicalFormChange" bindcolumnchange="bindMechanicalFormColumnChange" value="{{jxlIndex}}" range="{{jxlNamesArray}}">
+              <view class="flter-itm special">
+                {{jxlName}}
+              </view>
+          </picker>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>数量</text>
+        </view>
+        <view class="listRight">
+          <input maxlength="18"  placeholder-class='input-d' type='number' placeholder='请输入数量' bindinput='bindAmountInput'></input>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>价格</text>
+        </view>
+        <view class="listRight">
+          <input maxlength="18" placeholder-class='input-d' type='number' placeholder='请输入价格' bindinput='bindPriceInput'></input>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>所在地区</text>
+        </view>
+        <view class="listRight">
+           <area-modal modalHidden="true" areaTitle="{{areaTitle}}" img="1" bindchangeArea="changeArea"></area-modal>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>联系人</text>
+        </view>
+        <view class="listRight">
+          <input placeholder-class='input-d' type='text' placeholder='请输入联系人' bindinput='bindContactsInput'></input>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>联系电话</text>
+        </view>
+        <view class="listRight">
+          <input maxlength="11" placeholder-class='input-d' type='number' placeholder='请输入联系电话' bindinput='bindMoblieInput'></input>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>验证码</text>
+        </view>
+        <view class="listCenter">
+          <input maxlength="18" placeholder-class='input-d' type='number' placeholder='验证码' bindinput='bindCodeInput'></input>
+        </view>
+        <view class="list_right">
+            <block wx:if="{{isInCode===1}}">
+              <button class="btn" bindtap='getVerifyCode'>获取验证码</button>
+            </block>
+            <block wx:else>
+              <button class="btn" style='opacity:0.6;'>{{isCodeTime}}s后再发送</button>
+            </block> 
+        </view>
+    </view>
+    
+    <view class="listBox">
+        <view class="listLeft">
+            <text class="tip">*</text>
+            <text>备注</text>
+        </view>
+        <view class="listRight">
+          <input placeholder-class='input-d' type='text' placeholder='请输入备注' bindinput='bindShuoInput'></input>
+        </view>
+    </view>
+    <view class="caveat"  wx:if="{{!isSubmitAble}}">
+    {{warnStr}}
+    </view>
+  </form>
+</view>
+<view class="settleInBtn" bindtap="machineSubmit">
+    <button style="opacity: {{opacity}};" disabled='{{!isSubmitAble}}' class="btn-submit btn_color">入驻</button>
+</view>

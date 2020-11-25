@@ -1,0 +1,75 @@
+<!--pages/idcard/idcard.wxml-->
+<form bindsubmit="formSubmit" report-submit="true" bindreset="formReset">
+  <!--实名认证  -->
+  <view class='smrz'>
+    <!--姓名  -->
+    <view class='name'>
+      <view class='nm'>真实姓名</view>
+      <input type="text" maxlength="18" class='p_nm input-box' placeholder-class='input-id' placeholder="输入姓名" value='{{name}}' bindinput="bindName"></input>
+    </view>
+    <view class='name'>
+      <view class='nm'>身份证号</view>
+      <input type='text' maxlength="18" class='p_nm input-box idCard' placeholder-class='input-id' placeholder="输入身份证号" value='{{idNum}}' bindinput="bindIdNum"></input>
+      <ocr-navigator bind:onSuccess="success" certificateType="idCard" opposite="{{false}}" class="scanCard">
+        <image src="http://static.jianzhugang.com/mini/image/camera.png"></image>
+      </ocr-navigator>
+    </view>
+    <!-- <view class="idPhoto">
+       <text class="pictureBox">上传个人真实照片</text>
+       <view class="_photo">
+          <view class="left">
+            <block wx:if="{{!idPhotoImg}}">
+                <view class="_pictureBox" bindtap='uploadIdBack' data-type="2">
+                  <image src="https://static.jianzhugang.com/mini/image/scan.png" mode="aspectFit"></image>
+                </view>
+            </block>
+            <block wx:if="{{idPhotoImg}}">
+                <icon class="clear" type="clear" color="red" data-type="2"  bindtap='clearIdBack'/>
+                <view class="_pictureBox">
+                  <image  src="{{idPhoto}}" mode="aspectFit"></image>
+                </view>
+            </block>
+          </view>
+       </view>
+   </view> -->
+   <view class="idPicture">
+       <text class="pictureBox">上传身份证照片</text>
+        <view class="titleBox">
+            <text>请上传身份证(头像面)</text>
+            <text>请上传身份证(国徽面)</text>
+        </view>
+       <view class="_picture">
+          <view class="left">
+            <block wx:if="{{!isShowIdBack}}">
+              <view class="_pictureBox" bindtap='uploadIdBack' data-type="0">
+                <image src="https://static.jianzhugang.com/mini/image/ID_01.png" mode="aspectFit"></image>
+               </view>
+            </block>
+            <block wx:if="{{isShowIdBack}}">
+              <icon class="clear" type="clear" color="red" data-type="0"  bindtap='clearIdBack'/>
+              <view class="_pictureBox">
+                <image src='{{idBackUrl}}' mode="aspectFit"></image>
+              </view>
+            </block>
+          </view>
+          <view class="right">
+            <block wx:if="{{!isShowIdFront}}">
+              <view class="_pictureBox"  bindtap='uploadIdBack' data-type="1">
+                <image src="https://static.jianzhugang.com/mini/image/ID_02.png" mode="aspectFit"></image>
+              </view>
+            </block>
+             <block wx:if="{{isShowIdFront}}">
+                <icon class="clear" type="clear" color="red" data-type="1"  bindtap='clearIdBack'/>
+                <view class="_pictureBox">
+                  <image  src='{{idFrontUrl}}' mode="aspectFit"></image>
+                </view>
+            </block>
+          </view>
+       </view>
+        <view class="tips">
+           <text class="_tips">温馨提示 : 请确保图片内容完整文字清晰可见，以免影响审核结果</text>
+        </view>
+   </view>
+  </view>
+  <button class='btn2' formType="submit">认证</button>
+</form>

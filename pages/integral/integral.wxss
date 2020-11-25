@@ -1,0 +1,95 @@
+page{background:rgba(242,242,242,1);}
+.invite{
+   width:100%;
+   height:100%;
+}
+.announcement{
+  width:94%;
+  height:184rpx;
+  background:#fff;
+  margin:20rpx auto;
+  border-radius:6rpx;
+  padding:20rpx 0rpx;
+}
+.announcement text.prompt{
+   display:block;
+   width:94%;
+   margin:0rpx auto;
+   line-height:46rpx;
+   font-size:28rpx;
+   color:#515151;
+}
+.announcement text.text_prompt{
+  color:#f0940d;
+}
+.announcement text.phone{
+   color:#4da1ff;
+   font-weight:bold;
+}
+.pointsRecord{
+  width:94%;
+  height:auto;
+  background:#fff;
+  margin:10rpx auto;
+  border-radius:6rpx;
+}
+.pointsRecord text.integration{
+  width:94%;
+  display:block;
+  height:90rpx;
+  line-height:90rpx;
+  margin:0rpx auto;
+}
+.pointsRecord text.circle{
+  display:inline-block;
+  width:20rpx;
+  height:20rpx;
+  background:#4da1ff;
+  border-radius:50%;
+  margin:0rpx 12rpx 0rpx 0rpx;
+}
+.listBox{
+  padding:10rpx 0rpx;
+   width:94%;
+   height:150rpx;
+   margin:2rpx auto;
+   border-top:2rpx solid rgba(242,242,242,1);
+}
+.leftBox{
+   width:70%;
+   float:left;
+   height:150rpx;
+}
+.rightBox{
+  width:26%;
+  height:100%;
+  float:right;
+  display: flex;
+  align-items: center;
+   justify-content: center;
+}
+.rightBox button{
+  background:#4da1ff;
+  border-radius:6rpx;
+  color:#fff;
+  height:72rpx;
+  line-height:72rpx;
+  font-size:31rpx;
+}
+.rightBox button::after{
+  border:none;
+}
+.leftBox text.title{
+   display:block;
+   width:100%;
+   height:70rpx;
+   line-height:70rpx;
+   font-size:30rpx;
+}
+.leftBox text.content{
+   display:block;
+   width:100%;
+   height:80rpx;
+   color:#888;
+   font-size:27rpx;
+}

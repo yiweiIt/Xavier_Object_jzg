@@ -1,0 +1,311 @@
+/* pages/team/teameditor.wxss */
+.form_div{
+  position: relative;
+  width: 90%;
+  border-radius: 20rpx;
+  background-color: #efefef;
+  margin: 20rpx auto;
+  height:540rpx;
+  /* padding:15rpx 15rpx 15rpx 15rpx; */
+}
+.teamBox{
+  position:absolute;
+  top:30rpx;
+  width: 94%;
+  left:3%;
+  height:480rpx;
+}
+.ditor{
+  position: absolute;
+  right: 20rpx;
+  top:5rpx;
+  height:70rpx;
+  color:#4da1ff;
+  border:none;
+  width: 20%;
+  text-align: center;
+  background-color: transparent;
+  font-size: 30rpx;
+  z-index: 99;
+}
+.ditor:after{
+  border:none;
+}
+.teamList{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:30rpx;
+  color:#333;
+  display: flex;
+}
+.listLeft{
+  flex:0 0 24%;
+  height:100%;
+}
+.listRight{
+  flex:1;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.listRight input{
+  width:80%;
+  height:100%;
+  border:none;
+}
+
+.van-cell {
+  width: 50%;
+  padding:10rpx 0rpx !important;
+  background-color: transparent !important;
+}
+.van-cell__value{
+  text-align: left !important;
+}
+.van-cell__title{
+  width: 100px !important;
+}
+.van-cell:after{
+  border-bottom:1px solid transparent !important;
+}
+label{
+  padding: 5px 5px;
+  display: block;
+  color: #666666;
+  font-size: 32rpx;
+}
+
+.title{
+  width:92%;
+  height:100rpx;
+  line-height:100rpx;
+  margin:0rpx auto;
+  display: flex;
+  border-bottom: 1px solid #efefef;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15rpx 15rpx 15rpx;
+  margin-top: 40rpx;
+  border-bottom: 1px solid #eaeaea; */
+}
+.titleLeftText{
+  flex: 0 0 40%;
+  height:100%;
+  display: inline-block;
+    color: #DC5739;
+}
+.titleRightButton{
+  flex:1;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.titleRightButton text{
+  display: block;
+  width:40%;
+  height:60rpx;
+  line-height:60rpx;
+  background:#4da1ff;
+  color:#fff;
+  text-align: center;
+  font-size:30rpx;
+}
+.van-button{
+  height: 32px !important;
+  line-height: 30px !important;
+}
+.info{
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+.info .row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  padding: 15rpx 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #eaeaea;
+}
+.info .row text{
+  color: #666666;
+  font-size: 32rpx;
+  width: 80%;
+  display: block;
+}
+.rad_div{
+  display: flex;
+  flex-direction: row;
+}
+.rad_div view{
+  width: 12rpx;
+  height: 12rpx;
+  background-color: #7d7e80;
+  border-radius: 20rpx;
+  margin: 5rpx;
+}
+.prop{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+}
+.add_model{
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 3rpx;
+  z-index: 999;
+}
+.add_model input{
+  height: 48rpx;
+  line-height: 48rpx;
+  flex: 1;
+  border:1px solid #eaeaea;
+  color: #000000;
+  font-size: 32rpx;
+  padding-top: 0px;
+}
+.add_model input{
+  padding-left: 15rpx;
+}
+.add_model{
+  padding: 20rpx 30rpx 50rpx 30rpx;
+}
+.add_model .row{
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add_model label{
+  width: 200rpx;
+  padding: 0rpx;
+}
+.add_model button{
+  height: 65rpx;
+  line-height: 65rpx;
+  width: 40%;
+  margin-top: 60rpx;
+  font-size: 34rpx;
+  border-radius: 4rpx;
+  color: #666666;
+}
+.add_model button button::after {
+  border: none;
+}
+.add_model form{
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  display: block;
+}
+.add_model text{
+  display: block;
+  text-align: center;
+}
+.add_model span{
+  color: #FF0000;
+}
+/* van-area{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+} */
+.section{
+  height: 48rpx;
+  line-height: 48rpx;
+  flex: 1
+}
+.section .picker{
+  width:100%;
+  height: 48rpx;
+}
+teamType-modal{
+  text-align: left;
+  font-size: 14px;
+}
+.info .clo{
+  width: 40%;
+}
+.info .clo:last-child{
+  width: 20%;
+}
+.info .clo .rad_div{
+  float: right
+}
+.add_modelform{
+  z-index: 999;
+}
+.addinput{
+  color: #666666;
+  font-size: 32rpx;
+  min-height: 48rpx;
+}
+.picker{
+  color: #000000;
+  font-size: 32rpx;
+  float: left;
+}
+.add_model .confirm{
+  color: #ffffff;
+  background-color:#4FA5FB;
+}
+.van-field__input{
+  font-size: 32rpx;
+  line-height: 24px !important;
+}
+teamType-modal,area-third-input-modal{
+  float: left;
+  line-height: 29px;
+  padding-left: 0rpx;
+}
+/* area-third-input-modal{
+  padding:5px 0px 0px 0rpx;
+} */
+teamType-modal view{
+  /* color: #666666; */
+  font-size: 30rpx;
+}
+area-third-input-modal view{
+  font-size: 30rpx;
+}
+/* van-field{
+  float: left;
+} */
+.z_hide {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.input-box{
+  border:none !important;
+}
+.change_bank{
+  line-height: 29px;
+  padding-left: 0rpx;
+}
+.add_model button::after{
+  border:none;
+}
+.title_input van-cell view .van-cell__value{
+  padding-right: 160rpx;
+}
+.teamTypecolor view,.pickercolor{
+  color: #333;
+  font-size:30rpx;
+}

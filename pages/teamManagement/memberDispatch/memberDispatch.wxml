@@ -1,0 +1,23 @@
+<view class="dispatchBox">
+   <scroll-view class="dataListBox" scroll-y="true" wx:if="{{teamDispatch.length>0}}">
+      <block wx:for="{{teamDispatch}}" wx:key="id">
+         <view class="dispatchList">
+            <text class="name">{{item.memberName}}</text>
+            <text class="memo">{{item.memo}}</text>
+            <text class="status {{item.status=='HIRE_TYPE_AUDITED'?'orange':'grey'}}">{{item.status=='HIRE_TYPE_AUDITED'?'正在派单':'已完成'}}</text>
+            <view class="bottom">
+               <text class="time">{{item.publishedTime}}</text>
+               <view class="changeStatus {{type=='TEAM'?'':'dpn'}}" data-id ="{{item.id}}"  bindtap="updateHireStatus" wx:if="{{item.status=='HIRE_TYPE_AUDITED'}}">
+                 <text>完成派单</text>              
+               </view>
+            </view>
+         </view>
+      </block>
+   </scroll-view>
+   <view class="boxBg" wx:else>
+      <view class="noDataTip">
+        <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+        <text>暂无派单记录</text>
+      </view>
+   </view>
+</view>

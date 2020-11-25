@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "操作规范",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+     "teamType-modal": "/component/teamTypeModal/teamTypeModal"
+  }
+}

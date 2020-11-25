@@ -1,0 +1,114 @@
+<!--pages/machineList/machineList.wxml-->
+<!-- 工程找机械 -->
+<view wx:if="{{list.length > 0 && statusId === 'machineIns'}}">
+  <view class='table content-list' style="margin-top:0rpx;">
+    <view class="item " wx:for="{{list}}" data-name="{{item.id}}" wx:key="unique" bindtap="goMyMachineDetail">
+      <view class="title">{{item.title ? item.title : (item.area ? item.area.fullTitle: item.province+item.city) +'项目-找'+item.machineType.text}}</view>
+      <view class="desc">数量：{{item.number}}台</view>
+      <view class="desc">发布时间：{{item.publishedTime ? item.publishedTime : item.createTime}}</view>
+      <view class="img-v">
+        <image class="img" src="../../image/more.png"></image>
+      </view>
+      <block wx:if="{{item.status.text === '正在招租'}}">
+        <view class="right-top blue">
+          {{item.status.text}}
+        </view>
+      </block>
+      <block wx:if="{{item.status.text !== '正在招租'}}">
+        <view class="right-top grey">
+          {{item.status.text}}
+        </view>
+      </block>
+      <block wx:if="{{!item.status}}">
+        <view class="right-top grey">
+          已完成
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 机械找工程 -->
+<view wx:if="{{list.length > 0 && statusId === 'machineOuts'}}">
+  <view class='table content-list' style="margin-top:0rpx;">
+    <view class="item " wx:for="{{list}}" data-name="{{item.id}}" wx:key="unique" bindtap="goMyMachineDetail">
+      <view class="title">{{item.title ? item.title : (item.area ? item.area.fullTitle : item.province+item.city)+'-出租'+item.machineType.text}}</view>
+      <view class="desc">型号：{{item.version}}</view>
+      <view class="desc">发布时间：{{item.publishedTime ? item.publishedTime : item.createTime}}</view>
+      <view class="img-v">
+        <image class="img" src="../../image/more.png"></image>
+      </view>
+      <block wx:if="{{item.status.text === '正在出租'}}">
+        <view class="right-top blue">
+          {{item.status.text}}
+        </view>
+      </block>
+      <block wx:if="{{item.status.text !== '正在出租'}}">
+        <view class="right-top grey">
+          {{item.status.text}}
+        </view>
+      </block>
+      <block wx:if="{{!item.status}}">
+        <view class="right-top grey">
+          已完成
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 机械手招聘 -->
+<view wx:if="{{list.length > 0 && statusId === 'machineRecruit'}}">
+  <view class='table content-list' style="margin-top:0rpx;">
+    <view class="item " wx:for="{{list}}" data-name="{{item.id}}" wx:key="unique" bindtap="goMyMachineDetail">
+      <view class="title">{{item.title}}</view>
+      <view class="desc">驾龄：{{item.workYear}}</view>
+      <view class="desc">发布时间：{{item.publishedTime ? item.publishedTime : item.createTime}}</view>
+      <view class="img-v">
+        <image class="img" src="../../image/more.png"></image>
+      </view>
+      <block wx:if="{{item.status.text === '正在招聘'}}">
+        <view class="right-top blue">
+          {{item.status.text}}
+        </view>
+      </block>
+      <block wx:if="{{item.status.text !== '正在招聘'}}">
+        <view class="right-top grey">
+          {{item.status.text}}
+        </view>
+      </block>
+      <block wx:if="{{!item.status}}">
+        <view class="right-top grey">
+          已完成
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 机械手求职 -->
+<view wx:if="{{list.length > 0 && statusId === 'machinerWants'}}">
+  <view class='table content-list' style="margin-top:0rpx;">
+    <view class="item " wx:for="{{list}}" data-name="{{item.id}}" wx:key="unique" bindtap="goMyMachineDetail">
+      <view class="title">{{item.title ? item.title : (item.area ? item.area.fullTitle : item.province + item.city) +'-'+ item.machineType.text + '司机'}}</view>
+      <view class="desc">驾龄：{{item.workYear}}</view>
+      <view class="desc">发布时间：{{item.publishedTime ? item.publishedTime : item.createTime}}</view>
+      <view class="img-v">
+        <image class="img" src="../../image/more.png"></image>
+      </view>
+      <block wx:if="{{item.status.text === '正在求职'}}">
+        <view class="right-top blue">
+          {{item.status.text}}
+        </view>
+      </block>
+      <block wx:if="{{item.status.text !== '正在求职'}}">
+        <view class="right-top grey">
+          {{item.status.text}}
+        </view>
+      </block>
+      <block wx:if="{{!item.status}}">
+        <view class="right-top grey">
+          已完成
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="publish" data-name="{{publishName}}" bindtap="goPublish">{{publishTitle}}</view>

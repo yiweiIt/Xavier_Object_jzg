@@ -1,0 +1,48 @@
+/* pages/teamManagement/specification/specification.wxss */
+
+.selectTime{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  background:#fff;
+  border-bottom:4rpx solid rgba(242, 242, 242, 1);
+}
+.selectTime text.title{
+  float:left;
+  width:40%;
+  margin-left:4%;
+}
+.selectTime text.picker{
+   padding:0rpx 20rpx 0rpx 0rpx;
+}
+.selectTime view.selects{
+   float:right;
+   width:50%;
+   margin-right:4%;
+   text-align: right;
+}
+.selectTime view.selects image{
+   width:23rpx;
+   height:16rpx;
+   margin:0px 2rpx;
+}
+.content{
+  width:100%;
+  height:calc(100vh - 104rpx);
+  background:#fff;
+}
+.contentBox{
+  width:92%;
+  padding:50rpx 0rpx;
+  margin:0rpx auto;
+}
+.contentBox rich-text{
+  display: block;
+  width:100%;
+  line-height: 56rpx;
+  font-size:30rpx;
+  overflow: hidden;
+}
+.contentBox rich-text .img,.contentBox rich-text .img img {
+  width:100%;
+}

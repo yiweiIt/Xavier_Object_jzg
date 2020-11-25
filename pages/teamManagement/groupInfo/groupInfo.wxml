@@ -1,0 +1,129 @@
+
+<view class="infomation">
+  <form bindsubmit="formSubmit"> 
+    <view class="upper_apex"></view>
+    <view class="projectInfo box">
+        <view class="imageBox">
+          <view class="image_box">
+            <image src="{{getMember.account ? getMember.account.avatarUrl : 'http://static.jianzhugang.com/mini/image/ico-35.png'}}"></image>
+          </view>
+        </view>
+        <view class="infoListBox">
+          <view class="infoList">
+              <text class="listName">姓名</text>
+              <view class="inputBox">
+                <input type="text" name="title" disabled="{{isEdit}}" value="{{getMember.title}}" bindinput="bindtitle"></input>
+              </view>
+          </view>
+          <view class="infoList">
+              <text class="listName">性别</text>
+              <block wx:if="{{isEdit}}">
+                  <view class="inputBox">
+                    <input type="text" name="gender" value="{{getMember.gender}}"  bindinput="bindgender"></input>
+                  </view>         
+              </block>
+              <block wx:else>
+                  <view class="inputBox  {{isEdit?'':'small'}}">
+                    <picker bindchange="bindPickerChangeSex" value="{{arrayIndex}}" range="{{arrayGenger}}">
+                        <input  name="gender"  value='{{arrayGenger[arrayIndex]}}' disabled placeholder='请选择性别' />
+                    </picker>
+                  </view>
+                  <view class="iconNext" hidden="{{isEdit}}">
+                    <image src="../../../image/grayNext.png"></image>
+                  </view>    
+              </block>
+          </view>
+          <view class="infoList">
+              <text class="listName">电话</text>
+              <view class="inputBox">
+                <input type="text" name="phone"  disabled="{{isEdit}}" class="{{isEdit?'':'bgcolor'}}" value="{{getMember.phone}}" bindinput="bindphone"/>
+              </view>
+          </view>
+         <view class="infoList">
+              <text class="listName">工种类型</text>
+              <view class="inputBox  {{isEdit?'':'small'}}">
+                <teamType-modal modalHidden="false" teamTypeName="{{getMember.teamType}}" bindchangeTeamType="changeTeamType" isDisabled="{{isEdit}}">
+                </teamType-modal>
+              </view>
+              <view class="iconNext" hidden="{{isEdit}}">
+                <image src="../../../image/grayNext.png"></image>
+              </view>
+          </view>
+          <view class="infoList">
+              <text class="listName">身份证号</text>
+              <view class="inputBox {{isEdit?'':'big'}}">
+                <input  type="text" name="idNumber"  disabled="{{isEdit}}" class="{{isEdit?'':'bgcolor'}}" value="{{getMember.idNumber}}"  bindinput="bindidNumber"/>
+              </view>
+              <view class="cardBox"  hidden="{{isEdit}}">
+                <ocr-navigator bind:onSuccess="success" certificateType="idCard" opposite="{{false}}" class="scanCard {{isEdit?'dpn':''}}">
+                  <image src="../../../image/addModalCamera.png"></image>
+                </ocr-navigator>
+              </view>
+          </view>
+          <view class="infoList">
+              <text class="listName">开户行</text>
+              <view class="inputBox  {{isEdit?'':'small'}}">
+                <picker bindchange="userbindbankName" value="{{bankName}}" range="{{array}}" name="bankName" disabled="{{isEdit}}">
+                <input type="text"  class="picker" name="bankName" value="{{bankName?bankName:'请选择开户行'}}" disabled placeholder="请输入组员相关内容如经验丰富、踏实肯干"></input>
+                </picker>
+              </view>
+              <view class="iconNext" hidden="{{isEdit}}">
+                <image src="../../../image/grayNext.png"></image>
+              </view>
+          </view>
+          <view class="infoList lastInfo">
+              <text class="listName">银行卡号</text>
+              <view class="inputBox {{isEdit?'':'big'}}">
+                <input type="text" name="cardNumber"  class="{{isEdit?'':'bgcolor'}}" value="{{getMember.cardNumber}}"  disabled="{{isEdit}}" bindinput="bindcardNumber"/>
+              </view>
+              <view class="cardBox"  hidden="{{isEdit}}">
+                <ocr-navigator bind:onSuccess="bankSuccess"  certificateType="bankCard" selectedOptions="{{['bankName','number','validDate']}}" class="scanCard {{isEdit?'dpn':''}}">
+                  <image src="../../../image/addModalCamera.png"></image>
+                </ocr-navigator>
+              </view>
+          </view>
+        </view>
+    </view>
+    <view class="box boxList">
+        <view class="starBox">
+            <view class="iconBox">
+              <image src="../../../image/team_member.png"></image>
+            </view>
+            <text class="starName">组员星级</text>
+            <view class="starList">
+              <block wx:if="{{getMember.starLevel==null}}">
+                  <block wx:for="{{[1, 2, 3,4,5]}}" wx:key="unique">
+                    <image class="dark" src="http://static.jianzhugang.com/mini/image/en_star.png"  data-name="{{index+1}}" bindtap="changeStars"></image>
+                </block> 
+              </block>
+              <block wx:else>
+                <block wx:for="{{getMember.starLevel}}" wx:key="unique">
+                    <image class="Orange" src="http://static.jianzhugang.com/mini/image/star.png"  data-name="{{index+1}}" bindtap="changeStars"></image>
+                </block>
+                <block wx:for="{{5 - getMember.starLevel}}" wx:key="unique">
+                    <image class="dark" src="http://static.jianzhugang.com/mini/image/en_star.png" data-name="{{getMember.starLevel+index+1}}" bindtap="changeStars"></image>
+                </block>              
+              </block>
+            </view>
+        </view>
+        <view class="remarks">
+            <view class="iconBox">
+              <image src="../../../image/memberNote.png"></image>
+            </view>
+            <text class="starRemarks">组员备注</text>
+        </view>
+        <view class="details">
+          <text class="detailsBox"  wx:if="{{isEdit}}">{{getMember.notes==null?'暂无添加备注':getMember.notes}}</text>
+          <input type="text" name="notes" value="{{getMember.notes}}" bindinput="bindnotes" placeholder="请输入组员相关内容如经验丰富、踏实肯干"  wx:else="{{!isEdit}}"></input>
+        </view>
+    </view>
+    <view class="operate {{editDisplay?'':'dpn'}}">
+        <view class="buttonCenter" >
+            <button  size="large" type="info" class="edit"  form-type="submit">{{isEdit?'编辑资料':'保存修改'}}</button>
+        </view>  
+        <view class="buttonCenter" data-id="{{getMember.id}}" bindtap="delete">
+          <text>{{type=='TEAM'?'删除组员':'退出班组'}}</text>
+        </view>
+    </view>
+  </form>
+</view>

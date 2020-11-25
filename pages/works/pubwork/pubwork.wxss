@@ -1,0 +1,198 @@
+/* pages/pubwork/pubwork.wxss */
+/* .item {
+    border-color: #eee;
+    background-color: #fff;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 16px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-shadow: 0 0 0 0!important;
+}
+.top-avatar {
+    background-image: url('https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/ico-02.png');
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    top: -1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+}
+
+.top-avatar image {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    border: solid 3px rgba(255, 255, 255, 0.5);
+}
+.item .m_title{
+  font-size: 14px;
+  color: #1a65a4;
+}
+form{
+  display:block;
+  padding:5px;
+  color: #444;
+}
+.item-input{
+  border-bottom:1px solid #ddd;
+  padding:5px;
+  margin-top:8px;
+}
+.item-input .left{
+  width:27%;
+  float:left;
+}
+.button-bg{
+  background: #4fc1dd;
+  color: #fff;
+  margin-top: 20px;
+}
+.textarea-style{
+  margin-left: 27%;
+  width: 60%;
+  border:none;
+  margin-top: 0px;
+  padding: 0px;
+}
+.hs{
+  color: red
+} */
+
+page{
+  background:rgba(242,242,242,1);
+}
+.detailsBox{
+  width:100%;
+  height:200rpx;
+  background:#4da1ff;
+  display: flex;
+  justify-content: center;
+  font-size:29rpx;
+}
+.detailsBox image{
+   width:150rpx;
+   height:150rpx;
+   border-radius:50%;
+   margin-top:10rpx;
+   z-index:3;
+   border:4rpx solid #4da1ff;
+}
+.basis{
+  z-index:2;
+  width:92%;
+  /* height:200rpx; */
+  background:#fff;
+  border-radius:8rpx;
+  padding:16rpx 0rpx;
+}
+.basistip{
+  margin:-100rpx auto 10rpx auto;
+}
+.center{
+  margin:20rpx auto;
+}
+text.basisText{
+   width:92%;
+   margin:0rpx auto;
+   height:80rpx;
+   line-height: 80rpx;
+   display: block;
+   color:#666;
+   border-bottom: 2rpx solid rgba(242,242,242,1);
+}
+.listBox{
+  width:92%;
+  margin:0rpx auto;
+  height:90rpx;
+  line-height: 90rpx;
+  color:#666;
+  border-bottom:2rpx solid rgba(242,242,242,1)
+}
+.listBox text{
+   width:30%;
+   float:left;
+   height:100%;
+   color:#333;
+}
+.listBox input,.listBox picker{
+   width:70%;
+   float:right;
+   height:90rpx;
+   line-height: 90rpx;
+   text-align:right;
+}
+.listBox:last-child{
+  border:none;
+}
+.reportContent{
+  width:92%;
+  margin:0rpx auto;
+  height:280rpx;
+  background:#fff;
+  padding:15rpx 0rpx;
+  border-radius: 6rpx;
+}
+.reportContent text{
+  border:none;   
+  height:60rpx;
+  line-height: 60rpx;
+}
+.input-area{
+  width:90%;
+  height:180rpx;
+  background:rgba(242,242,242,1);
+  border:none;
+  margin:0rpx auto;
+  border-radius:4rpx;
+  color:#666;
+}
+.buttonBox{
+   width:92%;
+   margin:30rpx auto;
+   height:80rpx;
+}
+.buttonBox button{
+   background:#4da1ff;
+   color:#fff;
+   font-size:30rpx;
+   height:80rpx;
+   line-height:80rpx;
+   border-radius:6rpx;
+}
+.buttonBox button::after{
+  border:none;
+}
+.flter-itm{
+   text-align:right;
+   position: relative;
+   width:100%;
+   height:90rpx;
+   line-height: 90rpx;
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-end;
+   background:red!important;
+}
+.listBox view.flter-itm .flter-image{
+  display:none!important;
+}
+.basisText text.circle {
+ display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  background: #4da1ff;
+  border-radius: 50%;
+  margin: 0rpx 12rpx 0rpx 0rpx;
+}

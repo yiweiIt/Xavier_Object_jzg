@@ -1,0 +1,41 @@
+
+<view>
+  <view class="content-view">
+    <view class="rz-item" data-name="machineIns" bindtap="goMachineList">
+      <view class="imgBox">
+        <image class="rz-icon" src='http://static.jianzhugang.com/mini/image/jxrz.png'></image>
+      </view>
+      <view class="text">工程找机械</view>
+      <view class='img-v'>
+        <image class='img' src='/image/my_more.png'></image>
+      </view>
+    </view>
+    <view class="rz-item" data-name="machineOuts" bindtap="goMachineList">
+      <view class="imgBox">
+        <image class="rz-icon" src='http://static.jianzhugang.com/mini/image/gsrz.png'></image>
+      </view>
+      <view class="text">机械找工程</view>
+      <view class='img-v'>
+        <image class='img' src='/image/my_more.png'></image>
+      </view>
+    </view>
+    <view class="rz-item" data-name="machineRecruit" bindtap="goMachineList">
+      <view class="imgBox">
+        <image class="rz-icon" src='http://static.jianzhugang.com/mini/image/bzrz.png'></image>
+      </view>
+      <view class="text">机械手招聘</view>
+      <view class='img-v'>
+        <image class='img' src='/image/my_more.png'></image>
+      </view>
+    </view>
+    <view class="rz-item" data-name="machinerWants" bindtap="goMachineList">
+      <view class="imgBox">
+        <image class="rm-icon" src='/image/sy/grzh.png'></image>
+      </view>
+      <view class="text">机械手求职</view>
+      <view class='img-v'>
+        <image class='img' src='/image/my_more.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

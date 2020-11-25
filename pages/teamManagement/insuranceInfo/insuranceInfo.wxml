@@ -1,0 +1,148 @@
+<view class="insuranceInfo">
+   <view class="infomation">
+      <view class="insuranceBox {{info.status=='QH_INS_ORDER_SUCCESS'?'':'noSUCCESS'}}">
+         <view class="imgBox">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/orderIcon.png"></image>
+         </view>
+         <text>订单号 {{info.orderNo}}</text>
+      </view>
+      <text class="electronic" bindtap="getFile" wx:if="{{info.status=='QH_INS_ORDER_SUCCESS'}}">查看电子保单</text>
+   </view>
+  <view class="announcement" wx:if="{{info.status=='QH_INS_ORDER_FAIL'}}">
+    <view class="prompt">
+        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/refundIcon.png"></image>
+        <!-- <view class="textBox">尊敬的用户，由于您的订单未能成功交易，退款将会在48小时内到账。若您有任何疑问请联系客服：<text class="phone"  bindtap='callCustomer'>400-860-6025</text></view> -->
+        尊敬的用户，由于您的订单未能成功交易，退款将会在48小时内到账。若您有任何疑问请联系客服：<text class="phone"  bindtap='callCustomer'>400-860-6025</text>
+    </view>
+  </view>
+  <view class="announcement" wx:if="{{info.status=='QH_INS_ORDER_SUCCESS'}}">
+    <view class="prompt">
+        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/consumerHotline.png"></image>
+        尊敬的客户：您的保险已购买成功，有任何保险相关问题可致电24小时代理商客服电话：<text class="phone"  bindtap='callCustomer'>400-811-0110</text>
+    </view>
+  </view>
+   <view class="baseInfo">
+     <view class="baseInfoBox">
+       <view class="uniteTitle">
+          <image src="http://static.jianzhugang.com/mini/image/newJobInfo_4.png"></image>
+          <text>项目信息</text>
+       </view>
+        <view class="list">
+          <view class="listLeft">
+            <view class="line"></view>
+          </view>
+          <view class="listRight">
+              <text class="title">项目名称</text>
+              <text class="info">{{info.projectName}}</text>
+          </view>
+        </view>
+        <view class="list">
+          <view class="listLeft">
+          </view>
+          <view class="listRight">
+              <text class="title">项目地址</text>
+              <text class="info">{{info.projectAddress}}</text>
+          </view>
+        </view>
+     </view>
+   </view>
+   <view class="baseInfo">
+     <view class="baseInfoBox">
+       <view class="uniteTitle">
+          <image class="jobIcon_2" src="../../../image/InsuredIcon.png"></image>
+          <text>投保操作员信息</text>
+       </view>
+        <view class="list">
+          <view class="listLeft">
+            <view class="line"></view>
+          </view>
+          <view class="listRight">
+              <text class="title">投保操作员</text>
+              <text class="info">{{info.name}}</text>
+          </view>
+        </view>
+        <view class="list">
+          <view class="listLeft">
+              <view class="line"></view>
+          </view>
+          <view class="listRight">
+              <text class="title">投保操作员手机号</text>
+              <text class="info">{{info.phone}}</text>
+          </view>
+        </view>
+        <view class="list">
+          <view class="listLeft">
+          </view>
+          <view class="listRight">
+              <text class="title">投保操作员身份证号</text>
+              <text class="info">{{info.idNo}}</text>
+          </view>
+        </view>
+     </view>
+   </view>
+   <view class="baseInfo">
+     <view class="baseInfoBox">
+       <view class="uniteTitle">
+          <image class="jobIcon_2" src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/insuranceIcon.png"></image>
+          <text>投保信息</text>
+       </view>
+      <view class="list">
+        <view class="listLeft">
+           <view class="line"></view>
+        </view>
+        <view class="listRight">
+           <view class="timeBox">
+               <text class="timeName">保险起期</text>
+               <text class="timeCenterBox"></text>
+               <text class="timeName">保险至期</text>
+           </view>
+           <view class="timeContent">
+               <text class="timeName">{{info.insStartTime}}</text>
+               <text class="timeCenterBox"><text></text></text>
+               <text class="timeName">{{info.insEndTime}}</text>
+           </view>
+        </view>
+      </view>
+      <view class="list">
+        <view class="listLeft">
+        </view>
+        <view class="listRight">
+           <view class="program">
+               <text class="programName">投保方案</text>
+               <text class="programName">总保额</text>
+               <text class="programName">总保费</text>
+           </view>
+           <view class="programContent">
+               <text class="programName">{{plan}}</text>
+               <text class="programName">{{info.insAmount}}元</text>
+               <text class="programName">{{info.insFee}}元</text>
+           </view>
+        </view>
+      </view>
+     </view>
+   </view>
+   <view class="baseInfo lastBaseInfo">
+     <view class="baseInfoBox">
+       <view class="uniteTitle">
+          <image class="jobIcon_2" src="../../../image/beiInsuredIcon.png"></image>
+          <text>被保人信息</text>
+       </view>
+       <view class="insuredList">
+          <block wx:for="{{listArr}}" wx:key="id">
+            <view class="insuredBox">
+                <view class="l_insured">{{(index+1)<=9?'0'+(index+1):(index+1)}}</view>
+                <view class="r_insured">
+                  <view class="insuredName">
+                      <text>{{item.name}}</text>
+                  </view>
+                  <text class="idCard">{{item.idNo}}</text>
+                </view>
+            </view> 
+          </block>
+       </view>
+     </view>
+   </view>
+</view>
+<button  wx:if="{{info.status=='QH_INS_ORDER_NOT_PAY'}}">
+  <view class="publish" bindtap="buyInsurance">去支付</view>
+</button>

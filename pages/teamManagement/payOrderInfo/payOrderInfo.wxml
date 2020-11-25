@@ -1,0 +1,63 @@
+<view class="orderInfo">
+   <view  class="payInfo">
+      <view class="list">
+          <text>合约名称</text>
+          <text>{{orderDetail.contractName}}</text>
+       </view>
+       <view class="list">
+          <text>申请人</text>
+          <text>{{orderDetail.applyName}}</text>
+       </view>
+       <view class="list">
+          <text>申请时间</text>
+          <text>{{orderDetail.applyTime}}</text>
+       </view>
+       <view class="list">
+          <text>订单状态</text>
+          <text>{{orderDetail.status}}</text>
+       </view>
+       <view class="list">
+          <text>最后操作人</text>
+          <text>{{orderDetail.lastOp.account}}</text>
+       </view>
+       <view class="list">
+          <text>操作时间</text>
+          <text>{{orderDetail.lastOp.time}}</text>
+       </view>
+       <view class="oddnumber">
+          <text>工程审核支付单号</text>
+          <text>{{orderDetail.auditNo}}</text>
+       </view>
+       <view class="list">
+          <text>备注/摘要</text>
+          <text>{{orderDetail.remark}}</text>
+       </view>
+   </view>
+   <view class="salary">
+      <text class="salaryTitle">工资明细(工资总金额:<text class="totalNumber">{{orderDetail.applyAmount}}</text>元)</text>
+      <block wx:for="{{orderDetail.payDetails}}" wx:key="id">
+        <view class="money">
+          <view class="list">
+            <text>组员名称</text>
+            <text>{{item.workName}}</text>
+          </view>
+          <view class="list">
+            <text>开户银行</text>
+            <text>{{item.bankName}}</text>            
+          </view>
+          <view class="list">
+            <text>银行卡号</text>
+            <text>{{item.cardNumber}}</text>  
+          </view>
+          <view class="list">
+              <text>发放金额</text>
+              <text>￥{{item.salary}}</text> 
+          </view>
+          <view class="list">
+              <text>发放结果</text>
+              <text class="{{item.status != 1 ? 'failure': 'success'}}">{{item.status == 2 ? "发放失败": item.status == 1 ? "发放成功" : "待处理"}}</text> 
+          </view>
+        </view>       
+      </block>
+   </view>
+</view>

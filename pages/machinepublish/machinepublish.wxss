@@ -1,0 +1,192 @@
+/* pages/machinepublish/machinepublish.wxss */
+page{
+  height:100%;
+  background-color: #fff;
+}
+.mechanicalBox{
+  width:100%;
+  height:auto;
+  background:#fff;
+}
+.list{
+  width:98%;
+  margin:0rpx auto;
+  height:70rpx;
+  line-height:70rpx;
+  padding:10rpx 0rpx;
+}
+._list{
+  width:65%;
+  float:left;
+  height:100%;
+}
+._list_{
+  width:32%;
+  float:left;
+  height:100%;
+}
+.list text{
+  display: inline-block;
+  font-size:32rpx;
+  width:26%; 
+  height: 100%;
+  float:left;
+  margin-left:1%;
+}
+.list i{
+  width:3%; 
+  height:100%;
+  font-size:28rpx;
+  font-style: normal;
+  float:left;
+  color:red;
+  display:inline-block;
+}
+._list i{
+ width:5%;
+}
+._list text{
+   width:40%; 
+}
+.list input,.arear,.list picker view,.list .release{
+  width:64%;
+  float:left;
+  border-radius:6rpx;
+  background:rgba(242, 242, 242, 1);
+  height:70rpx;
+  line-height:70rpx;
+  /* margin:10rpx 0rpx; */
+  padding:0rpx 2%;
+  font-size:28rpx;
+}
+._list input{
+  width:46%;
+}
+._list_ input{
+  width:100%;
+}
+.list picker view input{
+  height:56rpx;
+  line-height:56rpx;
+  width:100%;
+}
+.modalList picker view input{
+  width: 90%;
+}
+.list input.vocd,.list picker input.vocd{
+  width:37%!important;
+  margin-right:2%;
+}
+._tips{
+  color: #ccc; 
+  font-size: 14px; 
+  float: right; 
+  right: 2%;
+  position: absolute;
+  bottom: 2%;
+}
+.details{
+  width:100%;
+  background:#fff;
+  border-radius:4rpx;
+  height:280rpx;
+}
+.input-area{
+  width:90%;
+  height:160rpx;
+  line-height:30rpx;
+  font-size: 30rpx !important;
+  background:rgba(242,242,242,1);
+  margin:0rpx auto;
+  border:none;
+}
+/*备注  */
+.remark{
+  width:90%;
+  height:90rpx;
+  line-height: 90rpx;
+  margin:30rpx auto;
+}
+.remark .mk{
+  float: left;
+  padding-left: 10rpx;
+  font-size: 35rpx;
+}
+.remark .p_mk{
+   margin-left: 280rpx;
+    font-size: 30rpx;
+}
+.btn-sub{
+  background-color:#1989fa !important;
+  color:#fff !important;
+  font-size:30rpx!important;
+  padding: 0rpx !important;
+
+}
+.btnBox_bg{
+  width:25%;
+  height:100%;
+  /* background:green; */
+  float:left;
+  padding:0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  width:100%;
+  display: inline-block;
+  height:70rpx;
+  line-height:70rpx;
+  padding:0rpx;
+  color: #fff;
+  border-radius: 6rpx;
+  background-color:#1989fa;
+  font-size: 28rpx !important;
+}
+.btn::after{
+  border:none;
+}
+.userPosition{   
+  width:64%;
+  float:left;
+  height:74rpx;
+  line-height: 74rpx;
+  margin:9rpx 0rpx;
+}
+.list text.adressText{
+  height:70rpx;
+  line-height:35rpx;
+  display: inline-block;
+   text-overflow: -o-ellipsis-lastline;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   line-clamp: 2;
+   -webkit-box-orient: vertical;  
+   width:37%!important;
+   margin:0rpx 2% 0rpx 0rpx;   
+   padding:0rpx 2%;
+   float:left;
+   border-radius:6rpx;
+   background:rgba(242, 242, 242, 1);
+   font-size:26rpx;
+}
+/* .userPosition button{
+   float:right;
+   width:26%;
+   height:90rpx;
+   line-height:90rpx;
+   padding:0rpx;
+   border:0;
+   background:#fff;
+   color:#4da1ff;
+   font-size:28rpx;
+   border-radius:0rpx;
+   text-align:right
+} */
+.userPosition button::after {
+  border:none;
+  border-radius:0rpx;
+}

@@ -1,0 +1,80 @@
+pages{background:#fff;}
+.titleBox{
+  width:100%;
+  height:197rpx;
+}
+.titleBox image{
+  width:100%;
+  height:197rpx;
+}
+.detailsProcess{
+  width:100%;
+  height:auto;
+}
+.process{
+  width:92%;
+  margin:0rpx auto;
+  height:auto;
+  padding:40rpx 0rpx;
+}
+.processBottom{
+   border-bottom:1rpx solid #ddd;
+}
+.processTitle{
+  width:100%;
+  height:40rpx;
+  line-height:40rpx;
+  border-left:4rpx solid #4DA1FF;
+  text-indent:20rpx;
+  font-size:30rpx;
+  color:#333;
+  margin-bottom:20rpx;
+}
+.processList{
+  width:100%;
+  height:60rpx;
+}
+.processList:nth-child(1){
+  margin-top:10rpx;
+}
+.listIcon{
+  width:50rpx;
+  height:100%;
+}
+.processList image{
+  width:30rpx;
+  height:30rpx;
+  padding-right:16rpx;
+}
+.flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start
+}
+.processList text{
+  font-weight: 400;
+  color: #333;
+  font-size:30rpx;
+}
+.processList text.processText{
+   color:#666;
+   line-height:42rpx;
+}
+
+.publish{
+  background:#0099FF;
+  font-weight: 400;
+  color: #FDFDFD;
+  position:fixed;
+  width:40%;
+  height:80rpx;
+  line-height:80rpx;
+  bottom:40rpx;
+  left:30%;
+  font-size:34rpx;
+  text-align:center;
+  border-radius:40rpx;
+  box-shadow:4rpx 0px 12rpx #4DA1FF;
+  letter-spacing:5rpx;
+  z-index:99;
+}

@@ -1,0 +1,192 @@
+page{background:#f2f2f2;}
+.noData{
+  width:100%;
+  height:100%;
+}
+.noDataImg{
+  width:100%;
+  height:600rpx;
+}
+.noDataImg image{
+  display: block;
+  width:446rpx;
+  height:350rpx;
+  margin:0rpx auto;
+  padding-top:125rpx;
+}
+.noDataImg text{
+  display: block;
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+  color:#999;
+  text-align:center;
+  font-size:28rpx;
+}
+.publish{
+  background:#4da1ff;
+  color:#fff;
+  position:fixed;
+  width:46%;
+  height:80rpx;
+  line-height: 80rpx;
+  bottom:30rpx;
+  left:27%;
+  font-size:34rpx;
+  text-align:center;
+  border-radius:40rpx;
+  box-shadow:2rpx 0px 6rpx rgb(0, 153, 255);
+  letter-spacing:10rpx;
+  z-index:10;
+}
+.listBox{
+  padding-bottom:80rpx;
+}
+.list{
+  width:92%;
+  margin:30rpx auto;
+  height:auto;
+  border-radius:8rpx;
+  background:#fff;
+  padding-bottom:10rpx;
+  /* background:#f2f2f2 url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/insuranceListBg.png)50% 50% no-repeat;
+  background-size:100% 330rpx; */
+}
+.orderNumber{
+  width:91%;
+  height:70rpx;
+  line-height:90rpx;
+  margin:0rpx auto;
+}
+.overflow{
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.orderNumber text.Number{
+  display: inline-block;
+  width:80%;
+  height:100%;
+  float:left;
+  color:#222;
+  font-size:30rpx;
+}
+.orderStatus{
+   width:20%;
+   height:100%;
+   float:right;
+   display:-webkit-flex;
+   display: flex;
+   justify-content: flex-end;
+}
+.orderStatus text{
+   font-size:28rpx;
+   display: block;
+   width:100%;
+   height:100%;
+   text-align:right;
+}
+.orderStatus text.blueColor{
+  color:#258cff;
+}
+.orderStatus text.red{
+  color:#f42f2f ;
+}
+.orderStatus text.gray{
+  color:#565656 ;
+}
+.orderStatus image{
+  width:92rpx;
+  height:70rpx;
+}
+.centerBg{
+  width:100%;
+  height:30rpx;
+  background:#f2f2f2 url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/orderListBg.png)50% 50% no-repeat;
+  background-size:100% 100%;
+}
+.orderBox{
+  width:92%;
+  height:210rpx;
+  margin:0rpx auto;
+}
+.orderInfo{
+  width:100%;
+  height:55rpx;
+  line-height:55rpx;
+}
+.orderInfo text{
+  display: inline-block;
+  height:100%;
+  font-size:28rpx;
+}
+.orderInfo text.orderLeft{
+  width:24%;
+  float:left;
+  color:#666;
+}
+.orderInfo text.orderRight,.order{
+  width:76%;
+  float:right;
+  color:#222;
+  text-align:right;
+  font-size:28rpx;
+}
+.order text{
+  margin:0rpx 4rpx;
+}
+.order text text{
+  color:rgb(244,47,47);
+  font-weight: bold;
+}
+.orderTime{
+  width:100%;
+  height:100rpx;
+}
+.orderTimeLeft{
+  display: inline-block;
+  width:28%;
+  height:100rpx;
+  line-height: 100rpx;
+  color:#666;
+  font-size:28rpx;
+  float:left;
+}
+.orderTimeRight{
+  width:72%;
+  height:90rpx;
+  margin-top:5rpx;
+  float:right;
+}
+.orderTimeRight text{
+  display: block;
+  width:100%;
+  height:45rpx;
+  line-height:45rpx;
+  color:#222;
+  font-size:28rpx;
+  text-align:right;
+}
+.refund{
+  width:92%;
+  height:50rpx;
+  margin:0rpx auto;
+}
+.refund .refundBox{
+  width:6%;
+  height:100%;
+  float:left;
+}
+.refundBox image{
+  width:32rpx;
+  height:32rpx;
+  margin-top:0rpx;
+}
+.refund text{
+  display: inline-block;
+  width:94%;
+  height:100%;
+  float:left;
+  font-size:26rpx;
+  color:#999;
+}

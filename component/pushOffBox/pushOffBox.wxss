@@ -1,0 +1,114 @@
+.mask_layer {  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1003;
+  align-content:center; 
+  flex-wrap:wrap;
+}  
+.mask_label {  
+   width:82%;
+   background:#fff;
+   z-index: 1002;
+   height:640rpx;
+   border-radius:10rpx;
+} 
+.titleBox{
+  width:100%;
+  height:280rpx;
+  background: url('https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/maskLabelBg.png') no-repeat 50% 0%;
+  background-size:100% auto;
+}
+.titleContent{
+  width:90%;
+  height:340rpx;
+  margin:0rpx auto;
+}
+.titleContent text.tiper,.titleContent text.use,.titleContent text.total{
+    display: block;
+    color:#333;
+    width:100%;
+    line-height:55rpx;
+}
+text.tiper{
+   height:110rpx;
+   font-size:31rpx;
+}
+text.total{
+  margin-top:10rpx;
+}
+text.total,text.use{
+  height:55rpx;
+  font-size:30rpx;
+}
+text.use text{
+  display: inline-block;
+  color:rgb(255,52,52);
+}
+.oprate{
+  width:100%;
+  height:120rpx;
+}
+.left,.right{
+   width:50%;
+   float:left;
+   height:100%;
+}
+.left text,.right text{
+   display: block;
+   width:90%;
+   border-radius:10rpx;
+   text-align:center;
+   font-size:30rpx;
+}
+.left text{
+  height:64rpx;
+  line-height:64rpx;
+  border:1rpx solid rgb(66,126,238);
+  color:#427eee;
+}
+.right text{
+   height:66rpx;
+   line-height:66rpx;
+   color:#fff;
+   background:-moz-linear-gradient(left,rgb(74,123,237),rgb(116,175,246));/*Mozilla*/
+   background:-webkit-gradient(linear,0 50%,100% 50%,from(rgb(74,123,237)),torgb(116,175,246));/*Old gradient for webkit*/
+   background:-webkit-linear-gradient(left,rgb(74,123,237),rgb(116,175,246));/*new gradient for Webkit*/
+   background:-o-linear-gradient(left,rgb(74,123,237),rgb(116,175,246)); /*Opera11*/
+}
+.features{
+  width:82%;
+  height:130rpx;
+  z-index: 1002;
+} 
+.features image{
+  width:60rpx;
+  height:60rpx;
+}
+.flexCenter{
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center; 
+}
+.flexStart{
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start; 
+}
+.flexEnd{
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+  

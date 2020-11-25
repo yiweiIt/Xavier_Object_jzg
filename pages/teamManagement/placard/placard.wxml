@@ -1,0 +1,16 @@
+<!--pages/teamManagement/placard/placard.wxml-->
+<view class="detail">
+   <view class="detailInfo">
+      <view class="titleBox">
+         <view class="left">
+            <text>{{queryTeamNews.teamTitle}}</text>
+            <text>{{queryTeamNews.createTime}}</text>
+         </view>
+         <view class="right">
+            <text>{{reading}}人已读</text>
+         </view>
+      </view>
+      <text class="title">公告标题：{{queryTeamNews.title}}</text>
+      <text class="titleInfo">内容：{{queryTeamNews.content}}</text>
+   </view>
+</view>

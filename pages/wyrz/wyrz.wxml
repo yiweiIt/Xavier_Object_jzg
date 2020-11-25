@@ -1,0 +1,25 @@
+<view>
+  <view class="content-view">
+    <view class="rz-item" bindtap="goRegisterBz">
+      <view class="imgBox">
+        <image class="rz-icon" src='http://static.jianzhugang.com/mini/image/bzrz.png'></image>
+      </view>
+      <view class="text">班组入驻</view>
+      <text wx:if="{{isTeamSignUp}}" class='sub-title'>已入驻</text>
+      <view class='img-v'>
+        <image class='img' src='/image/my_more.png'></image>
+      </view>
+     
+    </view>
+    <view class="rz-item" bindtap="goRegisterGs">
+      <view class="imgBox">
+        <image class="rz-icon" src='http://static.jianzhugang.com/mini/image/gsrz.png'></image>
+      </view>
+      <view class="text">公司入驻</view>
+      <text wx:if="{{isCompanySignUp}}" class='sub-title'>已入驻</text>
+      <view class='img-v'>
+        <image class='img' src='/image/my_more.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

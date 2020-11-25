@@ -1,0 +1,164 @@
+
+.listBox{
+  width:92%;
+  height:140rpx;
+  border-bottom:1rpx solid #ddd;
+  margin:0rpx auto;
+}
+.listBox text.left,.projectText{
+  display:  inline-block;
+  width:100%;
+  height:50rpx;
+  line-height:50rpx;
+  font-size:26rpx;
+  padding-top:20rpx;
+}
+.listBox text.left text,.projectText text{
+  color:red;
+  padding:0rpx 10rpx 0rpx 0rpx;
+}
+.input_type,.date picker input,.listBox picker view{
+  padding:9rpx 0rpx;
+  height:50rpx;
+  line-height:50rpx;
+  width:100%;
+  font-size:30rpx;
+  color:#999;
+}
+.date{
+  width:42%;
+  height:50rpx;
+  line-height:50rpx;
+  float:left;
+}
+.startDate{
+  width:38%;
+}
+.lineBox{
+  width:16%;
+  float:Left;
+  height:50rpx;
+  padding:9rpx 0rpx;
+  display: -webkit-flex; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line{
+  width:70%;
+  height: 2rpx;
+  background: #222;
+}
+.endDate picker input{
+  text-align: center;
+}
+.project{
+  width:92%;
+  height:auto;
+  border-bottom:1rpx solid #ddd; 
+  margin:0rpx auto;
+}
+.textareaBox{
+  width:100%;
+  padding:15rpx 0rpx;
+  margin:0rpx auto;
+} 
+.textareaBox textarea{
+  width:100%;
+  min-height: 50rpx;
+  line-height:46rpx;
+  border:none;
+  margin:0rpx auto;
+  font-size:30rpx;
+  color:#999;
+}
+.photoBox{
+  width:100%;
+  min-height: 180rpx;
+  padding-bottom:40rpx;
+}
+.photoList{
+  width:22%;
+  float:left;
+  background:#93c6ff;
+  height:150rpx;
+  margin:10rpx 1.5%;
+  border-radius:10rpx;
+  position:relative;
+}
+.photoList:nth-child(4n+1){
+  margin-left: 0rpx;
+}
+.photoList:nth-child(4n){
+  margin-right: 0rpx;
+}
+.clear{
+  float:right;
+  display: block;
+  position:absolute;
+  top:-8rpx;
+  right:-8rpx;
+  background:red;
+  border-radius:50%;
+  background:#fff;
+}
+.dpn{
+  display: none;
+}
+.photo{
+  width:100%;
+  height:150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:rgba(242,242,242,1);
+}
+.photo image{
+  padding:0rpx;
+  margin:0rpx;
+  width:100%;
+  height:150rpx;
+}
+.current{
+  width:92%;
+  margin:0rpx auto;
+  height:100rpx;
+  line-height:100rpx;
+  font-size: 24rpx;
+  text-align:right;
+  color:#999;
+}
+.buttonBox{
+  width:88%;
+  height:80rpx;
+  margin:20rpx auto 0rpx auto;
+}
+.buttonBox button::after{
+  border:0;
+}
+.buttonBox button{
+  height:80rpx;
+  line-height: 80rpx;  
+  font-size:28rpx;
+}
+.half{
+  width:43%; 
+  display: inline-block;
+}
+.halfLeft{
+  border:1rpx solid #4da1ff; 
+  color:#4da1ff;
+  float:left;
+}
+.halfRight{
+  float:right;
+  color:#fff;
+  background:#4da1ff;
+  border:1rpx solid #4da1ff;
+}
+.complete{
+  width:100%;
+  color:#fff;
+  background:#4da1ff;
+  border:1rpx solid #4da1ff;
+}

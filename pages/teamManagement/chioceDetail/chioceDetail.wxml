@@ -1,0 +1,30 @@
+
+<view class="questionResolve">
+  <view class="questionBox">
+      <view class="questionBg"></view>
+      <view class="answerSheet">
+        <view class="topic">
+            <text>{{item.content}}</text>
+        </view> 
+        <block wx:for="{{item.optionContentArray}}" wx:key="index" >
+          <view class="optionBox"  data-name="{{item.index}}">
+            <view class="selectContent">
+                <view class="buttonBox">
+                  <tetx class="selectButton {{item.index==answer?'dpn':''}}">{{item.index}}</tetx>
+                  <image class="{{item.index==answer?'':'dpn'}}" src="http://static.jianzhugang.com/mini/image/selectedIcon.png"></image>
+                </view>
+                <text>{{item.value}}</text>
+            </view>
+          </view>        
+        </block>
+      </view>
+  </view>
+  <view class="resolve" style='margin-top:{{height}}'  wx:if="{{!isRight}}">
+      <text class="Parsing">答案解析</text>
+      <text class="correct">正确答案: {{answer}} ，您的答案为：{{chosen}}</text>
+      <text class="resolveContent">
+        <text class="resolveTitle">解析:</text> {{item.description}}
+      </text>
+  </view>
+</view>
+

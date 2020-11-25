@@ -1,0 +1,17 @@
+<view class="pay">
+   <view class="payBox">
+      <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/paySuccess.png"></image>
+      <view class="payTip">
+         <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/paySuccessIcon.png"></image>
+         <text>恭喜您付款成功!</text>
+      </view>
+   </view>
+<view class="addOperationBox">
+  <view class="buttonBox flexCenter">
+      <button bindtap='toKeepBuy' class="btn-dopushmore">继续购买</button>
+  </view>
+  <view class="buttonBox flexCenter">
+      <button bindtap='toViewPolicy' class="btn-dopush">查看保单</button>
+  </view>
+</view>
+</view>

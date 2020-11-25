@@ -1,0 +1,38 @@
+<view class="revenue">
+  <block  wx:if="{{revenueList.length>0}}">
+    <view class="detailsList" wx:for="{{revenueList}}"  wx:key="unique">
+        <view class="lister">
+          <view class="time flex">
+          </view>
+          <view class="endOfTime flex">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/endOfTime.png"></image>
+          </view>
+          <view class="details">
+          </view>
+        </view>
+        <view class="list" wx:for="{{revenueList}}"  wx:key="unique">
+          <view class="time flex">
+              <text class="timeData">{{item.updateTime}}</text>
+          </view>
+          <view class="style flex">
+              <view class="styleLine"></view>
+          </view>
+          <view class="details">
+              <view class="detailsBox">
+                <view class="boxTip overHide">
+                  <text>+{{item.amount}}</text> 
+                  <text class="overHide">{{item.source.text}}</text>
+                </view>
+                <view class="source">来源 : {{item.beAccountName}}</view>
+              </view>
+          </view>
+        </view>
+    </view>
+  </block>
+  <view class="noData" wx:else>
+    <view class="dataImg">
+        <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/noDataBg.png"></image>
+    </view>
+    <view class="dataText">暂无记录</view>
+  </view>
+</view>

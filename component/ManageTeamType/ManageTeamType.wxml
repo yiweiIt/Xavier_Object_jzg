@@ -1,0 +1,24 @@
+<!--component/ManageTeamType/ManageTeamType.wxml-->
+<view wx:if="{{modalHidden == 'true'}}">
+  <picker mode="multiSelector" bindchange="bindMultiPickerTeamTypeChange" bindcolumnchange="bindMultiPickerTeamTypeColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="title" disabled="{{isDisabled == 'true'}}">
+    <view class="flter-itm">
+      <view wx:if="{{teamTypeName}}"> {{teamTypeName}}</view>
+      <view wx:else>
+        全部工种
+      </view>
+      <view class='flter-image'>
+        <image src='../../image/xl.jpg'></image>
+      </view>
+    </view>
+  </picker>
+</view>
+<view wx:else>
+  <picker mode="multiSelector" bindchange="bindMultiPickerTeamTypeChange" bindcolumnchange="bindMultiPickerTeamTypeColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="title" disabled="{{isDisabled == 'true'}}">
+  <view class="flter-itm1">
+    <view wx:if="{{teamTypeName}}">{{teamTypeName}}</view>
+    <view wx:else>
+      <input maxlength="18" placeholder='请选择工种类型' />
+    </view>
+  </view>
+</picker>
+</view>

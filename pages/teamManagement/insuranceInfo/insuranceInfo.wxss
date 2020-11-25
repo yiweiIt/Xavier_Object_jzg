@@ -1,0 +1,286 @@
+page{background:#f2f2f2;}
+
+.infomation{
+  width:100%;
+  height:90rpx;
+  line-height:90rpx;
+  background:#fff;
+  font-size:28rpx;
+}
+.publish{
+  background:#4da1ff;
+  color:#fff;
+  position:fixed;
+  width:46%;
+  height:80rpx;
+  line-height: 80rpx;
+  bottom:30rpx;
+  left:27%;
+  font-size:34rpx;
+  text-align:center;
+  border-radius:40rpx;
+  box-shadow:2rpx 0px 6rpx rgb(0, 153, 255);
+  letter-spacing:10rpx;
+  z-index:10;
+}
+.insuranceBox{
+  width:67%;
+  margin-left:4%;
+  height:100%;
+  float:left;
+}
+.noSUCCESS{
+  width:92% ;
+}
+.insuranceBox .imgBox{
+  width:10%;
+  height:100%;
+  float:left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.noSUCCESS  .imgBox{
+  width:7%;
+}
+.insuranceBox .imgBox image{
+  width:36rpx;
+  height:36rpx;
+}
+.insuranceBox text{
+  width: 90%;
+  display: inline-block;
+  height:100%;
+  float:right;
+        overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.noSUCCESS text{
+  width:93%;
+}
+text.electronic{
+  display: inline-block;
+  width:25%;
+  margin-right:4%;
+  height:100%;
+  color:#4da1ff;
+  float:right;
+  text-align:right;
+}
+.baseInfo{
+  width:100%;
+  height:auto;
+  padding: 10rpx 0rpx 0rpx 0rpx;
+  background:#fff;
+  margin:20rpx 0rpx;
+}
+.lastBaseInfo{
+  padding:10rpx 0rpx 80rpx 0rpx;
+  margin:20rpx auto 0rpx auto;
+}
+.baseInfoBox{
+   width:92%;
+   margin:0rpx auto;
+}
+.uniteTitle{
+  width:100%;
+  height:90rpx;
+  line-height:90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.uniteTitle image{
+   width:36rpx;
+   height:32rpx;
+}
+.uniteTitle image.jobIcon_2{
+   width:42rpx;
+   height:32rpx;
+}
+.uniteTitle text{
+   color:#4da1ff;
+   font-size:32rpx;
+   padding-left:10rpx;
+}
+.list{
+  width:100%;
+  height:110rpx;
+  margin:0rpx auto;
+}
+.listLeft{
+  width:6%;
+  height:100%;
+  float:left;
+  background: url(https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/image/lineBoxIcon.png) 50% 0% no-repeat;
+  background-size:20rpx 20rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.line{
+  height:94%;
+  width:2rpx;
+  background: rgb(253,160,103);
+}
+.listRight{
+   width:94%;
+   float:left;
+   height:100%;
+   margin-top:-10rpx;
+}
+.listRight text{
+  width:100%;  
+  display: inline-block;
+  color:#222;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size:28rpx;
+}
+.listRight text.title{
+  height:40rpx ;
+  line-height:40rpx;
+  font-size:30rpx;
+}
+
+.timeBox,.program,.programContent{
+  width:100%;
+  height:40rpx;
+}
+.timeBox text{
+   color:#222;
+   font-size: 30rpx;
+}
+.timeBox text.timeName,.timeContent text.timeName{
+  display: inline-block;
+  float:left;
+  width:45%;
+  height:100%;
+}
+.timeBox text.timeCenterBox,.timeContent text.timeCenterBox{
+  display: inline-block;
+  width:10%;
+  float:left;
+  height:100%;
+}
+.program text.programName,.programContent text.programName{
+  display: inline-block;
+  width:33.3%;
+  height:40rpx;
+  color:#222;
+  font-size: 30rpx;
+}
+.programContent text.programName{
+  font-size:28rpx;
+}
+.program text.programName:nth-child(2),.programContent text.programName:nth-child(2){
+   text-align: center
+}
+.program text.programName:nth-child(3),.programContent text.programName:nth-child(3){
+   text-align: right
+}
+.timeContent{
+  width:100%;
+  height:50rpx;
+  line-height:50rpx;
+  margin-top:4rpx;
+}
+.timeContent text{
+  font-size:28rpx;
+  color:#222;
+}
+.timeContent .timeCenterBox text{
+  display: block;
+  width:70%;
+  height:2rpx;
+  margin:22rpx auto;
+  background:pink;
+  background:#222;
+}
+.insuredBox{
+   width:100%;
+   height:120rpx;
+   background:url(http://static.jianzhugang.com/mini/image/insured.png) no-repeat 50% 50%;
+   background-size:100% 100%;
+   margin:0rpx auto 22rpx auto;
+   -moz-box-shadow:0px 4rpx 13rpx rgba(2, 25, 53, 0.11); 
+   -webkit-box-shadow:0px 4rpx 13rpx rgba(2, 25, 53, 0.11); 
+   box-shadow:0px 4rpx 13rpx rgba(2, 25, 53, 0.11);
+}
+.l_insured{
+  width:9%;
+  height:100%;
+  float:left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+  font-size:34rpx;
+}
+.r_insured{
+  width:68%;
+  height:100rpx;
+  float:left;
+  margin:11rpx 0% 11rpx 4%;
+  color:#222;
+  font-size:30rpx;
+}
+.insuredName{
+  width:100%;
+  height:50rpx;
+  line-height:60rpx;
+}
+.insuredName text{
+  display: inline-block;
+}
+.insuredName text:nth-child(1){
+  float:Left;
+  max-width:50%;
+  min-width:30%;
+  height:100%;
+}
+.insuredName text:nth-child(2){
+  float:left;
+  max-width:70%;
+  min-width:50%;
+  height:100%;
+}
+.idCard{
+  width:100%;
+  display: block;
+  height:50rpx;
+  line-height:50rpx;
+}
+.announcement{
+  width:100%;
+  background:#fff;
+  margin:0rpx auto;
+  padding:0rpx 0rpx 10rpx 0rpx;
+  border-top:1rpx solid #f2f2f2;
+}
+.announcement .prompt{
+   display:block;
+   width:92%;
+   margin:0rpx auto;
+   padding:10rpx 0rpx;
+   line-height:40rpx;
+}
+.announcement .prompt image{
+  display: inline-block;
+  width:36rpx;
+  height:36rpx;
+  padding-right:10rpx;
+  margin-bottom:-6rpx;
+}
+.announcement .prompt{
+  color:#222;
+  font-size:28rpx;
+  word-break:break-all;
+}
+.announcement .prompt text.phone{
+  
+  color:rgb(77,161,255);
+  display: inline-block;
+}

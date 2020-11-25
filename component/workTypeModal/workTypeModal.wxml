@@ -1,0 +1,19 @@
+<view class="flter-itm" bindtap='changetype'>{{name}}</view>
+<view class='flter-image'>
+  <image src='../../image/xl.png'></image>
+</view>
+
+<view class='dialog-login' wx:if="{{modalHidden == 'true'}}">
+  <view class='dialog-body'>
+    <view class='title'>全部工种</view>
+    <view class='content'>
+      <view wx:for="{{teamTypes}}" wx:key="unique">
+        <view class="my-title" style='width:100%;float:left'>{{item.title}}</view>
+        <view>
+          <text class="title-list {{state==item.id?'active':''}}" wx:for="{{item.titles}}"  wx:key="unique" data-key="{{index}}" data-id="{{item.id}}" data-name="{{item.title}}" bindtap="onclick">{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="btn-submit" bindtap='submit'>确定</button>
+</view>

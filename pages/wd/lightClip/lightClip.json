@@ -1,0 +1,9 @@
+{
+"navigationBarBackgroundColor":"#000",
+"navigationBarTitleText": "",
+"enablePullDownRefresh": false,
+"usingComponents": {
+  "image-cropper": "/component/imageCropper/imageCropper"
+},
+"disableScroll": true
+}

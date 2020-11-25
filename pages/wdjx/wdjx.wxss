@@ -1,0 +1,42 @@
+/**wyrz-css**/
+page{background:rgba(242,242,242,1)}
+.rz-item{
+  width:92%;
+  margin:20rpx auto;
+  height:140rpx;
+  line-height:140rpx;
+  background:#fff;
+  border-radius:8rpx;
+}
+.imgBox{
+  width:25%;
+}
+.img-v{
+  width:15%;
+}
+.imgBox,.img-v{
+  height:100%;
+  float:left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rz-icon{
+  width:80rpx;
+  height:68rpx;
+}
+.rm-icon{
+  width:52rpx;
+  height:52rpx;
+}
+.text{
+  display:inline-block;
+  width:60%;
+  float:left;
+  height: 100%;
+}
+
+.img{
+   width:15rpx !important;
+   height:27rpx !important;
+}

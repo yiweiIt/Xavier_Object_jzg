@@ -1,0 +1,141 @@
+<view class="announcement">
+  <text class="prompt">
+      <text class="text_prompt">公告：</text>加客服微信号:<text class="phone" bindtap='copyText'>{{kefuWeChat}}</text>拉你进建筑微信群，我们会不定期对用户进行电话回访，请注意接听！
+  </text>
+</view>
+<view class="group-all">
+  <view class="group">
+     <view class="group-left">
+       项目名称：
+       </view>
+       <view class="group-right">
+          <view class="pro-txt">{{hireInfo.title ? hireInfo.title : hireInfo.area.fullTitle +'-招'+ hireInfo.teamType.title}}</view>
+       </view>
+  </view>
+</view>
+<view class="group-all">
+  <view class="group">
+     <view class="group-left">
+        项目地址：
+       </view>
+       <view class="group-right">
+          <view class="pro-txt"> {{hireInfo.project.displayAddress ? hireInfo.project.displayAddress : hireInfo.area.fullTitle}}</view>
+       </view>
+  </view>
+</view>
+<view class="group-all mui-cell">
+  <view class="group">
+     <view class="group-left">
+        联系人：
+       </view>
+       <view class="group-right">
+           <view class=" " style="margin-right: 5rpx;">
+               {{hireInfo.contacts}}
+          </view>
+          <view class="">
+              {{phone}}
+          </view>
+          <view wx:if="{{isFullPhone}}" class="phoneview" >
+            <form bindsubmit="Callphone" report-submit>
+              <button form-type="submit" class="btn_call">拨打</button>
+            </form>
+          </view>
+          <view wx:if="{{!isFullPhone}}" class="getphoneview">
+            <button class="btn phone_text" bindtap='getContactPhone'>获取完整号码</button>
+          </view>
+          <!-- <button class="btn_call" bindtap='Callphone'>拨打</button> -->
+       </view>
+  </view>
+</view>
+  <block wx:if="{{hireInfo.type.id}} != 'PROJECT_TYPE_LAO_WU'"> 
+    <view class="group-all" >
+      <view class="group">
+        <view class="group-left">
+          {{hireInfo.teamType.title}}：
+        </view>
+        <view class="group-right p-value">
+            <view>{{hireInfo.peopleNumber}}人</view>
+        </view>
+      </view>
+    </view>
+  </block>
+<view class="group-all">
+  <view class="group">
+     <view class="group-left">
+       薪资/价格：
+       </view>
+       <view class="group-right">
+          <view> {{hireInfo.salary}}</view>
+       </view>
+  </view>
+</view>
+<view class="group-all">
+  <view class="group">
+     <view class="group-left">
+        发布时间：
+       </view>
+       <view class="group-right">
+          <view class="pro-txt">{{hireInfo.publishedTime}}</view>
+       </view>
+  </view>
+</view>
+  <view class="group-all group-all_remarks">
+    <view class="group group_remarks">
+      <view class="remarks_left">
+        要求/备注：
+        </view>
+        <view class="remarks_text">
+          <view>{{(hireInfo.teamRequire != null && hireInfo.teamRequire != '') ? hireInfo.teamRequire : ''}}
+        {{(hireInfo.memo != null && hireInfo.memo != '') ? hireInfo.memo : ''}}              </view>
+        </view>
+    </view>
+  </view>
+  <view class="mui-view v-mui-box">
+    <view class="mui-box p-black-normal mui-bg-body" style="clear:both;">
+      <button bindtap='doPublish' class="btn-dopush">我要报名</button>
+      <button bindtap='goIndex' class="btn-dopushmore">查看更多派遣</button>
+    </view>
+  </view>
+  <view class="QRcode">
+    <image class="leftCode" src="https://static.jianzhugang.com/mini/image/code.png"></image>
+    <view class="content">
+        <text><text class="text_prompt">温馨提示：</text>进场前请先核实对方身份，过往工程，拒绝先打路费现象。更多招工：请下载建筑港客户端，客服电话：<text class="phone"  bindtap='doCallAbc'>4008-6060-25</text></text>
+    </view>
+  </view>
+    <view class="sharePopUp"  wx:if="{{!openType}}">
+       <view class="popUp">
+          <text class="title">温馨提示</text>
+          <view class="content"><text>{{shareTitle}}</text></view>
+          <view class="buttonKBox">
+              <button bindtap="cancelSharing">取消</button>
+              <button open-type="share" wx:if="{{firstShare}}">立即分享</button>
+              <button bindtap="getPoints" wx:if="{{!firstShare}}">获取积分</button>
+          </view>
+       </view>
+    </view>
+<view class="view-side">
+  <navigator class="side"  url="../index/index" open-type="switchTab" >
+    <image class="small-logo" src="../../image/bottom/sy.png"></image>
+    <text> 首页</text>
+  </navigator>
+  <!-- <navigator class="side"  url="../wyrz/wyrz" open-type="switchTab" >
+    <image class="small-logo" src="../../image/bottom/wyrz2.png"></image>
+    <text>入驻</text>
+   </navigator> -->
+   <navigator class="side"  url="../publish/publish" open-type="switchTab" >
+    <image class="small-logo" src="../../image/bottom/fb.png"></image>
+    <text>发布</text>
+   </navigator>
+    <navigator class="side"  url="../wd/wd" open-type="switchTab" >
+    <image class="small-logo" src="../../image/bottom/wd.png"></image>
+    <text>会员中心</text>
+   </navigator>
+  <!-- <view class="side side-share">
+
+   <button class="share-btn" open-type="share">
+  <image class="share-logo" style="z-index: 11;" src="http://static.jianzhugang.com/mini/image/share_1.png">
+   </image> 
+</button>
+  </view> -->
+
+</view>

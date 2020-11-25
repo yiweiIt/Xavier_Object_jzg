@@ -1,0 +1,6 @@
+<picker mode="multiSelector" bindchange="bindMultiPickerAreaChange" bindcolumnchange="bindMultiPickerColumnAreaChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="title" disabled="{{isDisabled == 'true'}}">
+  <view wx:if="{{areaTitle}}">{{areaTitle}}</view>
+  <view wx:else>
+    <input maxlength="18" placeholder='请选择地区' disabled='disabled'/>
+  </view>
+</picker>

@@ -1,0 +1,50 @@
+/* pages/getintegral/getintegral.wxss */
+page{
+  background-color: #F2F2F2;
+}
+.list{
+  width: 94%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding-top: 15rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 20rpx;
+  padding-left:4%;
+}
+.list .h2{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.list .line{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rpx;
+}
+.list .line button{
+  width: 200rpx;
+  border:none;
+  background-color: #0099FF;
+  font-size: 28rpx;
+  color: #ffffff;
+  height: 56rpx;
+  line-height: 56rpx;
+  border-radius: 0rpx;
+  margin-left: 10rpx;
+}
+.list .line text{
+  flex: 1;
+  font-size: 28rpx;
+  color: #666666;
+}
+.tips{
+  color:#0066FF;
+  font-size: 28rpx;
+  margin-bottom: 14rpx;
+  display: block;
+  padding-left: 4%;
+  margin-top: 30rpx;
+}
+.list .line .ishide{
+  background-color: #cccccc;
+}

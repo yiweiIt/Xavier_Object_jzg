@@ -1,0 +1,48 @@
+/* pages/login/login.wxss */
+.swiper-tab{
+   /* float: left; */
+  width:600rpx;
+  margin: 15rpx auto;
+  margin-top: 50rpx;
+  /* height: 60rpx; */
+  border: 1.2rpx solid #f2f2f2;
+  /* margin-left: 95rpx; */
+  /* margin-top: 50rpx; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: #f0f0f0 -5rpx -5rpx 18rpx 3rpx;
+}
+.on{ color: #4da2ff;  
+  border-bottom: 5rpx solid #ffd162;
+} 
+#list1{
+   padding: 10rpx 0;
+   flex: 1;
+  font-size: 30rpx;
+  /* margin-top: 10rpx; */
+  /* margin-left: 80rpx; */
+  display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+#list2{
+    padding: 10rpx 0;
+   flex: 1;
+  font-size: 30rpx;
+   /* margin-top: 10rpx;  */
+  /* margin-left: 80rpx; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.input-itm{
+  margin: 0 30rpx;
+}
+.hs{
+  color: red;
+}
+.m-save button{
+    color: white !important; 
+    background-color: #4e9fe3 !important;
+}

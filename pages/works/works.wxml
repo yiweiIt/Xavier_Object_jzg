@@ -1,0 +1,32 @@
+<view class="areaBox">
+  <view class='dq'>
+    <area-modal modalHidden="true" bindchangeArea="changeArea"></area-modal>
+  </view>
+  <view class='gz'>
+    <teamType-modal modalHidden="true" bindchangeTeamType="changeTeamType"></teamType-modal>
+  </view>
+</view>
+<view class='content-list-box' style="'height:100%;overflow:hidden'">
+  <view class="listBox" wx:for="{{lookinglifes}}" wx:key="unique" data-name="{{item.id}}" bindtap="goHireDetail">
+     <view class="condition">
+        <image src="https://static.jianzhugang.com/mini/image/{{item.lookLifeStatus != 1?'lookingJob':'foundJob'}}.png" mode="aspectFit"></image>
+     </view>
+     <view class="l_list">
+        <image src="{{item.avatarUrl ? item.avatarUrl : 'https://static.jianzhugang.com/mini/image/squareLogo.png'}}" mode="aspectFit"></image>
+     </view>
+     <view class="r_list">
+        <view class="infoBox">
+          <text class="listName">{{item.userName}}</text>
+          <text class="listType">工种：{{item.teamTypeName}}</text>
+        </view>
+        <view class="divideLine"></view>
+        <view class="infoBox_b">
+          <text class="address">地区：{{item.provinceTitle}}{{item.cityTitle?item.cityTitle:''}}{{item.countyTitle?item.countyTitle:''}}</text>
+          <text class="time">发布时间：{{item.updateTime}}</text>
+        </view>
+     </view>
+  </view>
+</view>
+<button bindtap='goWorking'>
+  <view class="publish">我要找活</view>
+</button>

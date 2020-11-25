@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "同城机械",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "area-third-choose": "/component/areaThirdChoose/areaThirdChoose"
+  }
+}

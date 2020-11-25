@@ -1,0 +1,17 @@
+<!--pages/announce/announce.wxml-->
+<view class="sectionBox">
+  <form bindsubmit="formSubmit" report-submit="true">
+    <view class="content">
+       <input type="text" placeholder="标题" bindinput="bindCaption"></input>
+    </view>
+    <view class="section">
+      <textarea class="input-area" placeholder='输入公告' adjust-position="false"  placeholder-class='input-d' bindinput="bindContent" > </textarea>
+      <view class="clear">
+          <text class="_tips">0/200</text>
+      </view>
+    </view>
+    <view class="Announce" bindtap="addTeamNews">
+      <button formType="submit">确认发布</button>
+    </view>
+   </form>
+</view>

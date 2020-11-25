@@ -1,0 +1,27 @@
+<view class="notes" wx:if="{{notesList.length>0}}">
+    <view class="notesList flex" wx:for="{{notesList}}" wx:key="{{item.id}}">
+        <view class="listBox flexStart">
+           <view class="photoBox flexStart">
+           <!-- /*发布急聘ICON*/ -->
+              <block>
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/postRecruitmentIcon.png"></image>
+              </block>
+               <!-- /*积分兑换ICON*/ -->
+              <!-- <block>
+                  <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/personalIcon/pointsRecharge.png"></image>
+              </block> -->
+           </view>
+           <view class="contentBox">
+              <text class="title">{{item.source.text}}</text>
+              <text class="time">{{item.createTime}}</text>
+           </view>
+           <view class="consumption">-{{item.amount}}</view>
+        </view>
+    </view>
+</view>
+<view class="noData" wx:if="{{notesList.length==0}}">
+  <view class="dataImg">
+    <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/newIcon/noDataBg.png"></image>
+  </view>
+  <view class="dataText">暂无消耗记录</view>
+</view>

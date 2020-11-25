@@ -1,0 +1,33 @@
+<!--pages/announcement/announcement.wxml-->
+<view class="announcement">
+   <view class="NoData" wx:if="{{queryTeam.length==0}}">
+       <view class="noDataTip">
+         <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+         <text>暂无公告</text>
+       </view>
+   </view>
+   <view class="dataList"  wx:else>
+      <scroll-view class="dataListBox" scroll-y="true">
+        <block wx:for="{{queryTeam}}" wx:key="id">
+          <view class="listBox" >
+            <view class="listContent">
+                <text>{{item.content}}</text> 
+                <view class="delete" data-name="{{item.id}}" bindtap="bindDelete" wx:if="{{type=='TEAM'}}">
+                  <image src="http://static.jianzhugang.com/mini/image/delete.png"></image>
+                </view>
+            </view>
+            <view class="listMsg" data-name="{{item.id}}" bindtap="intoPlacard">
+                <text class="listName">发布人：{{item.teamTitle}}</text>
+                <text class="listTime">发布时间：{{item.createTime}}</text>
+                <text class="listRead">阅读量：{{item.numbers}}</text>
+            </view>
+          </view>       
+        </block>   
+      </scroll-view>
+   </view>
+  <form bindsubmit="formSubmit" report-submit="true" >
+    <view class="footer {{type=='TEAM'?'':'dpn'}}" bindtap="goAnnouncet">
+      <button formType="submit">发布公告</button>
+    </view>
+  </form>
+</view>

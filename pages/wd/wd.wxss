@@ -1,0 +1,345 @@
+page{background:rgba(242, 242, 242, 1)}
+.person{
+  margin: 0rpx ;
+  padding:0rpx;
+  width:100%;
+  height:100%;
+}
+.titleBg{
+  width: 100%;
+  height:180rpx;
+  background:  url(http://static.jianzhugang.com/mini/image/upper_apex_bg.png) no-repeat 50% 50%;
+  background-size: 100% 100%;
+}
+.dpn{display:none !important;}
+.titleBox{
+  position:absolute;
+  width:94%;
+  height:310rpx;
+  background:#fff;
+  left:3%;
+  top:50rpx;
+  border-radius:8rpx;
+}
+.titleLoginBox{
+  position:absolute;
+  width:94%;
+  height:180rpx;
+  background:#fff;
+  left:3%;
+  top:50rpx;
+  border-radius:8rpx;  
+}
+.material{
+  width:100%;
+  height:180rpx;
+}
+.material .logo{
+  width:22%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+.material .logo image{
+  width:110rpx;
+  height:110rpx;
+  border:2rpx solid rgba(242, 242, 242, 1);
+  border-radius: 50%;
+}
+.material .notLogo{
+  float: right;
+  width:78%;
+  height:100%;
+}
+.material .notLogo text.goLogin{
+    display:block;
+    width:100%;
+    height:180rpx;
+    line-height:180rpx;
+    font-size:32rpx;
+}
+.material .notLogo .box{
+   width:100%;
+   height:70rpx;
+   margin-top:10rpx;
+}
+.material .notLogo text.name{
+  display: inline-block;
+  height:80rpx;
+  line-height:90rpx; 
+  width:70%;
+  float:left;
+  font-size:32rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.material .notLogo text.personData{
+  display:inline-block;
+   float:right;
+   margin:23rpx 2% auto auto;
+   text-align:center;
+   border-radius:10rpx;
+   border:2rpx solid rgba(242, 242, 242, 1);
+   font-size:26rpx;
+   padding:6rpx 10rpx;
+}
+.material .notLogo text.integral{
+   display:inline-block;
+   width:100%;
+   height:50rpx;
+   line-hieght:40rpx;
+   font-size:30rpx;
+}
+.material .notLogo text.integral text{
+  color:#4da1ff;
+}
+.prompt{
+  width:100%;
+  height:130rpx;
+  border-top:2rpx dashed rgb(242, 242, 242);
+}
+.prompt text{
+   display: block;
+   width:96%;
+   margin:10rpx auto;
+   line-height:50rpx;
+   font-size:30rpx;
+   color:#888;
+}
+.listBoxBg{
+  position:relative;
+  width:100%;
+  height:1100rpx;
+}
+.listBox{
+   position:relative;
+   width:94%;
+   left:3%;
+   top:20rpx;
+   height:900rpx;
+   background:#fff;
+   border-radius:10rpx; 
+   padding:20rpx 0rpx;
+}
+/* .optionalService{
+   border-top:1rpx dashed rgb(242, 242, 242);
+} */
+.miniListBox{
+  height:300rpx;
+  margin:26rpx 0 32rpx 0;
+}
+.optionalTitle{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom:20rpx;
+}
+.optionalTitle text{
+  padding:0rpx 10rpx;
+  color:#333;
+  font-size:32rpx;
+}
+.jobIcon{
+   width:64rpx;
+   height:40rpx;
+}
+.transform{
+  transform:rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+}
+.functionList{
+   top:70rpx;
+}
+.functionListLogin{
+   top:200rpx;
+}
+.seccond{
+  /* border-top:2rpx dashed rgba(242, 242, 242, 1); */
+  /* border-bottom:2rpx dashed rgba(242, 242, 242, 1); */
+}
+.center{
+  border-left:2rpx dashed rgba(242, 242, 242, 1);
+  border-right:2rpx dashed rgba(242, 242, 242, 1)
+}
+.list{
+  width:32.6%;
+  height:200rpx;
+  background:#fff;
+  float:left;
+  border-top:2rpx dashed rgba(242, 242, 242, 1);
+}
+.list image{
+   display:block;
+   width:86rpx ;
+   height:86rpx;
+   margin:24rpx auto 0rpx auto;
+}
+.list text{
+  display: block;
+  width:100%;
+  height:70rpx;
+  line-height: 70rpx;
+  text-align:center;
+  font-size: 30rpx;
+}
+
+.QRcode{
+   position:relative; 
+   width:94%;
+   height:200rpx ;
+   margin:20rpx auto;
+   background:#fff;
+   border-radius:10rpx;
+}
+.bottomBox{
+   width:50%; 
+   height:160rpx;
+   margin-top:20rpx;
+}
+.thePublic{
+  float:left;
+}
+.codeBox{
+  float:right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thePublic image{
+  display:block;
+  margin:10rpx auto;
+  width:120rpx;
+  height:54rpx;
+}
+.thePublic text{
+  display:block;
+  width:100%;
+  line-height:34rpx;
+  text-align: center;
+  font-size:22rpx;
+  color:#888;
+}
+.codeBox image{
+  width:160rpx;
+  height:160rpx;
+}
+.list button{
+  width:100%;
+  height:100%;
+  background-color: #fff;
+}
+.list button::after{
+    border: none;
+}
+.authenticate,.recruit,.settleIn,.pushGuestTip{
+  position:relative;
+}
+.pushGuestMsg{
+  position:absolute;
+  top:10rpx;
+  right:34rpx;
+  width:60rpx;
+  height:60rpx;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pushGuestMsg image{
+  width:56rpx;
+  height:56rpx;
+  margin:0px;
+}
+.textMsg,._textMsg{
+  position:absolute;
+  top:0;
+  width:86rpx;
+  right:10rpx;
+  height:70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._textMsg text{
+  background:red;
+}
+.messageTip{
+  position:absolute;
+  top:30rpx;
+  right:70rpx;
+  height:20rpx;
+  line-height:20rpx;
+  color:#fff;
+  width: 20rpx;
+  border-radius:50%;
+  background:red;
+  text-align:center;
+  font-size:22rpx;
+}
+.textMsg text,._textMsg text{
+  background:red;
+  color:#fff;
+  display:block;
+  height:34rpx;
+  line-height:34rpx;
+  font-size: 20rpx;
+  border-radius:6rpx;
+}
+.textMsg text.pending{
+  background:#f4ea29;
+}
+.textMsg text.pass{
+  background:red;
+}
+.textMsg text.verified{
+  background:#30b416;
+}
+.textMsg text.notCertified{
+  background:red;
+}
+/*推客*/
+.wallet{
+   width:94%;
+   height:200rpx;
+   margin:0rpx auto;
+   background: linear-gradient(to right,#4D9BF3,#84BEFF);
+   border-radius:16rpx;
+}
+.receive,.balance{
+  width:50%;
+  height:100%;
+  float:left;
+  display:-webkit-flex;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  align-content:center; 
+  flex-wrap:wrap;
+}
+.photoImg{
+  width:100%;
+  height:50rpx;
+}
+.photoImg image{
+  width:48rpx;
+  height:48rpx;
+  display: block;
+  margin:0rpx auto;
+}
+.photoText{
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+  color:#fff;
+  text-align:center;
+  font-size:29rpx;
+}

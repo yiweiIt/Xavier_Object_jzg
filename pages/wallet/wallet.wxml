@@ -1,0 +1,56 @@
+<view class="wallet">
+   <view class="walletTopBg">
+      <image src="https://static.jianzhugang.com/mini/newIcon/walletTopBg.png"></image>
+      <view class="walletQR">
+        <view class="walletQRBox"  data-url="{{invitationCodeUrl}}"  bindtap='save'>
+           <view class="walletQRBoxTitle">
+              <text>我的推广二维码</text>
+           </view>
+           <view class="QRImg">
+              <image src="{{invitationCodeUrl}}"></image>
+           </view>
+           <view class="walletQRTip">
+              <text>点击二维码下载我的推客码</text>
+           </view>
+        </view>
+      </view>
+   </view>
+   <view class="features">
+      <view class="list" bindtap="goTwitterCode">
+        <view class="iconBox flexCenter">
+           <image src="https://static.jianzhugang.com/mini/newIcon/walletIcon1.png"></image>
+        </view>
+        <text>推客码</text>
+      </view>
+      <view class="list" bindtap="goTiro">
+        <view class="iconBox flexCenter">
+           <image src="https://static.jianzhugang.com/mini/newIcon/walletIcon2.png"></image>
+        </view>
+        <text>推客邀请</text>
+      </view>
+      <view class="list" data-type="1" bindtap="goDetailed">
+        <view class="iconBox flexCenter">
+           <image src="https://static.jianzhugang.com/mini/newIcon/walletIcon3.png"></image>
+        </view>
+        <text>工资订单</text>
+      </view>
+      <view class="list" data-type="2" bindtap="goDetailed">
+        <view class="iconBox flexCenter">
+           <image src="https://static.jianzhugang.com/mini/newIcon/walletIcon4.png"></image>
+        </view>
+        <text>购买团险</text>
+      </view>
+      <view class="list" data-type="3" bindtap="goDetailed">
+        <view class="iconBox flexCenter">
+           <image src="https://static.jianzhugang.com/mini/newIcon/walletIcon5.png"></image>
+        </view>
+        <text>积分充值</text>
+      </view>
+      <view class="list" data-type="4" bindtap="goDetailed">
+        <view class="iconBox flexCenter">
+           <image src="https://static.jianzhugang.com/mini/newIcon/walletIcon6.png"></image>
+        </view>
+        <text>急聘支付</text>
+      </view>
+   </view>
+</view>

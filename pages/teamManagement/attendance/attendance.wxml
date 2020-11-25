@@ -1,0 +1,7 @@
+<!--pages/teamManagement/attendance/attendance.wxml-->
+<view class="boxBg" wx:if="{{attendances.length==0}}">
+  <view class="noDataTip">
+    <image src="http://static.jianzhugang.com/mini/image/NoData.png"></image>
+    <text>暂无考勤记录</text>
+  </view>
+</view>

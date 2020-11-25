@@ -1,0 +1,14 @@
+<!--pages/pop/pop.wxml-->
+<view hidden='{{modalHidden}}'>
+  <!-- <view class='mask_layer' bindtap='modal_click_Hidden' /> 放置自定义方法 -->
+  <view class='modal_box'>
+    <view class="title">温馨提示</view>
+    <view class='content'>
+      <text class='modalMsg'>{{modalMsg}}</text>
+    </view>
+    <view class='btn'>
+      <view bindtap='my_Cancel' class='cancel'>取消</view>
+      <view bindtap='my_Sure' class='Sure'>确定</view>
+    </view>
+  </view>
+</view>

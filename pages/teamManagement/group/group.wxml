@@ -1,0 +1,172 @@
+<!--pages/teamManagement/group/group.wxml-->
+<view class="group">
+  <view class="leader">
+    <scroll-view class="{{type=='TEAM'?'dataListBox':'_dataListBox'}}" scroll-y="true" >
+      <view class="teamLeaderBox">
+        <view class="leaderLeftBox">
+           <view class="leaderLeft">
+              <image src="{{getMember.idPhoto ? getMember.idPhoto : (userInfo ? userInfo.avatarUrl : 'http://static.jianzhugang.com/mini/image/ico-35.png')}}"></image>
+           </view>
+           <view class="leaderRight">
+              <view class="leaderBox">
+                 <view class="leaderImage">
+                    <image src="../../../image/leaderTopic.png"></image>
+                 </view>
+                 <text class="leaderTopic">班组长</text>
+                 <view class="leaderRightBox">
+                    <text class="leaderName">{{getMember.name}}</text>
+                    <view class="starBox">
+                      <block wx:if="{{getMember.starLevel==null}}">
+                          <block wx:for="{{[1, 2, 3,4,5]}}" wx:key="unique">
+                            <image class="dark" src="http://static.jianzhugang.com/mini/image/en_star.png"></image>
+                        </block> 
+                      </block>
+                      <block wx:else>
+                        <block wx:for="{{getMember.starLevel}}" wx:key="unique">
+                            <image class="Orange" src="http://static.jianzhugang.com/mini/image/star.png"></image>
+                        </block>
+                        <block wx:for="{{5 - getMember.starLevel}}" wx:key="unique">
+                            <image class="dark" src="http://static.jianzhugang.com/mini/image/en_star.png"></image>
+                        </block>              
+                      </block> 
+                    </view>
+                 </view>
+              </view>
+              <view class="leaderBox">
+                 <view class="leaderImage">
+                    <image src="../../../image/leaderType.png"></image>
+                 </view>
+                 <text class="leaderTopic small">{{getMember.position}}类型</text>
+                 <text class="leaderTopicR small">{{getMember.teamType}}</text>
+              </view>
+              <view class="leaderBox">
+                 <view class="leaderImage">
+                    <image src="../../../image/leaderPhone.png"></image>
+                 </view>
+                 <text class="leaderTopic small">联系方式</text>
+                 <text class="leaderTopicR small">{{getMember.phone}}</text>
+             </view>
+           </view>
+        </view>
+      </view>
+      <block wx:for="{{getMember.memberList}}" wx:key="id">
+        <view class="memberList" data-id="{{getMember.id}}" data-name="{{item.id}}" bindtap="intoGroupInfo">
+          <view class="groupListBox">
+              <view class="groupImage">
+                <image class="avatar" src="{{item.idPhoto?item.idPhoto:'http://static.jianzhugang.com/mini/image/ico-35.png'}}"></image>
+              </view>
+              <view class="groupCenter">
+                <text class="groupCenterName">{{item.name?item.name:'未录入姓名'}}</text>
+                <view class="groupStarBox">
+                  <block wx:if="{{item.starLevel==null}}">
+                    <block wx:for="{{[1, 2, 3,4,5]}}" wx:key="unique">
+                        <image class="dark" src="http://static.jianzhugang.com/mini/image/en_star.png"></image>
+                    </block> 
+                  </block>
+                  <block wx:else>
+                    <block wx:for="{{item.starLevel}}" wx:key="unique">
+                        <image class="Orange" src="http://static.jianzhugang.com/mini/image/star.png"></image>
+                    </block>
+                    <block wx:for="{{5 - item.starLevel}}" wx:key="unique">
+                        <image class="dark" src="http://static.jianzhugang.com/mini/image/en_star.png"></image>
+                    </block>              
+                  </block> 
+                </view>
+              </view>
+              <text class="classification">{{item.position}}</text>
+              <view class="nextBox">
+                <image src="../../../image/grayNext.png"></image>
+              </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+<!-- style="display:{{isprop}}" -->
+<view class="prop" style="display:{{isprop}}">
+    <view class="add_model">
+      <text>添加新成员</text>
+      <view class="propTiper">( 提示:<i class="propRed">*</i>为必填项 )</view>
+      <form bindsubmit="formSubmit" class="add_modelform">
+        <view class="addInputBox">
+          <view class="addInputList">
+              <view class="imageBox">
+                  <image class="card" src="../../../image/addModalCard.png"></image>
+              </view>
+              <view class="symbol">*</view>
+              <input type="text"  name="idNumber" class="add_input_left"  placeholder-class="addinput" placeholder="请输入身份证号" value="{{adduserinfo.idNumber?adduserinfo.idNumber:clearuserinfo}}"></input>
+              <view class="imageBox">
+                  <ocr-navigator bind:onSuccess="success" certificateType="idCard" opposite="{{false}}" class="scanCard">
+                    <image class="camera" src="../../../image/addModalCamera.png"></image>
+                  </ocr-navigator>
+              </view>
+            </view>
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image src="../../../image/addModalName.png"></image>
+              </view>
+              <view class="symbol">*</view>
+              <input type="text"  name="title" class="add_input"  placeholder-class="addinput" placeholder="请输入姓名" value="{{adduserinfo.title?adduserinfo.title:clearuserinfo}}" ></input>
+            </view>
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image src="../../../image/addModalPhone.png"></image>
+              </view>
+              <view class="symbol">*</view>
+              <input type="number"  name="phone" class="add_input"  placeholder-class="addinput" placeholder="请输入手机号码" value="{{clearuserinfo}}" ></input>
+            </view>
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image src="../../../image/workTypeIcon.png"></image>
+              </view>
+              <view class="symbol">*</view>
+              <view class="listRight">
+                  <teamType-modal modalHidden="false" teamTypeName="{{teamWokerType}}" value="{{teamTypeId}}" bindchangeTeamType="changeTeamType">
+                  </teamType-modal>
+              </view>
+            </view>
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image class="card" src="../../../image/addModalBank.png"></image>
+              </view>
+              <view class="symbol"></view>
+              <input type="text"  name="cardNumber" class="add_input_left" placeholder-class="addinput" placeholder="请输入银行卡号" value="{{adduserinfo.cardNumber?adduserinfo.cardNumber:clearuserinfo}}"></input>
+              <view class="imageBox">
+                  <ocr-navigator bind:onSuccess="bankSuccess"  certificateType="bankCard" selectedOptions="{{['bankName','number','validDate']}}" class="scanCard">
+                      <image class="camera" src="../../../image/addModalCamera.png"></image>
+                  </ocr-navigator>
+              </view>
+            </view>
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image class="bank" src="../../../image/addModalBankNum.png"></image>
+              </view>
+              <view class="symbol"></view>
+                <picker bindchange="userbindbankName" value="{{newarray}}" range="{{array}}"  name="bankName">
+                  <view class="add_input">
+                    {{newarray?newarray:'请选择开户行'}}
+                  </view>
+                </picker>
+            </view>
+            <button class="addSubmit"  form-type="submit" >提交</button>
+        </view>      
+      </form>
+    </view>
+    <view class="cancelBox"  bindtap="close_model">
+       <image src="../../../image/addModalCancel.png"></image>
+    </view>
+</view>
+
+<!-- <view class="footer" bindtap="invite">
+   <button>邀请组员</button>
+</view> -->
+<!-- <view class="footer {{type=='TEAM'?'':'dpn'}}">
+   <button class="invite"  id="share_registe" open-type='share'>邀请组员</button>
+   <button class="addmeber"  bindtap="invite">添加组员</button>
+</view> -->
+
+<view class="footer {{type=='TEAM'?'':'dpn'}}">
+  <button  id="share_registe" open-type='share'>邀请组员</button>
+  <button bindtap="invite">添加组员</button>
+</view>

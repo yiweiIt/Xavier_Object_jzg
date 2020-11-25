@@ -1,0 +1,108 @@
+/* pages/wd/changephone/changephone.wxss */
+.box-contain{
+  border-top: 1rpx solid #eee; 
+  padding:20rpx 30rpx 60rpx 30rpx;
+}
+.input-title {
+  font-size: 32rpx !important;
+}
+.input-box{
+  font-size: 32rpx !important;
+}
+
+.btn{
+  width:28%;
+  display: inline-block;
+  height:70rpx;
+  line-height:70rpx;
+  padding:0rpx 8rpx;
+  top:0rpx;
+  color: #fff;
+  border-radius: 2px;
+  background-color:#1989fa;
+  border-color:#1989fa;
+  font-size: 28rpx !important;
+}
+
+.btn-submit{
+  margin-top:40rpx;
+  margin-bottom:20rpx;
+  color: #fff !important;
+  background-color: #1989fa !important;
+}
+
+
+.hs{
+  color:red;
+}
+
+
+.mui-bg{
+  position: relative;
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent
+}
+
+.btn-goReSend{
+  margin-top:10rpx;
+  margin-bottom:20rpx;
+  color: #fff !important;
+  background-color: #4e9fe3 !important;
+}
+
+
+@keyframes myfirst
+{
+  0%   {margin-left:750rpx;}
+  100% {margin-left:-1500rpx;}
+}
+.hide{
+  display: none;
+}
+.input-itm {
+  padding: 8rpx 0rpx;
+  display: flex;
+  align-items: center;
+}
+.input-itm .input-box{
+  height: 60rpx;
+  border:none;
+  font-size: 28rpx !important;
+}
+.input-title{
+  width: 20% !important;
+  font-size: 28rpx !important;
+}
+.input-itm .error{
+  color:red;
+  float:right;
+  margin-top:-60rpx;
+  margin-right:10rpx;
+}
+.input-itm .error_code{
+  color:red;
+  float:right;
+  margin-top:-70rpx;
+  margin-right:195rpx;
+}
+.info{
+  display:inline-block;
+  color:#45a3f1;
+  padding:5px;
+  text-align:center;
+  border-radius:5px;
+  border:1px solid #45a3f1;
+  margin: 5px;
+}
+.input-d{
+  color: #666666;
+  font-size: 28rpx !important;
+}
+

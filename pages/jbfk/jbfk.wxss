@@ -1,0 +1,87 @@
+page{background:rgba(242,242,242,1);}
+.caveat{
+  width:100%;
+  background:#fff;
+  padding:15rpx 0rpx;
+}
+.caveat text.antiFraud{
+  display: block;
+  width:94%;
+  line-height:46rpx;
+  font-size:28rpx;
+  color:#515151;
+  margin:0rpx auto;
+}
+.text_prompt{
+   color:#ff0000
+}
+.antifraudBox{
+  width:94%;
+  margin:20rpx auto;
+  background:#fff;
+  padding:15rpx 0rpx;
+  border-radius:6rpx;
+}
+.name{
+  width:90%;
+  height:100rpx;
+  margin:10rpx auto;
+  border-bottom:2rpx solid rgba(242,242,242,1);
+}
+.name text.left{
+  display: inline-block;
+  width:35%;
+  height:100rpx;
+  line-height:100rpx;
+  float: left;
+}
+.name input{
+  width:65%;
+  height:100%;
+  float: right;
+}
+.name:last-child{
+  border:none;
+}
+.reportContent{
+  width:94%;
+  margin:20rpx auto;
+  height:250rpx;
+  background:#fff;
+  padding:15rpx 0rpx;
+  border-radius: 6rpx;
+}
+.input-area{
+  width:90%;
+  height:200rpx;
+  background:rgba(242,242,242,1);
+  border:none;
+  margin:10rpx auto;
+  border-radius:4rpx;
+}
+.prompt{
+  width:94%;
+  height:100rpx;
+  line-height: 100rpx; 
+  margin:0rpx auto;
+  background:#fff;
+  color: #ff0000;
+  border-radius: 6rpx;
+}
+.prompt text{
+  width:94%;
+  margin:0rpx auto;
+  display: block;
+  font-size:28rpx;
+}
+.buttonBox{
+  display: block;
+  width:94%;
+  height:90rpx;
+  line-height: 90rpx;
+  margin:20rpx auto;
+  background:#4da1ff;
+  border-radius:8rpx;
+  text-align: center;
+  color:#fff;
+}

@@ -1,0 +1,203 @@
+<view class="case">
+  <view class="announcement">
+    <view class="prompt">
+        <image src="http://static.jianzhugang.com/mini/image/buyInsurance_p.png"></image>
+        <text>请输入项目信息后从您的班组成员中选择被保人（请确保您有三位或三位以上已经进行过身份证号码确认的组员）</text>
+    </view>
+  </view>
+  <view class="notice">
+    <view class="noticeBox">
+        <view class="noticeTitle">
+          <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/noticeTitleIcon.png"></image>
+          <text>投保须知</text>
+        </view>
+        <view class="noticeTip">确认投保前请您先了解 <text data-type="1" bindtap="file">《投保须知》</text> 和<text  data-type="2" bindtap="file">《保险条款》</text></view>
+        <view class="noticeDetail">
+          <view class="noticLeft">
+            <image src="https://jianzhugang.oss-cn-shenzhen.aliyuncs.com/mini/teamIcon/noticNameImage.png"></image>
+          </view>
+          <view class="noticRight">
+              <text class="noticName">好财险：有保障</text>
+              <text class="noticInfo">被保人：16-60周岁 投保人数：3-500人</text>
+              <text class="noticInfo">保险期限：1天至1年</text>
+              <text class="noticInfo">销售范围：中国大陆（除港澳台）</text>
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class="information">
+    <view class="informationTitle">
+        <text>投保操作员信息</text>
+    </view>
+    <view class="informationBox">
+       <view class="informationBoxList">
+         <text class="pointTextLeft">*<text class="promptText">项目名称</text></text>
+         <input class="inputBoxRight"  type="text"  placeholder="请输入所属工地项目名称" bindinput="bindProjectName"></input>
+       </view>
+       <view class="informationBoxList">
+         <text class="pointTextLeft">*<text class="promptText">项目地址</text></text>
+         <view class="inputBoxRight">
+            <area-third-input-modal areaTitle="{{localType}}" bindchangeThirdArea="changeThirdArea">   </area-third-input-modal>
+         </view>
+       </view>
+    </view>
+  </view>
+  <view class="information">
+    <view class="information_Title">
+        <text class="lookPlanName">保险方案</text>
+        <text class="lookPlan" bindtap="previewImage">查看方案</text>
+    </view>
+    <view class="informationBox">
+      <view class="program">
+         <view class="programLeft">
+            <text>保险起期</text>
+            <picker mode="date" value="{{startDate}}"  start="{{tomorrow}}" end="{{threeMonths}}" data-type="start" bindchange="bindDateChange">
+                <input value="{{startDate}}"   placeholder="保险起期" disabled='true'></input>
+            </picker> 
+         </view>
+         <view class="programRight">
+            <text>保险止期</text>
+            <picker mode="date" value="{{endDate}}" start="{{tomorrow}}" end="{{nextYear}}" data-type="end" bindchange="bindDateChange">
+                <input value="{{endDate}}" placeholder="完工时间" disabled='true'></input>
+            </picker>
+         </view>
+      </view>
+      <view class="ulList">
+        <block wx:for="{{insurancePlan}}" wx:key="unique">
+          <view class="ulListBox {{item.choose?'active':''}}"  data-index="{{index}}" data-type="{{item.type}}" bindtap="chooseInsurance">
+              <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="insured_Box">
+    <view class="insured_Box_Title">
+        <view class="insured_Box_Title_left">
+           <text class="insured_BoxTitle">参保人员<text>（请至少选择3位被保人）</text></text>
+        </view>
+        <view class="insured_Box_Title_right" bindtap="addMerber">
+           <image src="../../../image/addImageIcon.png"></image>
+        </view>
+    </view>
+    <view class="insuredList">
+      <checkbox-group  bindchange="checkboxChange">
+        <block wx:for="{{memberDispatch}}" wx:key="id">
+            <view class="insuredBox">
+              <view class="l_insured">{{(index+1)<=9?'0'+(index+1):(index+1)}}</view>
+              <view class="r_insured">
+                <view class="insuredName overhidden {{item.idNoFlag?'':'gray'}}">
+                    <text class="overhidden">{{item.name}}</text>
+                    <text class="{{item.teamType?'msg':''}}" wx:if="{{!item.teamTypeFlag}}">{{item.teamType?item.teamType+'暂不支持购买':'信息不完整'}}</text>
+                    <text wx:if="{{item.teamTypeFlag}}">{{item.teamType?item.teamType:'信息不完整'}}</text>
+                </view>
+                <text class="idCard overhidden {{item.idNoFlag?'':'gray'}}">{{item.idNoFlag?item.idNumber:'信息不完整'}}</text>
+              </view>
+              <view class="d_insured">
+                  <block wx:if="{{item.teamTypeFlag&&item.idNoFlag||item.type=='TEAM'}}">
+                    <label class="checkbox">
+                      <checkbox value="{{item.id}}" size="16" disabled="{{!item.teamTypeFlag}}"/>
+                    </label>              
+                  </block>
+                  <block wx:else>
+                      <view class="changeBox" data-id="{{item.id}}" data-teamType="{{item.teamType}}" data-name="{{item.name}}" data-phone="{{item.phone}}" data-idNumber="{{item.idNumber}}" data-typeId="{{item.idNumber}}" catchtap="changeId">修改</view>
+                  </block>
+              </view>
+            </view> 
+        </block>
+      </checkbox-group>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+   <view class="bottomBox">
+      <view class="bottomLeft">
+        合计：<text>{{total}}</text> 元
+      </view>
+      <view class="bottomRight">
+          <button  bindtap="next">下一步</button>
+      </view>
+   </view>
+</view>
+<!-- style="display:{{isprop}}" -->
+<view class="prop"  hidden="{{isprop}}">
+    <view class="add_model">
+      <text>{{add_model_title}}</text>
+        <view class="addInputBox">
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image class="card" src="../../../image/addModalCard.png"></image>
+              </view>
+              <view class="symbol">*</view>
+              <input type="text"  name="idNumber" class="add_input_left"  value="{{changIidNumber}}" placeholder-class="addinput" placeholder="请输入身份证号"  bindinput="bindidNumber"></input>
+              <view class="imageBox">
+                  <ocr-navigator bind:onSuccess="success" certificateType="idCard" opposite="{{false}}" class="scanCard">
+                    <image class="camera" src="../../../image/addModalCamera.png"></image>
+                  </ocr-navigator>
+              </view>
+            </view>
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image src="../../../image/addModalName.png"></image>
+              </view>
+              <view class="symbol">*</view>
+              <view class="listRight">
+                  <input type="text"  name="title" class="add_input" value="{{changeTitle}}" placeholder-class="addinput" placeholder="请输入姓名" bindinput="bindtitle"></input>
+              </view>
+            </view>
+
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image src="../../../image/workTypeIcon.png"></image>
+              </view>
+              <view class="symbol">*</view>
+              <view class="listRight">
+                  <teamType-modal modalHidden="false" teamTypeName="{{teamWokerType}}" value="{{teamTypeId}}" bindchangeTeamType="changeTeamType">
+                  </teamType-modal>
+              </view>
+            </view>
+            <block wx:if="{{add_model_flag}}">
+                <view class="addInputList">
+                  <view class="imageBox">
+                      <image class="card" src="../../../image/addModalBank.png"></image>
+                  </view>
+                  <view class="symbol"></view>
+                  <input type="text"  name="cardNumber" class="add_input_left" placeholder-class="addinput" placeholder="请输入银行卡号" value="{{cardNumber}}"></input>
+                  <view class="imageBox">
+                      <ocr-navigator bind:onSuccess="bankSuccess"  certificateType="bankCard" selectedOptions="{{['bankName','number','validDate']}}" class="scanCard">
+                          <image class="camera" src="../../../image/addModalCamera.png"></image>
+                      </ocr-navigator>
+                  </view>
+                </view>
+                <view class="addInputList">
+                  <view class="imageBox">
+                      <image class="bank" src="../../../image/addModalBankNum.png"></image>
+                  </view>
+                  <view class="symbol"></view>
+                    <picker bindchange="userbindbankName" value="{{bankName}}" range="{{array}}"  name="bankName">
+                      <view class="add_input">
+                        {{bankName?bankName:'请选择开户行'}}
+                      </view>
+                    </picker>
+                </view>
+
+            </block>
+            <view class="addInputList">
+              <view class="imageBox">
+                  <image src="../../../image/addModalPhone.png"></image>
+              </view>
+              <view class="symbol"></view>
+              <view class="listRight">
+                  <input type="number"  name="phone" class="add_input" value="{{changePhone}}" placeholder-class="addinput" placeholder="请输入手机号码" bindinput="bindphone"></input>
+              </view>
+            </view>
+            <button class="addSubmit" bindtap="addSubmit">{{add_model_flag?'确认添加':'修改'}}</button>
+        </view>    
+    </view>
+    <view class="cancelBox"  bindtap="close_model">
+       <image src="../../../image/addModalCancel.png"></image>
+    </view>
+</view>
+<!-- <button>
+  <view class="publish" bindtap="next">购买团险</view>
+</button> -->

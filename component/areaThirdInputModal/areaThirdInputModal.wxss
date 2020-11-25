@@ -1,0 +1,14 @@
+.flter-image image {
+  height: 15rpx;
+  width: 25rpx;
+  position: absolute;
+  right: -40rpx;
+  bottom: -5px;
+}
+.input-box{
+  height: 60rpx;
+  border-radius: 10rpx;
+  padding:8rpx 25rpx;
+  font-size: 32rpx !important;
+  font-family: "微软雅黑";
+}

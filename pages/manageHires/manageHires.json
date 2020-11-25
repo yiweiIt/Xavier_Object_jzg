@@ -1,0 +1,9 @@
+
+{
+  "navigationBarTitleText": "管理招工",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "area-modal": "/component/areaModal/areaModal",
+    "ManageTeam-Type": "/component/ManageTeamType/ManageTeamType"
+  }
+}

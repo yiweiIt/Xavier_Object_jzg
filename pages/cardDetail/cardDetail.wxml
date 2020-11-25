@@ -1,0 +1,44 @@
+<!--pages/idcard/idcard.wxml-->
+<form>
+  <!--实名认证  -->
+  <view class='smrz'>
+    <!--姓名  -->
+    <view class='name'>
+      <view class='nm'>真实姓名</view>
+      <text class="p_nm">{{cardDetail.title}}</text>
+    </view>
+    <view class='name'>
+      <view class='nm'>身份证号</view>
+      <text class="p_nm">{{cardDetail.idNumber}}</text>
+    </view>
+    <!-- <view class="idPhoto">
+       <text class="pictureBox">上传个人真实照片</text>
+       <view class="_photo">
+          <view class="left">
+              <view class="_pictureBox">
+                <image src='{{cardDetail.idPhoto}}' mode="aspectFit"></image>
+              </view>
+          </view>
+       </view>
+   </view> -->
+   <view class="idPicture">
+       <text class="pictureBox">上传身份证照片</text>
+        <view class="titleBox">
+            <text>请上传身份证(头像面)</text>
+            <text>请上传身份证(国徽面)</text>
+        </view>
+       <view class="_picture">
+          <view class="left">
+              <view class="_pictureBox">
+                <image src='{{cardDetail.idphotoScan}}' mode="aspectFit"></image>
+              </view>
+          </view>
+          <view class="right">
+                <view class="_pictureBox">
+                  <image  src='{{cardDetail.idphotoScan2}}' mode="aspectFit"></image>
+                </view>
+          </view>
+       </view>
+   </view>
+  </view>
+</form>

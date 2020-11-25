@@ -1,0 +1,46 @@
+<view class="invite">
+   <view class="announcement">
+      <text class="prompt">
+         <text class="text_prompt">公告：</text>为了预防骗子无限制获取招工信息并提高用户体验，现上线积分系统加以优化, 我们不提倡充值获取积分，请大家多分享帮助更多工友，如有任何疑问，请拨打客服电话：<text class="phone">4008-6060-25</text>
+      </text>
+   </view>
+   <view class="pointsRecord">
+      <text class="integration"><text class="circle"></text>如何获取积分</text>
+      <view class="listBox">
+          <view class="leftBox">
+             <text class="title">邀请工友获取积分</text>
+             <text class="content">邀请工友注册并绑定手机号码，即可获得3积分。(强烈推荐)</text>
+          </view>
+          <view class="rightBox">
+             <button class="my share" id="share_registe" open-type='share' >去邀请</button>
+          </view>
+      </view>
+      <view class="listBox" bindtap='checkIn'>
+          <view class="leftBox">
+             <text class="title">签到获取积分</text>
+             <text class="content">每日签到可以获取3积分(强烈推荐)</text>
+          </view>
+          <view class="rightBox">
+             <button >去签到</button>
+          </view>
+      </view>
+      <view class="listBox" bindtap='lottery' wx:if="{{isDrawLucky}}">
+          <view class="leftBox">
+             <text class="title">抽奖赢得积分</text>
+             <text class="content">每日参与幸运大转盘,即可赢得免费积分(强烈推荐)</text>
+          </view>
+          <view class="rightBox">
+             <button >去抽奖</button>
+          </view>
+      </view>
+      <view class="listBox" wx:if="{{platform == 'android' || platform == 'devtools'}}">
+          <view class="leftBox">
+             <text class="title">充值获取积分</text>
+             <text class="content">充值付钱购买积分(推荐)</text>
+          </view>
+          <view class="rightBox">
+             <button bindtap='rechargeMoney'>去充值</button>
+          </view>
+      </view>
+   </view>
+</view>

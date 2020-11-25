@@ -1,0 +1,160 @@
+<view class="announcement">
+  <view class="prompt">
+      <text class="text_prompt">公告：</text>加客服微信号:
+      <text class="phone" bindtap='copyText' data-text="{{kefuWeChat}}">{{kefuWeChat}}</text>
+      拉你进建筑微信群，我们会不定期对用户进行电话回访，请注意接听！
+  </view>
+</view>
+<view class="group-all">
+  <view class="group">
+    <view class="group-left">
+      标题：
+    </view>
+    <view class="group-right">
+      <view class="pro-txt">{{machineWantInfo.title ? machineWantInfo.title : (machineWantInfo.areaFullTitle ? machineWantInfo.areaFullTitle : machineWantInfo.province + machineWantInfo.city) +'-'+ machineType + '司机'}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="group-all">
+  <view class="group">
+    <view class="group-left">
+      地址：
+    </view>
+    <view class="group-right">
+      <view class="pro-txt">{{machineWantInfo.address}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="group-all">
+  <view class="group">
+    <view class="group-left">
+      机械类型：
+    </view>
+    <view class="group-right">
+      <view class="pro-txt">{{machineType}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="group-all">
+  <view class="group">
+    <view class="group-left">
+      驾机工龄：
+    </view>
+    <view class="group-right">
+      <view>{{machineWantInfo.workYear?machineWantInfo.workYear+'年':'未录入'}}年</view>
+    </view>
+  </view>
+</view>
+
+<view class="group-all">
+  <view class="group">
+    <view class="group-left">
+      期望薪资：
+    </view>
+    <view class="group-right">
+      <view>{{machineWantInfo.pay?machineWantInfo.pay:'无要求'}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="group-all">
+  <view class="group">
+    <view class="group-left">
+      发布时间：
+    </view>
+    <view class="group-right">
+      <view>{{machineWantInfo.createTime}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="group-all mui-cell">
+  <view class="group">
+    <view class="group-left">
+      联系方式：
+    </view>
+    <view class="group-right">
+      <view class="">
+        {{phone}}
+      </view>
+      <view wx:if="{{showPhone}}" class="phoneview">
+        <form bindsubmit="callphone" report-submit>
+          <button form-type="submit" class="btn_call">拨打</button>
+        </form>
+        <button class="btn_jubao" bindtap='Complain'>举报</button>
+      </view>
+      <view wx:if="{{!showPhone}}" class="getphoneview">
+        <button class="btn phone_text" bindtap='payMoney'>获取完整号码</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="group-all group-all_remarks">
+  <view class="group group_remarks">
+    <view class="remarks_left">
+      要求/备注：
+      </view>
+      <view class="remarks_text">
+        <view>{{machineWantInfo.remark}} </view>
+      </view>
+  </view>
+</view>
+<view class="mui-view v-mui-box">
+  <view class="mui-box p-black-normal mui-bg-body" style="clear:both;">
+    <button bindtap='goPublish' data-name="apply" class="btn-dopush">我要求职</button>
+    <button bindtap='goIndex' class="btn-dopushmore">查看更多</button>
+  </view>
+</view>
+
+<view class="QRcode">
+  <image class="leftCode" src="https://static.jianzhugang.com/mini/image/code.png"></image>
+  <view class="content">
+      <text><text class="text_prompt">温馨提示：</text>进场前请先核实对方身份，过往工程，拒绝先打路费现象。更多招工：请下载建筑港客户端，客服电话：<text class="phone"  bindtap='doCallAbc'>4008-6060-25</text></text>
+  </view>
+</view>
+
+<view class="view-side">
+  <navigator class="side" url="../index/index" open-type="switchTab">
+    <image class="small-logo" src="../../image/bottom/sy.png"></image>
+    <text> 首页</text>
+  </navigator>
+  <!-- <navigator class="side"  url="../wyrz/wyrz" open-type="switchTab" >
+    <image class="small-logo" src="../../image/bottom/wyrz2.png"></image>
+    <text>入驻</text>
+   </navigator> -->
+  <navigator class="side" url="../publish/publish" open-type="switchTab">
+    <image class="small-logo" src="../../image/bottom/fb.png"></image>
+    <text>发布</text>
+  </navigator>
+  <navigator class="side" url="../wd/wd" open-type="switchTab">
+    <image class="small-logo" src="../../image/bottom/wd.png"></image>
+    <text>会员中心</text>
+  </navigator>
+
+</view>
+
+<image class="side-tool" style="z-index: 11;" src="http://static.jianzhugang.com/mini/image/share_1.png">
+  分享
+</image>
+<button class="side-tool" style="opacity:0;z-index: 12;" open-type="share">
+</button>
+
+<!-- 举报弹窗modal -->
+<modal id="modal" data-id="{{machineOutId}}" hidden="{{hiddenmodalput}}" title="请选择举报内容" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <view class="check_list">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view wx:for="{{reportCategorys}}" wx:key="unique" data-name="{{item.id}}">
+        <label class="checkbox ck_list">
+          <radio name="{{item.id}}" value="{{item.id}}" />
+          <span class="text">{{item.text}}</span>
+        </label>
+      </view>
+    </radio-group>
+    <view>
+      <textarea wx:if="{{isremark}}" class="textarea-style" value='{{remark}}' bindinput="bindinputValue" bindblur="bindTextAreaBlur" auto-height placeholder="请填写举报内容" placeholder-class='input-d' cursor-spacing='100' fixed="true" adjust-position="false" />
+    </view>
+  </view>
+</modal>

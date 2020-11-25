@@ -1,0 +1,28 @@
+.my-title{
+  background: rgb(250, 247, 247);
+  padding: 20rpx;
+}
+.title-list{
+  width:29%;
+  display:block;
+  text-align:center;
+  margin:3% 1% 3% 1%;
+  border:1px solid #ddd;
+  background:rgb(250, 247, 247);
+  border-radius:6rpx;
+  padding:6rpx;
+  float:left;
+  color: #545252;
+}
+.btn-submit{
+  width:100%;
+  background:#4da1ff;
+  position:fixed;
+  bottom:0px;
+  color:#fff;
+  border-radius:0px;
+}
+.active{
+  background: #4da1ff;
+  color: #fff;
+}

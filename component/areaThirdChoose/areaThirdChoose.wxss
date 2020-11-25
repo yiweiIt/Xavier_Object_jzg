@@ -1,0 +1,16 @@
+/* component/areaThirdChoose/areaThirdChoose.wxss */
+.flter-itm {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.flter-image {
+  /* margin-left: 10rpx; */
+  margin-top: -5rpx; 
+}
+image {
+  height: 15rpx;
+  width: 25rpx;
+}

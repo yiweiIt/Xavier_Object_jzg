@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "工人找活",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "area-modal": "/component/areaModal/areaModal",
+    "teamType-modal": "/component/teamTypeModal/teamTypeModal",
+    "workType-modal": "/component/workTypeModal/workTypeModal"
+  }
+}
